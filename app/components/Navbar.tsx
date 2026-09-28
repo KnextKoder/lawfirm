@@ -308,15 +308,6 @@ export default function Navbar({ logoSrc = "/logo.png", activePath }: NavbarProp
                 Book a Consultation
               </Link>
             </div>
-
-            {/* Quick Contact Info in Mobile Menu */}
-            <div className="pt-4 border-t border-brand-gold/20 text-xs text-slate-500 space-y-2">
-              <p className="font-semibold text-brand-navy uppercase tracking-wider text-[11px]">
-                Habeeb Salawu Chambers
-              </p>
-              <p className="text-brand-navy/70">Legal Counsel &bull; Dispute Resolution &bull; Corporate Law</p>
-              <p className="text-brand-navy font-medium">Tel: +234 803 712 5633</p>
-            </div>
           </div>
         </div>
       )}

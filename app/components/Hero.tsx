@@ -117,27 +117,6 @@ export default function Hero() {
                     >
                       Explore Our Practice
                     </Link>
-
-                    <Link
-                      href="/contact"
-                      className="group inline-flex items-center gap-3 border-l-[3px] border-brand-gold pl-4 py-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
-                    >
-                      <span className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-brand-navy group-hover:text-brand-blue transition-colors duration-200">
-                        Contact the Firm
-                      </span>
-                      <span className="inline-flex items-center text-brand-gold group-hover:text-brand-blue group-hover:translate-x-1.5 transition-all duration-300 ease-out">
-                        <svg
-                          className="w-4 h-4 sm:w-5 sm:h-5"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth={2.2}
-                          viewBox="0 0 24 24"
-                          aria-hidden="true"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </span>
-                    </Link>
                   </div>
                 </div>
               </div>
