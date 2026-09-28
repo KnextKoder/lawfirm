@@ -48,7 +48,7 @@ export default function EnquirySection() {
   };
 
   return (
-    <section className="w-full bg-white py-16 sm:py-20 lg:py-24 text-[#18223c]">
+    <section className="w-full bg-white py-12 sm:py-14 lg:py-16 text-brand-navy">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 xl:gap-16 items-start">
           {/* ========================================================= */}
@@ -56,14 +56,14 @@ export default function EnquirySection() {
           {/* ========================================================= */}
           <div className="lg:col-span-5 flex flex-col">
             {/* Top dividing accent line */}
-            <div className="w-full h-px bg-[#3b5278]/40 mb-6 sm:mb-8" />
+            <div className="w-full h-px bg-brand-gold/30 mb-6 sm:mb-8" />
 
             {/* Block 1: Chambers Address */}
-            <div className="pb-5 sm:pb-6 border-b border-[#ded9cc]">
-              <span className="block text-[11px] font-semibold tracking-[0.18em] text-[#1d6ea8] uppercase mb-2">
+            <div className="pb-5 sm:pb-6 border-b border-brand-gold/20">
+              <span className="block text-[11px] font-semibold tracking-[0.18em] text-brand-blue uppercase mb-2">
                 Chambers
               </span>
-              <address className="not-italic font-serif text-lg sm:text-xl text-[#18223c] leading-relaxed font-normal">
+              <address className="not-italic font-serif text-lg sm:text-xl text-brand-navy leading-relaxed font-normal">
                 5A, Oke-Fia, Opposite Spices
                 <br />
                 Osogbo, Osun State, Nigeria
@@ -71,14 +71,14 @@ export default function EnquirySection() {
             </div>
 
             {/* Block 2: Telephone & WhatsApp */}
-            <div className="py-5 sm:py-6 border-b border-[#ded9cc]">
-              <span className="block text-[11px] font-semibold tracking-[0.18em] text-[#1d6ea8] uppercase mb-2">
+            <div className="py-5 sm:py-6 border-b border-brand-gold/20">
+              <span className="block text-[11px] font-semibold tracking-[0.18em] text-brand-blue uppercase mb-2">
                 Telephone &amp; WhatsApp
               </span>
-              <p className="font-serif text-lg sm:text-xl text-[#18223c] leading-relaxed font-normal">
+              <p className="font-serif text-lg sm:text-xl text-brand-navy leading-relaxed font-normal">
                 <a
                   href="tel:+2348037125633"
-                  className="hover:text-[#1d6ea8] transition-colors"
+                  className="hover:text-brand-blue transition-colors"
                 >
                   +234 803 712 5633
                 </a>
@@ -86,14 +86,14 @@ export default function EnquirySection() {
             </div>
 
             {/* Block 3: Email */}
-            <div className="py-5 sm:py-6 border-b border-[#ded9cc]">
-              <span className="block text-[11px] font-semibold tracking-[0.18em] text-[#1d6ea8] uppercase mb-2">
+            <div className="py-5 sm:py-6 border-b border-brand-gold/20">
+              <span className="block text-[11px] font-semibold tracking-[0.18em] text-brand-blue uppercase mb-2">
                 Email
               </span>
-              <p className="font-serif text-lg sm:text-xl text-[#18223c] leading-relaxed font-normal">
+              <p className="font-serif text-lg sm:text-xl text-brand-navy leading-relaxed font-normal">
                 <a
                   href="mailto:salawusan@yahoo.com"
-                  className="hover:text-[#1d6ea8] transition-colors"
+                  className="hover:text-brand-blue transition-colors"
                 >
                   salawusan@yahoo.com
                 </a>
@@ -101,12 +101,12 @@ export default function EnquirySection() {
             </div>
 
             {/* Block 4: Office Hours */}
-            <div className="py-5 sm:py-6 border-b border-[#ded9cc]">
-              <span className="block text-[11px] font-semibold tracking-[0.18em] text-[#1d6ea8] uppercase mb-2">
+            <div className="py-5 sm:py-6 border-b border-brand-gold/20">
+              <span className="block text-[11px] font-semibold tracking-[0.18em] text-brand-blue uppercase mb-2">
                 Office Hours
               </span>
-              <p className="font-serif text-lg sm:text-xl text-[#18223c] leading-relaxed font-normal">
-                [Monday &ndash; Friday, 00:00 &ndash; 00:00]
+              <p className="font-serif text-lg sm:text-xl text-brand-navy leading-relaxed font-normal">
+                [Monday &ndash; Friday, 08:30 &ndash; 17:30]
               </p>
             </div>
           </div>
@@ -115,17 +115,17 @@ export default function EnquirySection() {
           {/* RIGHT COLUMN: Send an Enquiry Card                        */}
           {/* ========================================================= */}
           <div className="lg:col-span-7">
-            <div className="bg-white border border-[#e5e0d5] p-7 sm:p-10 lg:p-12 shadow-[0_4px_24px_rgba(20,35,65,0.03)]">
-              <h2 className="font-serif text-3xl sm:text-[36px] text-[#18223c] font-normal tracking-tight">
+            <div className="bg-white border border-brand-gold/30 p-7 sm:p-10 lg:p-12 shadow-[0_4px_24px_rgba(10,27,51,0.03)]">
+              <h2 className="font-serif text-3xl sm:text-[36px] text-brand-navy font-normal tracking-tight">
                 Send an enquiry
               </h2>
-              <p className="text-slate-600 text-sm sm:text-[15px] mt-2 mb-8 sm:mb-10 font-normal">
+              <p className="text-brand-navy/70 text-sm sm:text-[15px] mt-2 mb-8 sm:mb-10 font-normal">
                 We will respond to confirm whether and how we can assist.
               </p>
 
               {submitted ? (
                 <div className="py-12 text-center">
-                  <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center">
+                  <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-brand-blue/10 text-brand-blue flex items-center justify-center">
                     <svg
                       className="w-6 h-6"
                       fill="none"
@@ -140,17 +140,17 @@ export default function EnquirySection() {
                       />
                     </svg>
                   </div>
-                  <h3 className="font-serif text-2xl text-[#18223c] mb-2">
+                  <h3 className="font-serif text-2xl text-brand-navy mb-2">
                     Enquiry Received
                   </h3>
-                  <p className="text-slate-600 text-sm max-w-md mx-auto leading-relaxed mb-8">
+                  <p className="text-brand-navy/75 text-sm max-w-md mx-auto leading-relaxed mb-8">
                     Thank you for contacting Habeeb Salawu Chambers. Our chambers
                     will review your enquiry and respond to you promptly.
                   </p>
                   <button
                     type="button"
                     onClick={handleReset}
-                    className="inline-block bg-[#18223c] text-white text-xs font-semibold uppercase tracking-wider px-6 py-3 hover:bg-[#111728] transition-colors cursor-pointer"
+                    className="inline-block bg-brand-navy hover:bg-brand-blue text-white text-xs font-semibold uppercase tracking-wider px-6 py-3 transition-colors cursor-pointer border border-brand-gold/40"
                   >
                     Send Another Enquiry
                   </button>
@@ -163,7 +163,7 @@ export default function EnquirySection() {
                     <div>
                       <label
                         htmlFor="fullName"
-                        className="block text-[11px] font-semibold tracking-[0.14em] text-[#18223c] uppercase mb-2"
+                        className="block text-[11px] font-semibold tracking-[0.14em] text-brand-navy uppercase mb-2"
                       >
                         Full Name
                       </label>
@@ -175,7 +175,7 @@ export default function EnquirySection() {
                         onChange={(e) =>
                           setFormData({ ...formData, fullName: e.target.value })
                         }
-                        className="w-full bg-transparent border-b border-slate-300 focus:border-[#18223c] text-sm sm:text-base text-slate-800 pb-2 outline-none transition-colors rounded-none"
+                        className="w-full bg-transparent border-b border-brand-gold/40 focus:border-brand-blue text-sm sm:text-base text-brand-navy pb-2 outline-none transition-colors rounded-none"
                       />
                     </div>
 
@@ -183,7 +183,7 @@ export default function EnquirySection() {
                     <div>
                       <label
                         htmlFor="phoneNumber"
-                        className="block text-[11px] font-semibold tracking-[0.14em] text-[#18223c] uppercase mb-2"
+                        className="block text-[11px] font-semibold tracking-[0.14em] text-brand-navy uppercase mb-2"
                       >
                         Phone Number
                       </label>
@@ -198,7 +198,7 @@ export default function EnquirySection() {
                             phoneNumber: e.target.value,
                           })
                         }
-                        className="w-full bg-transparent border-b border-slate-300 focus:border-[#18223c] text-sm sm:text-base text-slate-800 pb-2 outline-none transition-colors rounded-none"
+                        className="w-full bg-transparent border-b border-brand-gold/40 focus:border-brand-blue text-sm sm:text-base text-brand-navy pb-2 outline-none transition-colors rounded-none"
                       />
                     </div>
                   </div>
@@ -207,7 +207,7 @@ export default function EnquirySection() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-[11px] font-semibold tracking-[0.14em] text-[#18223c] uppercase mb-2"
+                      className="block text-[11px] font-semibold tracking-[0.14em] text-brand-navy uppercase mb-2"
                     >
                       Email Address
                     </label>
@@ -219,7 +219,7 @@ export default function EnquirySection() {
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
                       }
-                      className="w-full bg-transparent border-b border-slate-300 focus:border-[#18223c] text-sm sm:text-base text-slate-800 pb-2 outline-none transition-colors rounded-none"
+                      className="w-full bg-transparent border-b border-brand-gold/40 focus:border-brand-blue text-sm sm:text-base text-brand-navy pb-2 outline-none transition-colors rounded-none"
                     />
                   </div>
 
@@ -227,7 +227,7 @@ export default function EnquirySection() {
                   <div className="relative">
                     <label
                       htmlFor="area"
-                      className="block text-[11px] font-semibold tracking-[0.14em] text-[#18223c] uppercase mb-2"
+                      className="block text-[11px] font-semibold tracking-[0.14em] text-brand-navy uppercase mb-2"
                     >
                       Area of Legal Assistance
                     </label>
@@ -239,7 +239,7 @@ export default function EnquirySection() {
                         onChange={(e) =>
                           setFormData({ ...formData, area: e.target.value })
                         }
-                        className="w-full bg-transparent border-b border-slate-300 focus:border-[#18223c] text-sm sm:text-base text-slate-700 pb-2 pr-8 outline-none transition-colors cursor-pointer appearance-none rounded-none"
+                        className="w-full bg-transparent border-b border-brand-gold/40 focus:border-brand-blue text-sm sm:text-base text-brand-navy pb-2 pr-8 outline-none transition-colors cursor-pointer appearance-none rounded-none"
                       >
                         <option value="" disabled>
                           Select an area
@@ -251,7 +251,7 @@ export default function EnquirySection() {
                         ))}
                       </select>
                       {/* Chevron Arrow */}
-                      <div className="pointer-events-none absolute right-0 bottom-2.5 flex items-center text-slate-500">
+                      <div className="pointer-events-none absolute right-0 bottom-2.5 flex items-center text-brand-gold">
                         <svg
                           className="w-4 h-4"
                           fill="none"
@@ -273,7 +273,7 @@ export default function EnquirySection() {
                   <div>
                     <label
                       htmlFor="description"
-                      className="block text-[11px] font-semibold tracking-[0.14em] text-[#18223c] uppercase mb-2"
+                      className="block text-[11px] font-semibold tracking-[0.14em] text-brand-navy uppercase mb-2"
                     >
                       Brief Description
                     </label>
@@ -288,13 +288,13 @@ export default function EnquirySection() {
                           description: e.target.value,
                         })
                       }
-                      className="w-full border border-slate-300 focus:border-[#18223c] text-sm sm:text-base text-slate-800 p-3 sm:p-3.5 outline-none transition-colors rounded-none resize-y bg-transparent"
+                      className="w-full border border-brand-gold/40 focus:border-brand-blue text-sm sm:text-base text-brand-navy p-3 sm:p-3.5 outline-none transition-colors rounded-none resize-y bg-transparent"
                     />
                   </div>
 
                   {/* Legal Disclaimer Box */}
-                  <div className="border-l-2 border-[#1d8cd7] pl-3.5 sm:pl-4 py-0.5">
-                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                  <div className="border-l-2 border-brand-blue pl-3.5 sm:pl-4 py-0.5">
+                    <p className="text-xs text-brand-navy/70 leading-relaxed font-normal">
                       Submitting an enquiry does not by itself create a
                       solicitor&ndash;client relationship. Please do not send
                       confidential or time-sensitive information until the firm
@@ -307,7 +307,7 @@ export default function EnquirySection() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="inline-flex items-center justify-center bg-[#18223c] text-white text-sm font-medium px-8 py-3.5 hover:bg-[#111728] active:bg-[#0c1220] transition-colors duration-150 cursor-pointer disabled:opacity-75"
+                      className="inline-flex items-center justify-center bg-brand-navy hover:bg-brand-blue active:bg-brand-navy text-white text-sm font-medium px-8 py-3.5 transition-colors duration-150 cursor-pointer disabled:opacity-75 border border-brand-gold/40"
                     >
                       {isSubmitting ? "Submitting..." : "Submit Enquiry"}
                     </button>

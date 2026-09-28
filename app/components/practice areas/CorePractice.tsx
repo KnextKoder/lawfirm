@@ -153,14 +153,14 @@ export default function CorePractice() {
   }, []);
 
   return (
-    <section className="w-full bg-white py-16 sm:py-20 lg:py-24 border-b border-[#e5e0d5]">
+    <section className="w-full bg-white py-12 sm:py-14 lg:py-16 border-b border-brand-gold/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Header Row */}
-        <div className="flex items-center gap-4 pb-6 sm:pb-8 border-b border-[#ded9cc]">
-          <span className="text-sm font-semibold tracking-wider text-[#1d6ea8]">
+        <div className="flex items-center gap-4 pb-6 sm:pb-8 border-b border-brand-gold/30">
+          <span className="text-sm font-semibold tracking-wider text-brand-blue">
             &sect; I
           </span>
-          <span className="text-xs font-semibold tracking-[0.22em] text-[#556377] uppercase">
+          <span className="text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase">
             Core Practice
           </span>
         </div>
@@ -171,7 +171,7 @@ export default function CorePractice() {
             <div
               key={practice.number}
               id={practice.id}
-              className="scroll-mt-24 sm:scroll-mt-28 py-14 sm:py-16 lg:py-20 border-b border-[#ded9cc] last:border-b-0 relative"
+              className="scroll-mt-24 sm:scroll-mt-28 py-8 sm:py-10 lg:py-12 border-b border-brand-gold/20 last:border-b-0 relative"
             >
               {practice.aliases?.map((alias) => (
                 <span
@@ -189,33 +189,33 @@ export default function CorePractice() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
                 {/* Left Column: Number, Title, Description */}
                 <div className="lg:col-span-5 flex flex-col">
-                  <span className="text-sm font-semibold tracking-wider text-[#1d6ea8] mb-3">
+                  <span className="text-sm font-semibold tracking-wider text-brand-blue mb-3">
                     {practice.number}
                   </span>
-                  <h2 className="font-serif text-2xl sm:text-3xl lg:text-[2.2rem] text-[#141d2e] leading-[1.2] tracking-tight mb-4">
+                  <h2 className="font-serif text-2xl sm:text-3xl lg:text-[2.2rem] text-brand-navy leading-[1.2] tracking-tight mb-4">
                     {practice.title}
                   </h2>
-                  <p className="text-slate-600 text-[14.5px] sm:text-[15px] leading-relaxed max-w-md font-normal">
+                  <p className="text-brand-navy/75 text-[14.5px] sm:text-[15px] leading-relaxed max-w-md font-normal">
                     {practice.description}
                   </p>
                 </div>
 
                 {/* Right Column: Work Scope List */}
                 <div className="lg:col-span-7 flex flex-col pt-1">
-                  <p className="text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-[#556377] uppercase mb-5 sm:mb-6">
+                  <p className="text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-brand-gold uppercase mb-5 sm:mb-6">
                     Our work includes
                   </p>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 sm:gap-x-12 border-t border-[#ded9cc]">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 sm:gap-x-12 border-t border-brand-gold/30">
                     {/* Sub-column 1 */}
-                    <div className="divide-y divide-[#ded9cc]">
+                    <div className="divide-y divide-brand-gold/15">
                       {practice.col1.map((item) => (
                         <div
                           key={item}
                           className="py-3.5 sm:py-4 flex items-start gap-3"
                         >
-                          <span className="w-1.5 h-1.5 bg-[#1d6ea8] shrink-0 mt-2 rounded-[1px]" />
-                          <span className="text-[#182846] text-[14px] sm:text-[14.5px] leading-snug font-normal">
+                          <span className="w-1.5 h-1.5 bg-brand-blue shrink-0 mt-2 rounded-[1px]" />
+                          <span className="text-brand-navy text-[14px] sm:text-[14.5px] leading-snug font-normal">
                             {item}
                           </span>
                         </div>
@@ -223,14 +223,14 @@ export default function CorePractice() {
                     </div>
 
                     {/* Sub-column 2 */}
-                    <div className="divide-y divide-[#ded9cc] border-t sm:border-t-0 border-[#ded9cc]">
+                    <div className="divide-y divide-brand-gold/15 border-t sm:border-t-0 border-brand-gold/15">
                       {practice.col2.map((item) => (
                         <div
                           key={item}
                           className="py-3.5 sm:py-4 flex items-start gap-3"
                         >
-                          <span className="w-1.5 h-1.5 bg-[#1d6ea8] shrink-0 mt-2 rounded-[1px]" />
-                          <span className="text-[#182846] text-[14px] sm:text-[14.5px] leading-snug font-normal">
+                          <span className="w-1.5 h-1.5 bg-brand-blue shrink-0 mt-2 rounded-[1px]" />
+                          <span className="text-brand-navy text-[14px] sm:text-[14.5px] leading-snug font-normal">
                             {item}
                           </span>
                         </div>

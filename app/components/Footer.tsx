@@ -24,7 +24,7 @@ export function HSCFooterEmblem({ className = "h-11 w-auto" }: { className?: str
       />
       <path d="M 25 38 L 72 38 L 72 64 L 25 64 Z" fill="#ffffff" />
 
-      {/* Sky Blue 'S' */}
+      {/* Light Blue 'S' (#2D6CDF) */}
       <text
         x="50"
         y="34"
@@ -32,13 +32,13 @@ export function HSCFooterEmblem({ className = "h-11 w-auto" }: { className?: str
         fontFamily="var(--font-serif), Georgia, serif"
         fontSize="28"
         fontWeight="700"
-        fill="#38bdf8"
+        fill="#2D6CDF"
         letterSpacing="0"
       >
         S
       </text>
 
-      {/* Dark Navy 'C' centered in the white crossbar field */}
+      {/* Deep Navy 'C' (#0A1B33) centered in the white crossbar field */}
       <text
         x="50"
         y="58"
@@ -46,7 +46,7 @@ export function HSCFooterEmblem({ className = "h-11 w-auto" }: { className?: str
         fontFamily="var(--font-serif), Georgia, serif"
         fontSize="24"
         fontWeight="700"
-        fill="#171f38"
+        fill="#0A1B33"
         letterSpacing="0"
       >
         C
@@ -59,10 +59,10 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-[#171f38] text-white pt-16 sm:pt-20 pb-12 sm:pb-16 border-t border-slate-800">
+    <footer className="w-full bg-brand-navy text-white pt-12 sm:pt-14 pb-8 sm:pb-10 border-t border-brand-gold/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-14 sm:pb-16 border-b border-slate-700/60">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-10 sm:pb-12 border-b border-brand-gold/20">
           {/* Column 1: Brand Logo & Tagline (5 cols on lg) */}
           <div className="lg:col-span-4 flex flex-col items-start pr-0 lg:pr-6">
             <Link
@@ -71,26 +71,26 @@ export default function Footer() {
               aria-label="Habeeb Salawu Chambers Home"
             >
               <HSCFooterEmblem className="h-10 sm:h-11 w-auto" />
-              <span className="font-serif text-xl sm:text-[1.38rem] font-semibold text-white tracking-tight group-hover:text-slate-200 transition-colors">
+              <span className="font-serif text-xl sm:text-[1.38rem] font-semibold text-white tracking-tight group-hover:text-brand-blue transition-colors">
                 Habeeb Salawu Chambers
               </span>
             </Link>
 
-            <p className="font-serif italic text-slate-300 text-sm sm:text-[15px] mt-4 leading-relaxed font-normal">
+            <p className="font-serif italic text-white/75 text-sm sm:text-[15px] mt-4 leading-relaxed font-normal">
               Legal Representation. Advisory. Dispute Resolution.
             </p>
           </div>
 
           {/* Column 2: FIRM (2 cols on lg) */}
           <div className="lg:col-span-2 flex flex-col space-y-3">
-            <p className="text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-slate-200 uppercase mb-2">
+            <p className="text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-brand-gold uppercase mb-2">
               Firm
             </p>
             <ul className="space-y-2.5">
               <li>
                 <Link
-                  href="#the-firm"
-                  className="text-slate-300 hover:text-white text-sm transition-colors duration-150"
+                  href="/#the-firm"
+                  className="text-white/80 hover:text-brand-blue text-sm transition-colors duration-150"
                 >
                   The Firm
                 </Link>
@@ -100,14 +100,14 @@ export default function Footer() {
 
           {/* Column 3: PRACTICE (3 cols on lg) */}
           <div className="lg:col-span-3 flex flex-col space-y-3">
-            <p className="text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-slate-200 uppercase mb-2">
+            <p className="text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-brand-gold uppercase mb-2">
               Practice
             </p>
             <ul className="space-y-2.5">
               <li>
                 <Link
                   href="/practice-areas#litigation-dispute-resolution"
-                  className="text-slate-300 hover:text-white text-sm transition-colors duration-150"
+                  className="text-white/80 hover:text-brand-blue text-sm transition-colors duration-150"
                 >
                   Litigation &amp; Disputes
                 </Link>
@@ -115,7 +115,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/practice-areas#property-real-estate"
-                  className="text-slate-300 hover:text-white text-sm transition-colors duration-150"
+                  className="text-white/80 hover:text-brand-blue text-sm transition-colors duration-150"
                 >
                   Property &amp; Real Estate
                 </Link>
@@ -123,7 +123,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/practice-areas#asset-debt-recovery"
-                  className="text-slate-300 hover:text-white text-sm transition-colors duration-150"
+                  className="text-white/80 hover:text-brand-blue text-sm transition-colors duration-150"
                 >
                   Asset &amp; Debt Recovery
                 </Link>
@@ -131,7 +131,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/practice-areas#banking-finance"
-                  className="text-slate-300 hover:text-white text-sm transition-colors duration-150"
+                  className="text-white/80 hover:text-brand-blue text-sm transition-colors duration-150"
                 >
                   Banking &amp; Finance
                 </Link>
@@ -141,16 +141,16 @@ export default function Footer() {
 
           {/* Column 4: CHAMBERS (3 cols on lg) */}
           <div className="lg:col-span-3 flex flex-col space-y-3">
-            <p className="text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-slate-200 uppercase mb-2">
+            <p className="text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-brand-gold uppercase mb-2">
               Chambers
             </p>
-            <address className="not-italic text-sm text-slate-300 space-y-2 leading-relaxed">
+            <address className="not-italic text-sm text-white/80 space-y-2 leading-relaxed">
               <p>5A, Oke-Fia, Opposite Spices,</p>
               <p>Osogbo, Osun State, Nigeria</p>
               <p className="pt-2">
                 <a
                   href="tel:+2348037125633"
-                  className="hover:text-white transition-colors duration-150 block"
+                  className="hover:text-brand-blue transition-colors duration-150 block"
                 >
                   +234 803 712 5633
                 </a>
@@ -158,7 +158,7 @@ export default function Footer() {
               <p>
                 <a
                   href="mailto:salawusan@yahoo.com"
-                  className="hover:text-white transition-colors duration-150 block"
+                  className="hover:text-brand-blue transition-colors duration-150 block"
                 >
                   salawusan@yahoo.com
                 </a>
@@ -168,14 +168,14 @@ export default function Footer() {
         </div>
 
         {/* Legal Disclaimer Note */}
-        <div className="pt-8 pb-4 text-xs sm:text-[13px] text-slate-400 leading-relaxed max-w-4xl">
+        <div className="pt-8 pb-4 text-xs sm:text-[13px] text-white/60 leading-relaxed max-w-4xl">
           <p>
             The information on this website is for general information only and does not constitute legal advice. Use of this website does not create a solicitor-client relationship.
           </p>
         </div>
 
         {/* Bottom Bar: Copyright & Legal Policies */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 text-xs text-slate-400">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 text-xs text-white/60">
           <p>
             &copy; {currentYear} Habeeb Salawu Chambers. All rights reserved.
           </p>

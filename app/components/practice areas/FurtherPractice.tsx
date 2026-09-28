@@ -54,42 +54,42 @@ const furtherPractices: FurtherPracticeItem[] = [
 
 export default function FurtherPractice() {
   return (
-    <section className="w-full bg-white py-16 sm:py-20 lg:py-24 border-b border-[#e5e0d5]">
+    <section className="w-full bg-white py-12 sm:py-14 lg:py-16 border-b border-brand-gold/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Header Row */}
-        <div className="flex items-center gap-4 pb-6 sm:pb-8 border-b border-[#ded9cc]">
-          <span className="text-sm font-semibold tracking-wider text-[#1d6ea8]">
+        <div className="flex items-center gap-4 pb-6 sm:pb-8 border-b border-brand-gold/30">
+          <span className="text-sm font-semibold tracking-wider text-brand-blue">
             &sect; II
           </span>
-          <span className="text-xs font-semibold tracking-[0.22em] text-[#556377] uppercase">
+          <span className="text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase">
             Further Areas of Practice
           </span>
         </div>
 
         {/* 3-Column Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-[#ded9cc] mt-8 sm:mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-brand-gold/25 mt-6 sm:mt-8">
           {/* Items 1 to 7 */}
           {furtherPractices.map((practice) => (
             <div
               key={practice.title}
-              className="border-r border-b border-[#ded9cc] p-7 sm:p-8 lg:p-9 flex flex-col justify-between min-h-55 sm:min-h-60 transition-colors duration-150 hover:bg-[#ede9df]/40"
+              className="border-r border-b border-brand-gold/25 p-6 sm:p-7 lg:p-8 flex flex-col justify-between min-h-48 sm:min-h-52 transition-colors duration-150 hover:bg-slate-50/80"
             >
               <div>
-                <h3 className="font-serif text-xl sm:text-2xl text-[#141d2e] leading-snug tracking-tight mb-3">
+                <h3 className="font-serif text-xl sm:text-2xl text-brand-navy leading-snug tracking-tight mb-3">
                   {practice.title}
                 </h3>
-                <p className="text-slate-600 text-[14px] sm:text-[14.5px] leading-relaxed mb-6 font-normal">
+                <p className="text-brand-navy/75 text-[14px] sm:text-[14.5px] leading-relaxed mb-6 font-normal">
                   {practice.subtitle}
                 </p>
               </div>
-              <p className="text-slate-500 text-xs sm:text-[13px] leading-relaxed font-normal pt-2">
+              <p className="text-brand-navy/60 text-xs sm:text-[13px] leading-relaxed font-normal pt-2">
                 {practice.details}
               </p>
             </div>
           ))}
 
-          {/* Item 8: Callout Card (Solid Midnight Navy) */}
-          <div className="border-r border-b border-[#ded9cc] bg-[#18223c] text-white p-7 sm:p-8 lg:p-9 flex flex-col justify-between min-h-55 sm:min-h-60">
+          {/* Item 8: Callout Card (Solid Deep Navy Blue) */}
+          <div className="border-r border-b border-brand-gold/30 bg-brand-navy text-white p-7 sm:p-8 lg:p-9 flex flex-col justify-between min-h-55 sm:min-h-60">
             <div>
               <h3 className="font-serif text-2xl sm:text-3xl text-white leading-snug tracking-tight mb-4">
                 Not sure where your matter falls?
@@ -98,7 +98,7 @@ export default function FurtherPractice() {
             <div className="pt-6">
               <Link
                 href="/contact"
-                className="inline-block text-white text-sm font-semibold underline underline-offset-4 decoration-white/50 hover:text-[#38bdf8] hover:decoration-[#38bdf8] transition-colors duration-150"
+                className="inline-block text-white text-sm font-semibold underline underline-offset-4 decoration-brand-gold hover:text-brand-blue hover:decoration-brand-blue transition-colors duration-150"
               >
                 Speak with us
               </Link>
@@ -107,7 +107,7 @@ export default function FurtherPractice() {
 
           {/* Item 9: Empty Placeholder Grid Cell on Large Screens */}
           <div
-            className="hidden lg:block border-r border-b border-[#ded9cc] bg-transparent"
+            className="hidden lg:block border-r border-b border-brand-gold/25 bg-transparent"
             aria-hidden="true"
           />
         </div>

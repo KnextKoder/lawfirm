@@ -18,6 +18,11 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Habeeb Salawu Chambers | Barristers & Solicitors",
   description: "A distinguished full-service law firm providing expert legal counsel, advocacy, corporate advisory, and dispute resolution.",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -30,7 +35,7 @@ export default function RootLayout({
       lang="en"
       className={`${rubik.variable} ${playfair.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-white text-slate-900">{children}</body>
+      <body className="min-h-full flex flex-col font-sans bg-white text-brand-navy">{children}</body>
     </html>
   );
 }

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative w-full bg-[#171f38] overflow-hidden py-18 sm:py-24 lg:py-28 text-white border-b border-slate-800/80">
+    <section className="relative w-full bg-brand-navy overflow-hidden py-12 sm:py-16 lg:py-18 text-white border-b border-brand-gold/30">
       {/* Giant Semi-Transparent Watermark Emblem on Right Background */}
       <div
         className="absolute right-0 top-0 bottom-0 w-full lg:w-1/2 overflow-hidden pointer-events-none select-none flex items-center justify-end pr-0 sm:pr-4 lg:pr-8"
@@ -55,16 +55,16 @@ export default function Hero() {
             {/* Breadcrumb Navigation */}
             <nav
               aria-label="Breadcrumb"
-              className="flex items-center gap-2 text-xs sm:text-[13px] font-medium text-slate-400 mb-6 sm:mb-8"
+              className="flex items-center gap-2 text-xs sm:text-[13px] font-medium text-white/60 mb-6 sm:mb-8"
             >
               <Link
                 href="/"
-                className="hover:text-white transition-colors duration-150"
+                className="hover:text-brand-blue transition-colors duration-150"
               >
                 Home
               </Link>
-              <span className="text-slate-500 font-normal">/</span>
-              <span className="text-slate-200">Contact</span>
+              <span className="text-brand-gold/70 font-normal">/</span>
+              <span className="text-brand-gold">Contact</span>
             </nav>
 
             {/* Title */}
@@ -75,7 +75,7 @@ export default function Hero() {
 
           {/* Right Column: Narrative Statement */}
           <div className="lg:col-span-6 flex justify-start lg:justify-end pb-1 lg:pb-2">
-            <p className="text-slate-200 text-base sm:text-lg lg:text-[1.0625rem] leading-relaxed max-w-xl font-normal">
+            <p className="text-white/80 text-base sm:text-lg lg:text-[1.0625rem] leading-relaxed max-w-xl font-normal">
               Representation, advice on a transaction or property matter,
               <br className="hidden lg:inline" /> assistance with recovery, or institutional support &mdash; contact our
               <br className="hidden lg:inline" /> office to discuss your requirements.

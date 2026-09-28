@@ -2,7 +2,10 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0A1B33;
+  --color-navy: #0A1B33;
+  --color-blue: #2D6CDF;
+  --color-gold: #C7A24B;
 }
 
 html {
@@ -10,8 +13,9 @@ html {
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-brand-navy: #0A1B33;
+  --color-brand-blue: #2D6CDF;
+  --color-brand-gold: #C7A24B;
   --font-sans: var(--font-rubik), system-ui, -apple-system, sans-serif;
   --font-serif: var(--font-playfair), Georgia, Cambria, "Times New Roman", serif;
 }
@@ -45,4 +49,47 @@ body {
   .animate-marquee-vertical {
     animation-duration: 60s;
   }
+}
+
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroScaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes heroDownIndicator {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.animate-hero-fade-up {
+  animation: heroFadeUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-hero-scale-in {
+  animation: heroScaleIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-hero-down {
+  animation: heroDownIndicator 2.2s ease-in-out infinite;
 }
