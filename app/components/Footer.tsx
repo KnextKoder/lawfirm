@@ -25,10 +25,10 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Column 2: FIRM (3 cols on lg) */}
+          {/* Column 2: THE FIRM (3 cols on lg) */}
           <div className="lg:col-span-3 flex flex-col space-y-3">
             <p className="text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-brand-gold uppercase mb-2">
-              Firm
+              The Firm
             </p>
             <ul className="space-y-2.5">
               <li>
@@ -74,10 +74,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: CHAMBERS (3 cols on lg) */}
+          {/* Column 3: CONTACT (3 cols on lg) */}
           <div className="lg:col-span-3 flex flex-col space-y-3">
             <p className="text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-brand-gold uppercase mb-2">
-              Chambers
+              Contact
             </p>
             <address className="not-italic text-sm text-white/80 space-y-2 leading-relaxed">
               <p>5A, Oke-Fia, Opposite Spices,</p>
