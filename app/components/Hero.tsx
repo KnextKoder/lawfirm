@@ -117,14 +117,6 @@ export default function Hero() {
             } bg-white`}
           >
             <div className="flex-1 flex flex-col justify-center px-6 sm:px-10 md:px-12 lg:px-10 xl:px-16 py-8 sm:py-12 lg:py-14 lg:mr-16 xl:mr-20 overflow-y-auto lg:overflow-visible">
-              {/* Mobile Top Brand Masthead (< lg) */}
-              <div className="lg:hidden flex items-center gap-2.5 mb-5 pb-2.5 border-b border-brand-navy/10">
-                <span className="w-4 h-0.5 bg-brand-gold" aria-hidden="true" />
-                <span className="text-xs font-serif font-bold tracking-[0.2em] text-brand-navy uppercase">
-                  Habeeb Salawu Chambers
-                </span>
-              </div>
-
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-8 xl:gap-14 items-center">
                 {/* Center-Left: Framed Visual Exhibition Stage */}
                 <div className="order-2 lg:order-1 lg:col-span-6 flex justify-center">
@@ -161,7 +153,7 @@ export default function Hero() {
                   <div>
                     {/* Category Eyebrow */}
                     <p className="text-xs sm:text-sm font-semibold tracking-[0.25em] text-brand-blue uppercase mb-3 sm:mb-4 flex items-center gap-2.5">
-                      <span className="w-5 h-0.5 bg-brand-gold shrink-0" aria-hidden="true" />
+                      
                       <span>LEGAL PRACTICE · EST. 2007</span>
                     </p>
 
@@ -241,18 +233,10 @@ export default function Hero() {
 
             {/* Overlaid Typography Stage */}
             <div className="relative z-10 flex-1 flex flex-col justify-center px-6 sm:px-10 md:px-14 lg:px-16 xl:px-20 py-8 sm:py-12 lg:py-14 lg:mr-16 xl:mr-20">
-              {/* Mobile Top Brand Masthead (< lg) */}
-              <div className="lg:hidden flex items-center gap-2.5 mb-5 pb-2.5 border-b border-white/10">
-                <span className="w-4 h-0.5 bg-brand-gold" aria-hidden="true" />
-                <span className="text-xs font-serif font-bold tracking-[0.2em] text-white uppercase">
-                  Habeeb Salawu Chambers
-                </span>
-              </div>
-
               <div className="max-w-3xl">
                 {/* Category Eyebrow */}
                 <p className="text-xs sm:text-[13px] font-normal tracking-[0.24em] text-brand-gold uppercase mb-2.5 sm:mb-3.5 flex items-center gap-2.5">
-                  <span className="w-5 h-0.5 bg-brand-gold shrink-0" aria-hidden="true" />
+                  
                   <span>Legal Practice · Est. 2007</span>
                 </p>
 
