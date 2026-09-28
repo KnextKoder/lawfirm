@@ -317,7 +317,7 @@ export default function CorePractice() {
         <div className="pb-8 sm:pb-10 border-b border-brand-gold/30">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-sm font-semibold tracking-wider text-brand-blue">
-              &sect; Complete Directory
+              Complete Directory
             </span>
             <span className="text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase">
               All 13 Practice Disciplines

@@ -59,7 +59,7 @@ export default function FurtherPractice() {
         {/* Top Header Row */}
         <div className="flex items-center gap-4 pb-6 sm:pb-8 border-b border-brand-gold/30">
           <span className="text-sm font-semibold tracking-wider text-brand-blue">
-            &sect; II
+            II
           </span>
           <span className="text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase">
             Further Areas of Practice

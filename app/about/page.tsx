@@ -74,7 +74,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
               <div className="lg:col-span-3 flex flex-col space-y-2 lg:space-y-3 pt-1">
                 <span className="text-sm font-semibold tracking-wider text-brand-blue">
-                  &sect; Overview
+                  Overview
                 </span>
                 <p className="text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase">
                   Founded in 2007
@@ -115,7 +115,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
               <div className="lg:col-span-3 flex flex-col space-y-2 lg:space-y-3 pt-1">
                 <span className="text-sm font-semibold tracking-wider text-brand-blue">
-                  &sect; Practitioners
+                  Practitioners
                 </span>
                 <p className="text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase">
                   Our Lawyers
@@ -168,7 +168,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
               <div className="lg:col-span-3 flex flex-col space-y-2 lg:space-y-3 pt-1">
                 <span className="text-sm font-semibold tracking-wider text-brand-blue">
-                  &sect; Track Record
+                  Track Record
                 </span>
                 <p className="text-xs font-semibold tracking-[0.22em] text-brand-gold uppercase">
                   Our Experience
@@ -210,7 +210,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start mb-12">
               <div className="lg:col-span-3 flex flex-col space-y-2 lg:space-y-3 pt-1">
                 <span className="text-sm font-semibold tracking-wider text-brand-blue">
-                  &sect; Methodology
+                  Methodology
                 </span>
                 <p className="text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase">
                   Our Approach

@@ -89,10 +89,34 @@ export default function Footer() {
             <ul className="space-y-2.5">
               <li>
                 <Link
-                  href="/#the-firm"
+                  href="/about"
                   className="text-white/80 hover:text-brand-blue text-sm transition-colors duration-150"
                 >
-                  The Firm
+                  About the Firm
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/experience"
+                  className="text-white/80 hover:text-brand-blue text-sm transition-colors duration-150"
+                >
+                  Experience &amp; Clientele
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/practice-areas"
+                  className="text-white/80 hover:text-brand-blue text-sm transition-colors duration-150"
+                >
+                  Practice Areas
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-white/80 hover:text-brand-blue text-sm transition-colors duration-150"
+                >
+                  Contact Chambers
                 </Link>
               </li>
             </ul>

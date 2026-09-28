@@ -97,7 +97,7 @@ export default function TheFirm() {
             {/* Left Column / Metadata Sidebar (3 cols on lg) */}
             <div className="lg:col-span-3 flex flex-col space-y-3 lg:space-y-4 pt-1">
               <span className="text-sm font-semibold tracking-wider text-brand-blue">
-                &sect; 01
+                01
               </span>
               <p className="text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase">
                 A Firm Built on Experience
@@ -158,7 +158,7 @@ export default function TheFirm() {
             {/* Left badge */}
             <div className="flex flex-col space-y-2">
               <span className="text-sm font-semibold tracking-wider text-brand-blue">
-                &sect; 02
+                02
               </span>
               <p className="text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase">
                 Practice Areas
@@ -237,7 +237,7 @@ export default function TheFirm() {
             {/* Left Column / Metadata Sidebar (3 cols on lg) */}
             <div className="lg:col-span-3 flex flex-col space-y-2 lg:space-y-3 pt-1">
               <span className="text-sm font-semibold tracking-wider text-brand-blue">
-                &sect; 03
+                03
               </span>
               <p className="text-xs font-semibold tracking-[0.22em] text-brand-gold uppercase">
                 Track Record
@@ -313,7 +313,7 @@ export default function TheFirm() {
             {/* Left Column / Metadata Sidebar (3 cols on lg) */}
             <div className="lg:col-span-3 flex flex-col space-y-2 lg:space-y-3 pt-1">
               <span className="text-sm font-semibold tracking-wider text-brand-blue">
-                &sect; 04
+                04
               </span>
               <p className="text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase">
                 Our Legal Practitioners

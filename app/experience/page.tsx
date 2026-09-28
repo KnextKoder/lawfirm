@@ -160,7 +160,7 @@ export default function ExperiencePage() {
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-4 border-b border-brand-gold/30">
               <div>
                 <span className="text-sm font-semibold tracking-wider text-brand-blue block mb-1">
-                  &sect; Clientele
+                  Clientele
                 </span>
                 <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-navy tracking-tight">
                   Selected Clients by Sector
@@ -224,7 +224,7 @@ export default function ExperiencePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl mb-12">
               <span className="text-sm font-semibold tracking-wider text-brand-blue block mb-2">
-                &sect; Focus &amp; Capability
+                Focus &amp; Capability
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl text-brand-navy tracking-tight mb-4">
                 Five Key Areas of Experience
