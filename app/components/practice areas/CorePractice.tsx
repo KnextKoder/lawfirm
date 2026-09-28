@@ -328,15 +328,61 @@ export default function CorePractice() {
             Our full-service practice enables us to advise and represent clients across a wide range of legal matters &mdash; from front-line court advocacy to high-stakes transactional and regulatory advisory.
           </p>
 
-          {/* Quick-Jump Index Pills */}
-          <div className="flex flex-wrap gap-2 pt-2">
+          {/* Quick-Jump Index for Mobile (< sm): Dropdown + Horizontal Snap Scroll */}
+          <div className="sm:hidden space-y-3 pt-2">
+            {/* 1-Tap Quick Select Dropdown */}
+            <div className="relative">
+              <select
+                aria-label="Quick-jump to any of the 13 practice disciplines"
+                defaultValue=""
+                onChange={(e) => {
+                  if (e.target.value) {
+                    const el = document.getElementById(e.target.value);
+                    if (el) {
+                      el.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }
+                }}
+                className="w-full bg-slate-50 border border-brand-gold/40 text-brand-navy py-3 px-3.5 pr-10 text-xs font-semibold uppercase tracking-wider rounded-xs appearance-none focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-brand-blue cursor-pointer shadow-2xs"
+              >
+                <option value="" disabled>
+                  &darr; Jump directly to a practice area (01 &ndash; 13)...
+                </option>
+                {allPractices.map((p) => (
+                  <option key={p.id} value={p.id}>
+                    {p.number}. {p.title}
+                  </option>
+                ))}
+              </select>
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3.5 text-brand-gold">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+
+            {/* Horizontal Swipeable Chip Rail with Snap */}
+            <div className="flex gap-2 overflow-x-auto [-ms-overflow-style:none] scrollbar-none [&::-webkit-scrollbar]:hidden py-1 -mx-4 px-4 scroll-smooth snap-x snap-mandatory">
+              {allPractices.map((p) => (
+                <a
+                  key={p.id}
+                  href={`#${p.id}`}
+                  className="shrink-0 snap-start inline-flex items-center gap-1.5 px-3 py-2 rounded-xs text-xs font-medium text-brand-navy bg-slate-50 border border-brand-gold/30 hover:border-brand-blue hover:text-brand-blue active:bg-brand-navy active:text-white transition-colors shadow-2xs"
+                >
+                  <span className="whitespace-nowrap">{p.title}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick-Jump Index Pills for Tablet & Desktop (sm and up) */}
+          <div className="hidden sm:flex sm:flex-wrap gap-2 pt-2">
             {allPractices.map((p) => (
               <a
                 key={p.id}
                 href={`#${p.id}`}
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xs text-xs font-medium text-brand-navy bg-slate-50 border border-brand-gold/30 hover:border-brand-blue hover:text-brand-blue transition-colors"
               >
-                <span className="text-brand-blue font-semibold">{p.number}</span>
                 <span>{p.title}</span>
               </a>
             ))}
@@ -367,9 +413,6 @@ export default function CorePractice() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
                 {/* Left Column: Number, Title, Description, and Special Note */}
                 <div className="lg:col-span-5 flex flex-col">
-                  <span className="text-sm font-semibold tracking-wider text-brand-blue mb-3">
-                    {practice.number}
-                  </span>
                   <h2 className="font-serif text-2xl sm:text-3xl lg:text-[2.2rem] text-brand-navy leading-[1.2] tracking-tight mb-4">
                     {practice.title}
                   </h2>
@@ -384,16 +427,6 @@ export default function CorePractice() {
                       </p>
                     </div>
                   )}
-
-                  <div className="mt-6">
-                    <Link
-                      href="/contact"
-                      className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand-blue hover:text-brand-navy transition-colors"
-                    >
-                      <span>Inquire About This Practice</span>
-                      <span>&rarr;</span>
-                    </Link>
-                  </div>
                 </div>
 
                 {/* Right Column: Work Scope List */}

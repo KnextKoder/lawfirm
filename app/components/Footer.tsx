@@ -1,59 +1,4 @@
-import React from "react";
 import Link from "next/link";
-
-export function HSCFooterEmblem({ className = "h-11 w-auto" }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 100 80"
-      className={className}
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-label="Habeeb Salawu Chambers Inverted Emblem"
-    >
-      {/* White curved foundation plinth */}
-      <path d="M 6 72 Q 50 63 94 72 L 96 66 Q 50 56 4 66 Z" fill="#ffffff" />
-
-      {/* White 'H' Structure */}
-      <path
-        d="M 12 18 L 30 18 L 30 24 L 25 24 L 25 64 L 31 64 L 31 70 L 8 70 L 8 64 L 14 64 L 14 24 L 9 24 L 9 18 Z"
-        fill="#ffffff"
-      />
-      <path
-        d="M 70 18 L 88 18 L 88 24 L 83 24 L 83 64 L 89 64 L 89 70 L 66 70 L 66 64 L 72 64 L 72 24 L 67 24 L 67 18 Z"
-        fill="#ffffff"
-      />
-      <path d="M 25 38 L 72 38 L 72 64 L 25 64 Z" fill="#ffffff" />
-
-      {/* Light Blue 'S' (#2D6CDF) */}
-      <text
-        x="50"
-        y="34"
-        textAnchor="middle"
-        fontFamily="var(--font-serif), Georgia, serif"
-        fontSize="28"
-        fontWeight="700"
-        fill="#2D6CDF"
-        letterSpacing="0"
-      >
-        S
-      </text>
-
-      {/* Deep Navy 'C' (#0A1B33) centered in the white crossbar field */}
-      <text
-        x="50"
-        y="58"
-        textAnchor="middle"
-        fontFamily="var(--font-serif), Georgia, serif"
-        fontSize="24"
-        fontWeight="700"
-        fill="#0A1B33"
-        letterSpacing="0"
-      >
-        C
-      </text>
-    </svg>
-  );
-}
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -70,7 +15,6 @@ export default function Footer() {
               className="flex items-center gap-3.5 group focus:outline-none"
               aria-label="Habeeb Salawu Chambers Home"
             >
-              <HSCFooterEmblem className="h-10 sm:h-11 w-auto" />
               <span className="font-serif text-xl sm:text-[1.38rem] font-semibold text-white tracking-tight group-hover:text-brand-blue transition-colors">
                 Habeeb Salawu Chambers
               </span>
@@ -101,6 +45,14 @@ export default function Footer() {
                   className="text-white/80 hover:text-brand-blue text-sm transition-colors duration-150"
                 >
                   Experience &amp; Clientele
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/careers"
+                  className="text-white/80 hover:text-brand-blue text-sm transition-colors duration-150"
+                >
+                  Careers
                 </Link>
               </li>
               <li>

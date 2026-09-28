@@ -164,6 +164,7 @@ export default function Navbar({ logoSrc = "/logo.png", activePath }: NavbarProp
     { label: "About", href: "/about" },
     { label: "Practice Areas", href: "/practice-areas" },
     { label: "Experience", href: "/experience" },
+    { label: "Careers", href: "/careers" },
     { label: "Contact", href: "/contact" },
   ];
 

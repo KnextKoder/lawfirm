@@ -4,42 +4,36 @@ import Image from "next/image";
 
 const practiceAreas = [
   {
-    number: "01",
     title: "Litigation & Dispute Resolution",
     description:
       "Civil, commercial and criminal matters, election petitions, appeals, negotiation and ADR.",
     href: "/practice-areas#litigation-dispute-resolution",
   },
   {
-    number: "02",
     title: "Property & Real Estate",
     description:
       "Land transactions and recovery, title matters, property disputes, leases and development.",
     href: "/practice-areas#property-real-estate",
   },
   {
-    number: "03",
     title: "Asset & Debt Recovery",
     description:
       "Recovery of debts, assets, public revenue and possession; enforcement of obligations.",
     href: "/practice-areas#asset-debt-recovery",
   },
   {
-    number: "04",
     title: "Banking & Finance",
     description:
       "Banking disputes, mortgages, facility matters, security enforcement and financial advisory.",
     href: "/practice-areas#banking-finance",
   },
   {
-    number: "05",
     title: "Corporate & Commercial",
     description:
       "Corporate advisory, transactions, contracts, governance and regulatory compliance.",
     href: "/practice-areas#corporate-commercial",
   },
   {
-    number: "06",
     title: "Institutional & Government Advisory",
     description:
       "Advice and representation for government institutions, public bodies and organisations.",
@@ -88,35 +82,32 @@ export default function TheFirm() {
   return (
     <div id="the-firm" className="w-full bg-white">
       {/* ============================================================ */}
-      {/* § 01 | A FIRM BUILT ON EXPERIENCE (Overview & Library)       */}
+      {/* 01 | A FIRM BUILT ON EXPERIENCE (Overview & Library)         */}
       {/* ============================================================ */}
-      <section className="w-full bg-white py-12 sm:py-14 lg:py-16 border-b border-brand-gold/30">
+      <section className="w-full bg-white py-10 sm:py-12 lg:py-16 border-b border-brand-gold/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top Split Section: Sidebar and Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start">
             {/* Left Column / Metadata Sidebar (3 cols on lg) */}
-            <div className="lg:col-span-3 flex flex-col space-y-3 lg:space-y-4 pt-1">
-              <span className="text-sm font-semibold tracking-wider text-brand-blue">
-                01
-              </span>
-              <p className="text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase">
+            <div className="lg:col-span-3 flex items-center lg:flex-col lg:items-start pt-1">
+              <p className="text-[11px] sm:text-xs font-normal tracking-[0.22em] text-brand-navy/70 uppercase">
                 A Firm Built on Experience
               </p>
             </div>
 
             {/* Right Column / Headline & Two-Column Text (9 cols on lg) */}
             <div className="lg:col-span-9 flex flex-col">
-              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] text-brand-navy leading-[1.18] tracking-tight">
+              <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-[3.25rem] text-brand-navy leading-[1.18] tracking-tight">
                 We combine technical legal expertise with a practical understanding of our clients&rsquo; objectives,{" "}
                 <span className="italic font-normal">from initial assessment through to resolution.</span>
               </h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mt-8 sm:mt-10 lg:mt-10 pt-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 lg:gap-12 mt-6 sm:mt-8 lg:mt-10 pt-2">
                 <p className="text-brand-navy/75 text-[14.5px] sm:text-[15.5px] leading-relaxed font-normal">
                   Since 2007, Habeeb Salawu Chambers has developed a broad legal practice serving clients across the public and private sectors. We have represented government institutions, financial institutions, corporate organisations and private clients in matters involving significant legal, financial, commercial and property interests.
                 </p>
                 <div className="flex flex-col justify-between">
-                  <p className="text-brand-navy/75 text-[14.5px] sm:text-[15.5px] leading-relaxed font-normal mb-6">
+                  <p className="text-brand-navy/75 text-[14.5px] sm:text-[15.5px] leading-relaxed font-normal mb-5 sm:mb-6">
                     Our experience includes complex litigation and dispute resolution, asset and debt recovery, land and property disputes, banking and financial matters, corporate advisory, and institutional legal engagements.
                   </p>
                   <div>
@@ -135,8 +126,8 @@ export default function TheFirm() {
             </div>
           </div>
 
-          {/* Chambers Library Photograph Banner */}
-          <div className="mt-10 sm:mt-12 lg:mt-14 relative w-full h-80 sm:h-110 md:h-140 lg:h-155 overflow-hidden rounded-xs shadow-sm bg-brand-navy border border-brand-gold/30">
+          {/* Chambers Library Photograph Banner (Wide Landscape Crop) */}
+          <div className="mt-8 sm:mt-10 lg:mt-12 relative w-full aspect-[16/9] sm:aspect-[21/9] lg:aspect-[2.6/1] max-h-[420px] overflow-hidden rounded-xs shadow-sm bg-brand-navy border border-brand-gold/30">
             <Image
               src="/assets/bookshelf.jpeg"
               alt="Habeeb Salawu Chambers Library and Private Consultation Suite"
@@ -149,65 +140,72 @@ export default function TheFirm() {
       </section>
 
       {/* ============================================================ */}
-      {/* § 02 | PRACTICE (Where we focus)                            */}
+      {/* 02 | PRACTICE (Where we focus)                               */}
       {/* ============================================================ */}
-      <section id="practice-areas" className="w-full bg-white py-12 sm:py-14 lg:py-16 border-b border-brand-gold/30">
+      <section id="practice-areas" className="w-full bg-white py-8 sm:py-10 lg:py-14 border-b border-brand-gold/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 sm:pb-8 border-b border-brand-gold/30">
+          {/* Section Header: Compact & balanced */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 sm:gap-6 pb-4 sm:pb-6 border-b border-brand-gold/30">
             {/* Left badge */}
-            <div className="flex flex-col space-y-2">
-              <span className="text-sm font-semibold tracking-wider text-brand-blue">
-                02
-              </span>
-              <p className="text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase">
+            <div className="flex items-center md:flex-col md:items-start">
+              <p className="text-[11px] sm:text-xs font-normal tracking-[0.22em] text-brand-navy/70 uppercase">
                 Practice Areas
               </p>
             </div>
 
-            {/* Center title */}
-            <div className="md:px-4">
-              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-brand-navy tracking-tight">
+            {/* Title & Link inline row */}
+            <div className="flex items-baseline justify-between gap-4 flex-1 md:px-6">
+              <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-[40px] text-brand-navy tracking-tight">
                 Where we focus
               </h2>
-            </div>
-
-            {/* Right link */}
-            <div>
               <Link
                 href="/practice-areas"
-                className="inline-block text-brand-navy text-sm font-semibold underline underline-offset-4 decoration-brand-gold/60 hover:text-brand-blue hover:decoration-brand-blue transition-colors duration-150"
+                className="inline-flex items-center gap-1.5 text-brand-navy text-xs sm:text-sm font-semibold underline underline-offset-4 decoration-brand-gold/60 hover:text-brand-blue hover:decoration-brand-blue transition-colors duration-150 shrink-0"
               >
-                All 13 practice areas
+                <span>All 13 practice areas</span>
+                <span aria-hidden="true">&rarr;</span>
               </Link>
             </div>
           </div>
 
-          {/* Practice Areas List */}
+          {/* Practice Areas List: Clean, unnumbered, compact spacing */}
           <div className="divide-y divide-brand-gold/20">
             {practiceAreas.map((area) => (
               <Link
-                key={area.number}
+                key={area.title}
                 href={area.href}
-                className="group flex flex-col md:flex-row md:items-center py-5 sm:py-5.5 lg:py-6 gap-4 md:gap-8 transition-colors duration-150 hover:bg-slate-50/80 px-2 sm:px-4 rounded-xs"
+                className="group block md:flex md:items-center md:justify-between py-3.5 sm:py-4 lg:py-5 md:gap-8 transition-colors duration-150 hover:bg-slate-50/80 px-2 sm:px-3 rounded-xs"
               >
-                {/* Number in Light Blue */}
-                <span className="text-sm sm:text-base font-semibold tracking-wider text-brand-blue w-12 sm:w-16 shrink-0">
-                  {area.number}
-                </span>
-
-                {/* Title */}
-                <h3 className="font-serif text-xl sm:text-2xl text-brand-navy group-hover:text-brand-blue transition-colors w-full md:w-72 lg:w-84 shrink-0 font-normal">
-                  {area.title}
-                </h3>
+                {/* Mobile Title Row: Title with Arrow aligned on the right */}
+                <div className="flex items-center justify-between gap-3 md:w-72 lg:w-84 shrink-0">
+                  <h3 className="font-serif text-[17px] sm:text-xl lg:text-2xl text-brand-navy group-hover:text-brand-blue transition-colors font-normal leading-snug">
+                    {area.title}
+                  </h3>
+                  {/* Arrow for mobile (< md) on the right of title */}
+                  <div className="md:hidden shrink-0 text-brand-gold group-hover:text-brand-blue group-hover:translate-x-1 transition-all duration-150">
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.75"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                      />
+                    </svg>
+                  </div>
+                </div>
 
                 {/* Description */}
-                <p className="text-brand-navy/75 text-[14px] sm:text-[15px] leading-relaxed flex-1">
+                <p className="mt-1 md:mt-0 text-brand-navy/75 text-[13.5px] sm:text-[14.5px] leading-relaxed flex-1 md:px-4">
                   {area.description}
                 </p>
 
-                {/* Right Arrow in Gold */}
-                <div className="shrink-0 pt-2 md:pt-0 text-brand-gold group-hover:text-brand-blue group-hover:translate-x-1.5 transition-all duration-150">
+                {/* Arrow for tablet & desktop (md and up) */}
+                <div className="hidden md:block shrink-0 text-brand-gold group-hover:text-brand-blue group-hover:translate-x-1.5 transition-all duration-150">
                   <svg
                     className="w-5 h-5"
                     fill="none"
@@ -229,24 +227,21 @@ export default function TheFirm() {
       </section>
 
       {/* ============================================================ */}
-      {/* § 03 | TRACK RECORD (Experience across complex matters)      */}
+      {/* 03 | TRACK RECORD (Experience across complex matters)        */}
       {/* ============================================================ */}
-      <section id="experience" className="w-full bg-brand-navy py-12 sm:py-14 lg:py-16 text-white border-b border-brand-gold/30">
+      <section id="experience" className="w-full bg-brand-navy py-10 sm:py-12 lg:py-16 text-white border-b border-brand-gold/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start">
             {/* Left Column / Metadata Sidebar (3 cols on lg) */}
-            <div className="lg:col-span-3 flex flex-col space-y-2 lg:space-y-3 pt-1">
-              <span className="text-sm font-semibold tracking-wider text-brand-blue">
-                03
-              </span>
-              <p className="text-xs font-semibold tracking-[0.22em] text-brand-gold uppercase">
+            <div className="lg:col-span-3 flex items-center lg:flex-col lg:items-start pt-1">
+              <p className="text-[11px] sm:text-xs font-normal tracking-[0.22em] text-brand-gold uppercase">
                 Track Record
               </p>
             </div>
 
             {/* Right Column / Matters & Highlight Note (9 cols on lg) */}
             <div className="lg:col-span-9 flex flex-col">
-              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mb-8 sm:mb-10">
+              <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl text-white tracking-tight mb-6 sm:mb-8 lg:mb-10">
                 Experience across complex matters
               </h2>
 
@@ -257,10 +252,10 @@ export default function TheFirm() {
                   {trackRecordMattersCol1.map((matter) => (
                     <div
                       key={matter}
-                      className="py-3.5 sm:py-4 flex items-start gap-3.5"
+                      className="py-3 sm:py-3.5 flex items-start gap-3"
                     >
                       <span className="w-1.5 h-1.5 bg-brand-blue shrink-0 mt-2 rounded-[1px]" />
-                      <span className="text-slate-200 text-[14.5px] sm:text-[15.5px] leading-snug font-normal">
+                      <span className="text-slate-200 text-[14px] sm:text-[15.5px] leading-snug font-normal">
                         {matter}
                       </span>
                     </div>
@@ -272,10 +267,10 @@ export default function TheFirm() {
                   {trackRecordMattersCol2.map((matter) => (
                     <div
                       key={matter}
-                      className="py-3.5 sm:py-4 flex items-start gap-3.5"
+                      className="py-3 sm:py-3.5 flex items-start gap-3"
                     >
                       <span className="w-1.5 h-1.5 bg-brand-blue shrink-0 mt-2 rounded-[1px]" />
-                      <span className="text-slate-200 text-[14.5px] sm:text-[15.5px] leading-snug font-normal">
+                      <span className="text-slate-200 text-[14px] sm:text-[15.5px] leading-snug font-normal">
                         {matter}
                       </span>
                     </div>
@@ -284,11 +279,11 @@ export default function TheFirm() {
               </div>
 
               {/* Highlighted Engagement Case Note */}
-              <div className="mt-8 sm:mt-10 lg:mt-12 border-l-2 border-brand-gold pl-6 sm:pl-8 py-2 max-w-3xl">
-                <p className="font-serif italic text-[17px] sm:text-lg md:text-[19px] text-slate-200 leading-relaxed font-normal">
-                  Our engagement with the Osun State Government and the Osun State Internal Revenue Service on revenue collection and recovery reflects our broader experience protecting and recovering financial and institutional interests.
+              <div className="mt-6 sm:mt-8 lg:mt-12 border-l-2 border-brand-gold pl-5 sm:pl-8 py-1.5 max-w-3xl">
+                <p className="font-serif italic text-[16px] sm:text-lg md:text-[19px] text-slate-200 leading-relaxed font-normal">
+                  Our engagement with the Osun State Government and the Osun State Internal Revenue Service on tax collection and asset recovery reflects our broader experience protecting and recovering financial and institutional interests.
                 </p>
-                <div className="mt-5">
+                <div className="mt-4 sm:mt-5">
                   <Link
                     href="/experience"
                     className="inline-flex items-center gap-2 text-xs sm:text-[13px] font-semibold tracking-wider text-brand-gold hover:text-white uppercase transition-colors"
@@ -304,58 +299,49 @@ export default function TheFirm() {
       </section>
 
       {/* ============================================================ */}
-      {/* § 04 | OUR LEGAL PRACTITIONERS                              */}
+      {/* 04 | OUR LEGAL PRACTITIONERS                                 */}
       {/* ============================================================ */}
-      <section id="practitioners" className="w-full bg-white py-12 sm:py-14 lg:py-16 border-b border-brand-gold/30">
+      <section id="practitioners" className="w-full bg-white py-10 sm:py-12 lg:py-16 border-b border-brand-gold/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top Section: Practitioners Profile */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start">
             {/* Left Column / Metadata Sidebar (3 cols on lg) */}
-            <div className="lg:col-span-3 flex flex-col space-y-2 lg:space-y-3 pt-1">
-              <span className="text-sm font-semibold tracking-wider text-brand-blue">
-                04
-              </span>
-              <p className="text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase">
+            <div className="lg:col-span-3 flex items-center lg:flex-col lg:items-start pt-1">
+              <p className="text-[11px] sm:text-xs font-normal tracking-[0.22em] text-brand-navy/70 uppercase">
                 Our Legal Practitioners
               </p>
             </div>
 
             {/* Right Column / Practitioners Narrative (9 cols on lg) */}
             <div className="lg:col-span-9 flex flex-col">
-              <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl text-brand-navy tracking-tight">
+              <h3 className="font-serif text-2xl sm:text-4xl md:text-5xl text-brand-navy tracking-tight">
                 Our Legal Practitioners
               </h3>
 
-              <p className="text-brand-navy/75 text-[15px] sm:text-[16px] leading-relaxed max-w-3xl mt-5 font-normal">
+              <p className="text-brand-navy/75 text-[14.5px] sm:text-[16px] leading-relaxed max-w-3xl mt-4 sm:mt-5 font-normal">
                 Our practice is supported by a team of Solicitors and Advocates of the Supreme Court of Nigeria with experience across litigation, dispute resolution, property, banking and finance, corporate and commercial law, recovery matters and institutional legal advisory.
               </p>
 
-              <p className="text-brand-navy/75 text-[14.5px] sm:text-[15.5px] leading-relaxed max-w-3xl mt-3 font-normal">
+              <p className="text-brand-navy/75 text-[14px] sm:text-[15.5px] leading-relaxed max-w-3xl mt-2.5 sm:mt-3 font-normal">
                 Working collaboratively across different areas of practice, our lawyers combine legal research, advocacy, advisory and transactional capabilities to provide clients with comprehensive legal support.
               </p>
 
               {/* Principal Counsel Profile Block */}
-              <div className="mt-8 pt-6 border-t border-brand-gold/25 max-w-3xl">
-                <h4 className="font-serif text-2xl sm:text-3xl text-brand-navy tracking-tight">
+              <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-brand-gold/25 max-w-3xl">
+                <h4 className="font-serif text-xl sm:text-2xl md:text-3xl text-brand-navy tracking-tight">
                   Habeeb Salawu
                 </h4>
 
-                <div className="flex flex-wrap items-center gap-2 text-[11.5px] sm:text-xs font-semibold tracking-[0.16em] text-brand-navy/70 uppercase mt-2">
-                  <span>LL.B (ILORIN), 2005</span>
-                  <span className="text-brand-gold font-bold">&bull;</span>
-                  <span>CALLED TO THE NIGERIAN BAR, 2007</span>
-                </div>
-
-                <p className="text-brand-navy/75 text-[14.5px] sm:text-[15.5px] leading-relaxed mt-4 font-normal">
-                  The firm&rsquo;s practice is led by Habeeb Salawu, who was called to the Nigerian Bar in 2007 and has over 19 years of professional legal practice. He has built extensive experience in litigation, dispute resolution, property law, banking and finance, asset and debt recovery, corporate advisory and institutional legal services.
+                <p className="text-brand-navy/75 text-[14px] sm:text-[15.5px] leading-relaxed mt-2.5 sm:mt-3 font-normal">
+                  The firm&rsquo;s practice is led by Habeeb Salawu. With over 19 years of professional legal practice, he has built extensive experience in litigation, dispute resolution, property law, banking and finance, asset and debt recovery, corporate advisory and institutional legal services.
                 </p>
 
-                <div className="mt-5">
+                <div className="mt-4 sm:mt-5">
                   <Link
                     href="/about"
                     className="inline-flex items-center gap-2 text-xs sm:text-[13px] font-bold uppercase tracking-[0.2em] text-brand-navy hover:text-brand-blue border-b-2 border-brand-gold pb-1 transition-colors"
                   >
-                    <span>Read more in About the Firm</span>
+                    <span>Read more</span>
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
@@ -366,24 +352,31 @@ export default function TheFirm() {
           </div>
 
           {/* Bottom Section: Our Approach */}
-          <div className="mt-12 sm:mt-14 pt-8 sm:pt-10 border-t border-brand-gold/30">
-            <p className="text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase mb-6 sm:mb-8">
+          <div className="mt-8 sm:mt-10 lg:mt-12 pt-5 sm:pt-7 lg:pt-8 border-t border-brand-gold/30">
+            <p className="text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase mb-3.5 sm:mb-6">
               Our Approach
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
               {approaches.map((item) => (
-                <div key={item.roman} className="flex flex-col">
-                  {/* Roman Numeral in Gold */}
-                  <span className="text-brand-gold italic font-serif text-base sm:text-lg mb-2.5 font-normal">
-                    {item.roman}
-                  </span>
-                  <h4 className="font-serif text-lg sm:text-xl font-bold text-brand-navy mb-2.5 leading-snug">
-                    {item.title}
-                  </h4>
-                  <p className="text-brand-navy/75 text-[13px] sm:text-[13.5px] leading-relaxed font-normal">
-                    {item.description}
-                  </p>
+                <div
+                  key={item.roman}
+                  className="p-3.5 sm:p-4.5 lg:p-5 bg-slate-50/70 border border-brand-gold/25 hover:border-brand-gold/50 rounded-xs flex flex-col justify-between transition-colors duration-150"
+                >
+                  <div>
+                    <div className="flex items-baseline gap-2 mb-1.5">
+                      {/* Roman Numeral in Gold */}
+                      <span className="text-brand-gold italic font-serif text-base sm:text-lg font-normal shrink-0">
+                        {item.roman}
+                      </span>
+                      <h4 className="font-serif text-[15.5px] sm:text-base lg:text-lg font-bold text-brand-navy leading-snug">
+                        {item.title}
+                      </h4>
+                    </div>
+                    <p className="text-brand-navy/75 text-[13px] sm:text-[13.5px] leading-relaxed font-normal">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>

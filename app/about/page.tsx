@@ -96,8 +96,8 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Library / Office Photo Accent */}
-            <div className="mt-12 sm:mt-16 relative w-full h-72 sm:h-96 md:h-120 overflow-hidden rounded-xs border border-brand-gold/30 shadow-sm bg-brand-navy">
+            {/* Library / Office Photo Accent (Wide Landscape Crop) */}
+            <div className="mt-8 sm:mt-12 relative w-full aspect-video sm:aspect-21/9 lg:aspect-[2.6/1] max-h-105 overflow-hidden rounded-xs border border-brand-gold/30 shadow-sm bg-brand-navy">
               <Image
                 src="/assets/bookshelf.jpeg"
                 alt="Chambers Law Library"
@@ -125,7 +125,7 @@ export default function AboutPage() {
               <div className="lg:col-span-9 flex flex-col space-y-8">
                 <div>
                   <h2 className="font-serif text-3xl sm:text-4xl text-brand-navy tracking-tight mb-5">
-                    Advocates &amp; Legal Advisers
+                    Advocates &amp; Legal Councels
                   </h2>
                   <p className="text-brand-navy/80 text-base sm:text-[17px] leading-relaxed font-normal mb-4">
                     Our team comprises Solicitors and Advocates of the Supreme Court of Nigeria with experience across various areas of Nigerian legal practice.
@@ -137,24 +137,17 @@ export default function AboutPage() {
 
                 {/* Principal Counsel Card */}
                 <div className="bg-white border border-brand-gold/35 p-8 sm:p-10 lg:p-12 shadow-sm rounded-xs">
-                  <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 pb-6 border-b border-brand-gold/25">
-                    <div>
-                      <span className="text-xs font-semibold tracking-[0.22em] text-brand-blue uppercase block mb-1">
-                        Principal Counsel
-                      </span>
-                      <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-navy tracking-tight">
-                        Habeeb Salawu
-                      </h3>
-                    </div>
-                    <div className="flex flex-wrap items-center gap-2 text-xs font-semibold tracking-wider text-brand-navy/70 uppercase bg-slate-50 px-3.5 py-2 border border-brand-gold/20 rounded-xs">
-                      <span>LL.B (ILORIN), 2005</span>
-                      <span className="text-brand-gold font-bold">&bull;</span>
-                      <span>CALLED TO THE NIGERIAN BAR, 2007</span>
-                    </div>
+                  <div className="pb-5 sm:pb-6 border-b border-brand-gold/25">
+                    <span className="text-xs font-semibold tracking-[0.22em] text-brand-blue uppercase block mb-1">
+                      Principal Counsel
+                    </span>
+                    <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-navy tracking-tight">
+                      Habeeb Salawu
+                    </h3>
                   </div>
 
                   <p className="text-brand-navy/75 text-[15px] sm:text-[16px] leading-relaxed mt-6 font-normal">
-                    The firm is led by Habeeb Salawu, who obtained his LL.B from the University of Ilorin in 2005 and was called to the Nigerian Bar in 2007. He has practised continuously since then and has developed extensive experience in litigation, dispute resolution, property law, banking and finance, asset and debt recovery, corporate advisory and institutional legal services.
+                    The firm is led by Habeeb Salawu. With over 19 years of professional legal practice, he has developed extensive experience in litigation, dispute resolution, property law, banking and finance, asset and debt recovery, corporate advisory and institutional legal services.
                   </p>
                 </div>
               </div>
@@ -166,13 +159,7 @@ export default function AboutPage() {
         <section className="w-full bg-brand-navy py-12 sm:py-16 lg:py-20 text-white border-b border-brand-gold/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-              <div className="lg:col-span-3 flex flex-col space-y-2 lg:space-y-3 pt-1">
-                <span className="text-sm font-semibold tracking-wider text-brand-blue">
-                  Track Record
-                </span>
-                <p className="text-xs font-semibold tracking-[0.22em] text-brand-gold uppercase">
-                  Our Experience
-                </p>
+              <div className="lg:col-span-3 pt-1">
               </div>
 
               <div className="lg:col-span-9 flex flex-col space-y-6">
@@ -195,7 +182,7 @@ export default function AboutPage() {
                     href="/experience"
                     className="inline-flex items-center gap-2 text-xs sm:text-[13px] font-semibold tracking-wider uppercase text-brand-gold hover:text-white transition-colors"
                   >
-                    <span>View detailed client portfolio &amp; areas of experience</span>
+                    <span>Client Portfolio &amp; Areas of Experience</span>
                     <span>&rarr;</span>
                   </Link>
                 </div>
@@ -208,12 +195,9 @@ export default function AboutPage() {
         <section className="w-full bg-white py-12 sm:py-16 lg:py-20 border-b border-brand-gold/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start mb-12">
-              <div className="lg:col-span-3 flex flex-col space-y-2 lg:space-y-3 pt-1">
-                <span className="text-sm font-semibold tracking-wider text-brand-blue">
+              <div className="lg:col-span-3 pt-1">
+                <p className="text-xs sm:text-sm font-normal tracking-[0.22em] text-brand-blue uppercase">
                   Methodology
-                </span>
-                <p className="text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase">
-                  Our Approach
                 </p>
               </div>
 
@@ -227,18 +211,25 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 border-t border-brand-gold/30 pt-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 border-t border-brand-gold/30 pt-8 sm:pt-10">
               {approaches.map((item) => (
-                <div key={item.roman} className="flex flex-col">
-                  <span className="text-brand-gold italic font-serif text-lg mb-2.5 font-normal">
-                    {item.roman}
-                  </span>
-                  <h3 className="font-serif text-xl font-bold text-brand-navy mb-2.5 leading-snug">
-                    {item.title}
-                  </h3>
-                  <p className="text-brand-navy/75 text-[14px] leading-relaxed font-normal">
-                    {item.description}
-                  </p>
+                <div
+                  key={item.roman}
+                  className="p-3.5 sm:p-4.5 lg:p-5 bg-slate-50/70 border border-brand-gold/25 hover:border-brand-gold/50 rounded-xs flex flex-col justify-between transition-colors duration-150"
+                >
+                  <div>
+                    <div className="flex items-baseline gap-2 mb-1.5">
+                      <span className="text-brand-gold italic font-serif text-base sm:text-lg font-normal shrink-0">
+                        {item.roman}
+                      </span>
+                      <h3 className="font-serif text-[15.5px] sm:text-base lg:text-lg font-bold text-brand-navy leading-snug">
+                        {item.title}
+                      </h3>
+                    </div>
+                    <p className="text-brand-navy/75 text-[13px] sm:text-[13.5px] leading-relaxed font-normal">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>

@@ -238,9 +238,6 @@ export default function ExperiencePage() {
               {areasOfExperience.map((area) => (
                 <div key={area.number} className="py-10 sm:py-12 lg:py-14 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start">
                   <div className="lg:col-span-5 flex flex-col">
-                    <span className="text-sm font-semibold tracking-wider text-brand-blue mb-2">
-                      {area.number}
-                    </span>
                     <h3 className="font-serif text-2xl sm:text-3xl text-brand-navy tracking-tight mb-4">
                       {area.title}
                     </h3>

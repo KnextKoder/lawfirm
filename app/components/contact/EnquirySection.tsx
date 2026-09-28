@@ -11,6 +11,7 @@ export default function EnquirySection() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
   
   const practiceAreaOptions = [
     "Litigation & Dispute Resolution",
@@ -29,14 +30,27 @@ export default function EnquirySection() {
     "Other Legal Assistance",
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate submission
-    setTimeout(() => {
+    setErrorMsg(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const json = await res.json();
+      if (!res.ok) {
+        setErrorMsg(json.error || "Something went wrong. Please try again.");
+      } else {
+        setSubmitted(true);
+      }
+    } catch {
+      setErrorMsg("Network error. Please check your connection and try again.");
+    } finally {
       setIsSubmitting(false);
-      setSubmitted(true);
-    }, 600);
+    }
   };
 
   const handleReset = () => {
@@ -307,6 +321,13 @@ export default function EnquirySection() {
                       confirms it is able to act.
                     </p>
                   </div>
+
+                  {/* Error Message */}
+                  {errorMsg && (
+                    <div className="border-l-2 border-red-500 pl-3.5 py-0.5">
+                      <p className="text-xs text-red-600 leading-relaxed">{errorMsg}</p>
+                    </div>
+                  )}
 
                   {/* Submit Button */}
                   <div className="pt-2">
