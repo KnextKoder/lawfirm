@@ -310,7 +310,7 @@ export default function Navbar({ logoSrc = "/logo.png", activePath }: NavbarProp
             </div>
           </div>
         </div>
-      )}
+      )} 
     </header>
   );
 }
