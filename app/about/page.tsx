@@ -73,10 +73,10 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
               <div className="lg:col-span-3 flex flex-col space-y-2 lg:space-y-3 pt-1">
-                <span className="text-sm font-semibold tracking-wider text-brand-blue">
+                <span className="text-sm md:text-base font-semibold tracking-wider text-brand-blue">
                   Overview
                 </span>
-                <p className="text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase">
+                <p className="text-sm md:text-base font-semibold tracking-[0.22em] text-brand-navy/70 uppercase">
                   Founded in 2007
                 </p>
               </div>
@@ -114,10 +114,10 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
               <div className="lg:col-span-3 flex flex-col space-y-2 lg:space-y-3 pt-1">
-                <span className="text-sm font-semibold tracking-wider text-brand-blue">
+                <span className="text-sm md:text-base font-semibold tracking-wider text-brand-blue">
                   Practitioners
                 </span>
-                <p className="text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase">
+                <p className="text-sm md:text-base font-semibold tracking-[0.22em] text-brand-navy/70 uppercase">
                   Our Lawyers
                 </p>
               </div>
@@ -125,7 +125,7 @@ export default function AboutPage() {
               <div className="lg:col-span-9 flex flex-col space-y-8">
                 <div>
                   <h2 className="font-serif text-3xl sm:text-4xl text-brand-navy tracking-tight mb-5">
-                    Advocates &amp; Legal Councels
+                    Advocates &amp; Legal Counsels
                   </h2>
                   <p className="text-brand-navy/80 text-base sm:text-[17px] leading-relaxed font-normal mb-4">
                     Our team comprises Solicitors and Advocates of the Supreme Court of Nigeria with experience across various areas of Nigerian legal practice.
@@ -138,7 +138,7 @@ export default function AboutPage() {
                 {/* Principal Counsel Card */}
                 <div className="bg-white border border-brand-gold/35 p-8 sm:p-10 lg:p-12 shadow-sm rounded-xs">
                   <div className="pb-5 sm:pb-6 border-b border-brand-gold/25">
-                    <span className="text-xs font-semibold tracking-[0.22em] text-brand-blue uppercase block mb-1">
+                    <span className="text-xs sm:text-[13px] font-semibold tracking-[0.22em] text-brand-blue uppercase block mb-1">
                       Principal Counsel
                     </span>
                     <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-navy tracking-tight">
@@ -196,7 +196,7 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start mb-12">
               <div className="lg:col-span-3 pt-1">
-                <p className="text-xs sm:text-sm font-normal tracking-[0.22em] text-brand-blue uppercase">
+                <p className="text-sm md:text-base font-normal tracking-[0.22em] text-brand-blue uppercase">
                   Methodology
                 </p>
               </div>

@@ -90,7 +90,7 @@ export default function TheFirm() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start">
             {/* Left Column / Metadata Sidebar (3 cols on lg) */}
             <div className="lg:col-span-3 flex items-center lg:flex-col lg:items-start pt-1">
-              <p className="text-[11px] sm:text-xs font-normal tracking-[0.22em] text-brand-navy/70 uppercase">
+              <p className="text-sm md:text-base font-normal tracking-[0.22em] text-brand-navy/70 uppercase">
                 A Firm Built on Experience
               </p>
             </div>
@@ -127,7 +127,7 @@ export default function TheFirm() {
           </div>
 
           {/* Chambers Library Photograph Banner (Wide Landscape Crop) */}
-          <div className="mt-8 sm:mt-10 lg:mt-12 relative w-full aspect-[16/9] sm:aspect-[21/9] lg:aspect-[2.6/1] max-h-[420px] overflow-hidden rounded-xs shadow-sm bg-brand-navy border border-brand-gold/30">
+          <div className="mt-8 sm:mt-10 lg:mt-12 relative w-full aspect-video sm:aspect-21/9 lg:aspect-[2.6/1] max-h-105 overflow-hidden rounded-xs shadow-sm bg-brand-navy border border-brand-gold/30">
             <Image
               src="/assets/bookshelf.jpeg"
               alt="Habeeb Salawu Chambers Library and Private Consultation Suite"
@@ -148,7 +148,7 @@ export default function TheFirm() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 sm:gap-6 pb-4 sm:pb-6 border-b border-brand-gold/30">
             {/* Left badge */}
             <div className="flex items-center md:flex-col md:items-start">
-              <p className="text-[11px] sm:text-xs font-normal tracking-[0.22em] text-brand-navy/70 uppercase">
+              <p className="text-sm md:text-base font-normal tracking-[0.22em] text-brand-navy/70 uppercase">
                 Practice Areas
               </p>
             </div>
@@ -234,7 +234,7 @@ export default function TheFirm() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start">
             {/* Left Column / Metadata Sidebar (3 cols on lg) */}
             <div className="lg:col-span-3 flex items-center lg:flex-col lg:items-start pt-1">
-              <p className="text-[11px] sm:text-xs font-normal tracking-[0.22em] text-brand-gold uppercase">
+              <p className="text-sm md:text-base font-normal tracking-[0.22em] text-brand-gold uppercase">
                 Track Record
               </p>
             </div>
@@ -307,7 +307,7 @@ export default function TheFirm() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start">
             {/* Left Column / Metadata Sidebar (3 cols on lg) */}
             <div className="lg:col-span-3 flex items-center lg:flex-col lg:items-start pt-1">
-              <p className="text-[11px] sm:text-xs font-normal tracking-[0.22em] text-brand-navy/70 uppercase">
+              <p className="text-sm md:text-base font-normal tracking-[0.22em] text-brand-navy/70 uppercase">
                 Our Legal Practitioners
               </p>
             </div>
@@ -327,15 +327,7 @@ export default function TheFirm() {
               </p>
 
               {/* Principal Counsel Profile Block */}
-              <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-brand-gold/25 max-w-3xl">
-                <h4 className="font-serif text-xl sm:text-2xl md:text-3xl text-brand-navy tracking-tight">
-                  Habeeb Salawu
-                </h4>
-
-                <p className="text-brand-navy/75 text-[14px] sm:text-[15.5px] leading-relaxed mt-2.5 sm:mt-3 font-normal">
-                  The firm&rsquo;s practice is led by Habeeb Salawu. With over 19 years of professional legal practice, he has built extensive experience in litigation, dispute resolution, property law, banking and finance, asset and debt recovery, corporate advisory and institutional legal services.
-                </p>
-
+              <div>
                 <div className="mt-4 sm:mt-5">
                   <Link
                     href="/about"
@@ -353,7 +345,7 @@ export default function TheFirm() {
 
           {/* Bottom Section: Our Approach */}
           <div className="mt-8 sm:mt-10 lg:mt-12 pt-5 sm:pt-7 lg:pt-8 border-t border-brand-gold/30">
-            <p className="text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase mb-3.5 sm:mb-6">
+            <p className="text-sm md:text-base font-semibold tracking-[0.22em] text-brand-navy/70 uppercase mb-3.5 sm:mb-6">
               Our Approach
             </p>
 

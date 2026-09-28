@@ -313,24 +313,10 @@ export default function CorePractice() {
   return (
     <section className="w-full bg-white py-12 sm:py-14 lg:py-16 border-b border-brand-gold/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Top Header Row with Quick Jump Links */}
-        <div className="pb-8 sm:pb-10 border-b border-brand-gold/30">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="text-sm font-semibold tracking-wider text-brand-blue">
-              Complete Directory
-            </span>
-            <span className="text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase">
-              All 13 Practice Disciplines
-            </span>
-          </div>
-
-          <p className="text-brand-navy/75 text-sm sm:text-base leading-relaxed max-w-3xl mb-6">
-            Our full-service practice enables us to advise and represent clients across a wide range of legal matters &mdash; from front-line court advocacy to high-stakes transactional and regulatory advisory.
-          </p>
-
-          {/* Quick-Jump Index for Mobile (< sm): Dropdown + Horizontal Snap Scroll */}
-          <div className="sm:hidden space-y-3 pt-2">
-            {/* 1-Tap Quick Select Dropdown */}
+        {/* Quick-Jump Nav */}
+        <div className="pb-6 border-b border-brand-gold/30">
+          {/* Dropdown for Mobile */}
+          <div className="sm:hidden">
             <div className="relative">
               <select
                 aria-label="Quick-jump to any of the 13 practice disciplines"
@@ -360,23 +346,10 @@ export default function CorePractice() {
                 </svg>
               </div>
             </div>
-
-            {/* Horizontal Swipeable Chip Rail with Snap */}
-            <div className="flex gap-2 overflow-x-auto [-ms-overflow-style:none] scrollbar-none [&::-webkit-scrollbar]:hidden py-1 -mx-4 px-4 scroll-smooth snap-x snap-mandatory">
-              {allPractices.map((p) => (
-                <a
-                  key={p.id}
-                  href={`#${p.id}`}
-                  className="shrink-0 snap-start inline-flex items-center gap-1.5 px-3 py-2 rounded-xs text-xs font-medium text-brand-navy bg-slate-50 border border-brand-gold/30 hover:border-brand-blue hover:text-brand-blue active:bg-brand-navy active:text-white transition-colors shadow-2xs"
-                >
-                  <span className="whitespace-nowrap">{p.title}</span>
-                </a>
-              ))}
-            </div>
           </div>
 
-          {/* Quick-Jump Index Pills for Tablet & Desktop (sm and up) */}
-          <div className="hidden sm:flex sm:flex-wrap gap-2 pt-2">
+          {/* Horizontal Chip Strip for Tablet & Desktop */}
+          <div className="hidden sm:flex sm:flex-wrap gap-2">
             {allPractices.map((p) => (
               <a
                 key={p.id}
@@ -395,7 +368,7 @@ export default function CorePractice() {
             <div
               key={practice.number}
               id={practice.id}
-              className="scroll-mt-24 sm:scroll-mt-28 py-10 sm:py-12 lg:py-14 border-b border-brand-gold/20 last:border-b-0 relative"
+              className="scroll-mt-24 sm:scroll-mt-28 py-7 sm:py-9 border-b border-brand-gold/20 last:border-b-0 relative"
             >
               {practice.aliases?.map((alias) => (
                 <span
@@ -430,8 +403,8 @@ export default function CorePractice() {
                 </div>
 
                 {/* Right Column: Work Scope List */}
-                <div className="lg:col-span-7 flex flex-col pt-1">
-                  <p className="text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-brand-gold uppercase mb-5 sm:mb-6">
+                <div className="lg:col-span-7 flex flex-col md:pt-1">
+                  <p className="text-xs sm:text-[13px] font-semibold tracking-[0.22em] text-brand-gold uppercase mb-5 sm:mb-6">
                     Our work includes
                   </p>
 
@@ -476,7 +449,7 @@ export default function CorePractice() {
         <div className="mt-14 border border-brand-gold/30 bg-brand-navy text-white p-8 sm:p-10 lg:p-12 shadow-sm rounded-xs">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8">
-              <span className="text-xs font-semibold tracking-[0.22em] text-brand-gold uppercase block mb-2">
+              <span className="text-xs sm:text-[13px] font-semibold tracking-[0.22em] text-brand-gold uppercase block mb-2">
                 Legal Advisory &amp; Assessment
               </span>
               <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl text-white tracking-tight">

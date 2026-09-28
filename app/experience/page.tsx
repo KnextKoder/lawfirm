@@ -141,7 +141,7 @@ export default function ExperiencePage() {
         <section className="w-full bg-white py-12 sm:py-16 border-b border-brand-gold/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <span className="text-xs font-semibold tracking-[0.22em] text-brand-blue uppercase block mb-3">
+              <span className="text-xs md:text-base font-semibold tracking-[0.22em] text-brand-blue uppercase block mb-3">
                 Track Record &amp; Institutional Trust
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl text-brand-navy tracking-tight mb-6">
@@ -159,7 +159,7 @@ export default function ExperiencePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-4 border-b border-brand-gold/30">
               <div>
-                <span className="text-sm font-semibold tracking-wider text-brand-blue block mb-1">
+                <span className="text-xs md:text-base font-semibold tracking-wider text-brand-blue block mb-1">
                   Clientele
                 </span>
                 <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-navy tracking-tight">
@@ -175,7 +175,6 @@ export default function ExperiencePage() {
               {clientGroups.map((group) => (
                 <div key={group.category} className="space-y-4">
                   <h3 className="font-serif text-lg sm:text-xl text-brand-navy flex items-center gap-2.5">
-                    <span className="w-3 h-0.5 bg-brand-gold" aria-hidden="true" />
                     <span>{group.category}</span>
                   </h3>
 
@@ -223,7 +222,7 @@ export default function ExperiencePage() {
         <section className="w-full bg-white py-12 sm:py-16 lg:py-20 border-b border-brand-gold/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl mb-12">
-              <span className="text-sm font-semibold tracking-wider text-brand-blue block mb-2">
+              <span className="text-xs md:text-base font-semibold tracking-wider text-brand-blue block mb-2">
                 Focus &amp; Capability
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl text-brand-navy tracking-tight mb-4">

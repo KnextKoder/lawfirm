@@ -81,7 +81,6 @@ export default function SelectedClients() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
           <div className="max-w-2xl">
             <p className="text-[12px] sm:text-xs font-semibold tracking-[0.22em] text-brand-blue uppercase flex items-center gap-2 mb-3">
-              <span className="w-3.5 h-0.5 bg-brand-gold" aria-hidden="true" />
               <span>Experience Across Institutions &amp; Industries</span>
             </p>
             <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-brand-navy tracking-tight">

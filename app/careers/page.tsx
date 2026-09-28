@@ -87,7 +87,7 @@ export default function CareersPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
               <div className="lg:col-span-3 flex flex-col space-y-2 lg:space-y-3 pt-1">
-                <span className="text-sm font-semibold tracking-wider text-brand-blue">
+                <span className="text-sm md:text-base font-semibold tracking-wider text-brand-blue">
                   Professional Growth
                 </span>
                 <p className="text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase">
@@ -117,7 +117,7 @@ export default function CareersPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-4 border-b border-brand-gold/30">
               <div>
-                <span className="text-sm font-semibold tracking-wider text-brand-blue block mb-1">
+                <span className="text-sm md:text-base font-semibold tracking-wider text-brand-blue block mb-1">
                   Opportunities
                 </span>
                 <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-navy tracking-tight">

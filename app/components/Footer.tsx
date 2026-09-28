@@ -144,7 +144,7 @@ export default function Footer() {
         </div>
 
         {/* Legal Disclaimer Note */}
-        <div className="pt-8 pb-4 text-xs sm:text-[13px] text-white/60 leading-relaxed max-w-4xl">
+        <div className="pt-8 pb-4 text-xs sm:text-[13px] text-white/60 leading-relaxed max-w-5xl">
           <p>
             The information on this website is for general information only and does not constitute legal advice. Use of this website does not create a solicitor-client relationship.
           </p>

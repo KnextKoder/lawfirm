@@ -12,7 +12,7 @@ export default function EnquirySection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
-  
+
   const practiceAreaOptions = [
     "Litigation & Dispute Resolution",
     "Corporate & Commercial Law",
@@ -77,7 +77,7 @@ export default function EnquirySection() {
 
             {/* Block 1: Chambers Address */}
             <div className="pb-5 sm:pb-6 border-b border-brand-gold/20">
-              <span className="block text-[11px] font-semibold tracking-[0.18em] text-brand-blue uppercase mb-2">
+              <span className="block text-sm md:text-base font-semibold tracking-[0.18em] text-brand-blue uppercase mb-2">
                 Chambers
               </span>
               <address className="not-italic font-serif text-lg sm:text-xl text-brand-navy leading-relaxed font-normal">
@@ -89,8 +89,8 @@ export default function EnquirySection() {
 
             {/* Block 2: Telephone & WhatsApp */}
             <div className="py-5 sm:py-6 border-b border-brand-gold/20">
-              <span className="block text-[11px] font-semibold tracking-[0.18em] text-brand-blue uppercase mb-2">
-                Telephone &amp; WhatsApp
+              <span className="block text-sm md:text-base font-semibold tracking-[0.18em] text-brand-blue uppercase mb-2">
+                Telephone
               </span>
               <p className="font-serif text-lg sm:text-xl text-brand-navy leading-relaxed font-normal">
                 <a
@@ -104,7 +104,7 @@ export default function EnquirySection() {
 
             {/* Block 3: Email */}
             <div className="py-5 sm:py-6 border-b border-brand-gold/20">
-              <span className="block text-[11px] font-semibold tracking-[0.18em] text-brand-blue uppercase mb-2">
+              <span className="block text-sm md:text-base font-semibold tracking-[0.18em] text-brand-blue uppercase mb-2">
                 Email
               </span>
               <p className="font-serif text-lg sm:text-xl text-brand-navy leading-relaxed font-normal">
@@ -119,7 +119,7 @@ export default function EnquirySection() {
 
             {/* Block 4: Office Hours */}
             <div className="py-5 sm:py-6 border-b border-brand-gold/20">
-              <span className="block text-[11px] font-semibold tracking-[0.18em] text-brand-blue uppercase mb-2">
+              <span className="block text-sm md:text-base font-semibold tracking-[0.18em] text-brand-blue uppercase mb-2">
                 Office Hours
               </span>
               <p className="font-serif text-lg sm:text-xl text-brand-navy leading-relaxed font-normal">
@@ -334,7 +334,7 @@ export default function EnquirySection() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="inline-flex items-center justify-center bg-brand-navy hover:bg-brand-blue active:bg-brand-navy text-white text-sm font-medium px-8 py-3.5 transition-colors duration-150 cursor-pointer disabled:opacity-75 border border-brand-gold/40"
+                      className="inline-flex items-center justify-center px-6 py-3 sm:py-3.5 bg-brand-gold hover:bg-brand-navy active:bg-brand-navy text-white text-xs sm:text-[13px] font-semibold tracking-wider uppercase rounded-xs transition-all duration-150 border border-brand-gold/40 shadow-xs hover:shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
                     >
                       {isSubmitting ? "Submitting..." : "Submit Enquiry"}
                     </button>
