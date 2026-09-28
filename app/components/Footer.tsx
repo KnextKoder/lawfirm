@@ -8,8 +8,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-10 sm:pb-12 border-b border-brand-gold/20">
-          {/* Column 1: Brand Logo & Tagline (5 cols on lg) */}
-          <div className="lg:col-span-4 flex flex-col items-start pr-0 lg:pr-6">
+          {/* Column 1: Brand Logo & Tagline (6 cols on lg) */}
+          <div className="lg:col-span-6 flex flex-col items-start pr-0 lg:pr-8">
             <Link
               href="/"
               className="flex items-center gap-3.5 group focus:outline-none"
@@ -25,8 +25,8 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Column 2: FIRM (2 cols on lg) */}
-          <div className="lg:col-span-2 flex flex-col space-y-3">
+          {/* Column 2: FIRM (3 cols on lg) */}
+          <div className="lg:col-span-3 flex flex-col space-y-3">
             <p className="text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-brand-gold uppercase mb-2">
               Firm
             </p>
@@ -74,48 +74,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: PRACTICE (3 cols on lg) */}
-          <div className="lg:col-span-3 flex flex-col space-y-3">
-            <p className="text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-brand-gold uppercase mb-2">
-              Practice
-            </p>
-            <ul className="space-y-2.5">
-              <li>
-                <Link
-                  href="/practice-areas#litigation-dispute-resolution"
-                  className="text-white/80 hover:text-brand-blue text-sm transition-colors duration-150"
-                >
-                  Litigation &amp; Disputes
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/practice-areas#property-real-estate"
-                  className="text-white/80 hover:text-brand-blue text-sm transition-colors duration-150"
-                >
-                  Property &amp; Real Estate
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/practice-areas#asset-debt-recovery"
-                  className="text-white/80 hover:text-brand-blue text-sm transition-colors duration-150"
-                >
-                  Asset &amp; Debt Recovery
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/practice-areas#banking-finance"
-                  className="text-white/80 hover:text-brand-blue text-sm transition-colors duration-150"
-                >
-                  Banking &amp; Finance
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 4: CHAMBERS (3 cols on lg) */}
+          {/* Column 3: CHAMBERS (3 cols on lg) */}
           <div className="lg:col-span-3 flex flex-col space-y-3">
             <p className="text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-brand-gold uppercase mb-2">
               Chambers
