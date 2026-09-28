@@ -325,15 +325,6 @@ export default function TheFirm() {
               <p className="text-slate-600 text-[14.5px] sm:text-[15.5px] leading-relaxed max-w-2xl mt-6 font-normal">
                 Habeeb Salawu leads a team of Solicitors and Advocates of the Supreme Court of Nigeria. He has practised continuously since his call to the Bar, building extensive experience in litigation, property law, banking and finance, asset and debt recovery, corporate advisory and institutional legal services.
               </p>
-
-              <div className="mt-8">
-                <Link
-                  href="/team"
-                  className="inline-block text-[#182846] text-sm font-semibold underline underline-offset-4 decoration-[#182846]/40 hover:text-[#1d6ea8] hover:decoration-[#1d6ea8] transition-colors duration-150"
-                >
-                  Our lawyers
-                </Link>
-              </div>
             </div>
           </div>
 

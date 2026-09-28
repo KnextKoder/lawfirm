@@ -95,14 +95,6 @@ export default function Footer() {
                   The Firm
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/faq"
-                  className="text-slate-300 hover:text-white text-sm transition-colors duration-150"
-                >
-                  FAQ
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -187,20 +179,6 @@ export default function Footer() {
           <p>
             &copy; {currentYear} Habeeb Salawu Chambers. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
-            <Link
-              href="/privacy-policy"
-              className="hover:text-white transition-colors duration-150"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="/disclaimer"
-              className="hover:text-white transition-colors duration-150"
-            >
-              Disclaimer
-            </Link>
-          </div>
         </div>
       </div>
     </footer>
