@@ -193,7 +193,7 @@ export default function Hero() {
           {/* Starts covering 100% of stage on load/reload, wipes to the right, and docks as the right rail */}
           <aside
             aria-label="Next Story & Navigation"
-            className={`absolute top-0 bottom-0 right-0 z-20 bg-brand-navy text-white select-none border-l-[3px] border-brand-gold overflow-hidden transition-all duration-3000 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+            className={`absolute top-0 bottom-0 right-0 z-20 bg-brand-navy text-white select-none border-l-[3px] border-brand-gold overflow-hidden transition-all duration-1200 ease-[cubic-bezier(0.16,1,0.3,1)] ${
               curtainPhase === "covering"
                 ? "left-0"
                 : "left-full lg:left-[calc(100%-4rem)] xl:left-[calc(100%-5rem)]"
