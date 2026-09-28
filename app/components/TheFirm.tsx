@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -90,7 +89,7 @@ export default function TheFirm() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start">
             {/* Left Column / Metadata Sidebar (3 cols on lg) */}
             <div className="lg:col-span-3 flex items-center lg:flex-col lg:items-start pt-1">
-              <p className="text-sm md:text-base font-normal tracking-[0.22em] text-brand-navy/70 uppercase">
+              <p className="text-xs sm:text-[13px] font-normal tracking-[0.22em] text-brand-navy/70 uppercase">
                 A Firm Built on Experience
               </p>
             </div>
@@ -148,7 +147,7 @@ export default function TheFirm() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 sm:gap-6 pb-4 sm:pb-6 border-b border-brand-gold/30">
             {/* Left badge */}
             <div className="flex items-center md:flex-col md:items-start">
-              <p className="text-sm md:text-base font-normal tracking-[0.22em] text-brand-navy/70 uppercase">
+              <p className="text-xs sm:text-[13px] font-normal tracking-[0.22em] text-brand-navy/70 uppercase">
                 Practice Areas
               </p>
             </div>
@@ -234,7 +233,7 @@ export default function TheFirm() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start">
             {/* Left Column / Metadata Sidebar (3 cols on lg) */}
             <div className="lg:col-span-3 flex items-center lg:flex-col lg:items-start pt-1">
-              <p className="text-sm md:text-base font-normal tracking-[0.22em] text-brand-gold uppercase">
+              <p className="text-xs sm:text-[13px] font-normal tracking-[0.22em] text-brand-gold uppercase">
                 Track Record
               </p>
             </div>
@@ -307,7 +306,7 @@ export default function TheFirm() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start">
             {/* Left Column / Metadata Sidebar (3 cols on lg) */}
             <div className="lg:col-span-3 flex items-center lg:flex-col lg:items-start pt-1">
-              <p className="text-sm md:text-base font-normal tracking-[0.22em] text-brand-navy/70 uppercase">
+              <p className="text-xs sm:text-[13px]   font-normal tracking-[0.22em] text-brand-navy/70 uppercase">
                 Our Legal Practitioners
               </p>
             </div>
