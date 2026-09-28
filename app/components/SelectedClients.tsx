@@ -3,56 +3,69 @@ import Image from "next/image";
 
 interface ClientItem {
   name: string;
+  category: "Government & Public Institutions" | "Financial Institutions" | "Corporate Organisations" | "Other";
   logo?: string;
 }
 
 const clients: ClientItem[] = [
   {
     name: "Osun State Government",
+    category: "Government & Public Institutions",
     logo: "/clients/Osun State.jpg",
   },
   {
     name: "Kaduna State Government",
+    category: "Government & Public Institutions",
     logo: "/clients/Kaduna-State-1024x1024.png",
   },
   {
     name: "Industrial Training Fund",
+    category: "Government & Public Institutions",
     logo: "/clients/Industrial-Training-Fund-ITF-logo.png",
   },
   {
     name: "Nigeria Deposit Insurance Corporation",
+    category: "Government & Public Institutions",
     logo: "/clients/ndicLogo-02.png",
   },
   {
     name: "Osun State Internal Revenue Service",
+    category: "Government & Public Institutions",
     logo: "/clients/Osun Internal Revenue Service.png",
   },
   {
     name: "First Bank of Nigeria Limited",
+    category: "Financial Institutions",
     logo: "/clients/FirstBank.png",
   },
   {
     name: "Zenith Bank Plc",
+    category: "Financial Institutions",
     logo: "/clients/zenith-bank-logo.png",
   },
   {
     name: "LivingTrust Mortgage Bank Plc",
-    logo: "/clients/living trust.png"
+    category: "Financial Institutions",
+    logo: "/clients/living trust.png",
   },
   {
     name: "Ibadan Electricity Distribution Company",
+    category: "Corporate Organisations",
     logo: "/clients/IBDEC.png",
   },
   {
     name: "Fatgbems Petroleum Company Limited",
+    category: "Corporate Organisations",
     logo: "/clients/fatgbems.png",
   },
   {
     name: "WemaBod Nigeria Limited",
+    category: "Corporate Organisations",
     logo: "/clients/wemabod.png",
   },
   {
     name: "And other institutions",
+    category: "Other",
   },
 ];
 
@@ -62,13 +75,21 @@ const mobileClients = clients.filter(
 
 export default function SelectedClients() {
   return (
-    <section id="clients" className="w-full bg-white py-10 sm:py-12 lg:py-14 border-b border-brand-gold/30">
+    <section id="clients" className="w-full bg-white py-12 sm:py-14 lg:py-16 border-b border-brand-gold/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Row */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 sm:mb-8">
-          <p className="text-[14px] sm:text-xs font-semibold tracking-[0.22em] text-brand-blue uppercase flex items-center gap-2">
-            <span className="w-3.5 h-0.5 bg-brand-gold" aria-hidden="true" />
-            <span>Selected Clients &amp; Engagements</span>
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
+          <div className="max-w-2xl">
+            <p className="text-[12px] sm:text-xs font-semibold tracking-[0.22em] text-brand-blue uppercase flex items-center gap-2 mb-3">
+              <span className="w-3.5 h-0.5 bg-brand-gold" aria-hidden="true" />
+              <span>Experience Across Institutions &amp; Industries</span>
+            </p>
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-brand-navy tracking-tight">
+              Selected Clients &amp; Engagements
+            </h2>
+          </div>
+          <p className="text-brand-navy/75 text-sm sm:text-[14.5px] leading-relaxed max-w-xl font-normal">
+            Our clients and professional engagements have included state governments, federal institutions, financial institutions, public bodies, utilities, petroleum companies and other corporate organisations.
           </p>
         </div>
 
@@ -162,9 +183,14 @@ export default function SelectedClients() {
                         </div>
                       )}
                     </div>
-                    <span className="font-serif text-[15px] sm:text-[15.5px] lg:text-[16.5px] leading-snug text-brand-navy font-normal">
-                      {client.name}
-                    </span>
+                    <div className="flex flex-col">
+                      <span className="font-serif text-[15px] sm:text-[15.5px] lg:text-[16.5px] leading-snug text-brand-navy font-normal">
+                        {client.name}
+                      </span>
+                      <span className="text-[10px] sm:text-[10.5px] font-sans font-medium text-brand-navy/55 tracking-wider uppercase mt-0.5">
+                        {client.category}
+                      </span>
+                    </div>
                   </>
                 )}
               </div>

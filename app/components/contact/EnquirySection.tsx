@@ -14,16 +14,19 @@ export default function EnquirySection() {
   
   const practiceAreaOptions = [
     "Litigation & Dispute Resolution",
-    "Corporate & Commercial Practice",
-    "Property & Real Estate Transactions",
-    "Asset & Debt Recovery",
+    "Corporate & Commercial Law",
+    "Real Estate & Property Law",
     "Banking & Finance",
-    "Public Sector & Regulatory Advisory",
-    "Family Law, Estates & Succession",
-    "Energy, Mining & Natural Resources",
-    "Election Petitions & Constitutional Law",
-    "Labour & Employment Relations",
-    "Other Legal Matters",
+    "Asset & Debt Recovery",
+    "Criminal Law",
+    "Family & Matrimonial Law",
+    "Employment & Labour Law",
+    "Arbitration, Mediation & ADR",
+    "Constitutional & Administrative Law",
+    "Probate, Wills & Estate Administration",
+    "Construction & Infrastructure Law",
+    "Regulatory & Institutional Advisory",
+    "Other Legal Assistance",
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -106,7 +109,10 @@ export default function EnquirySection() {
                 Office Hours
               </span>
               <p className="font-serif text-lg sm:text-xl text-brand-navy leading-relaxed font-normal">
-                [Monday &ndash; Friday, 08:30 &ndash; 17:30]
+                Monday &ndash; Friday, 08:30 &ndash; 17:30
+              </p>
+              <p className="text-xs text-brand-navy/60 mt-1 font-sans">
+                Consultations arranged by appointment
               </p>
             </div>
           </div>

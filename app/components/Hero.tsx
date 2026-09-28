@@ -20,16 +20,16 @@ interface HeroSlide {
 const slides: HeroSlide[] = [
   {
     id: "strategy",
-    eyebrow: "Innovative Legal Strategy",
-    title: "We deliver the results that are best for you",
+    eyebrow: "Legal Practice · Est. 2007",
+    title: "Experienced Legal Counsel. Strategic Representation. Practical Solutions.",
     description:
-      "Innovative legal strategies paired with outstanding service. Our seasoned advocates combine rigorous legal acumen with commercial pragmatism to protect your interests and drive decisive outcomes.",
-    ctaText: "Book a Consultation",
-    ctaLink: "/contact",
-    secondaryCtaText: "Explore the Practice",
-    secondaryCtaLink: "/practice-areas",
+      "Habeeb Salawu Chambers is a full-service Nigerian law firm with over 19 years of experience providing legal representation and advisory services to government institutions, financial institutions, corporate organisations and private clients.",
+    ctaText: "Explore Our Practice",
+    ctaLink: "/practice-areas",
+    secondaryCtaText: "Contact the Firm",
+    secondaryCtaLink: "/contact",
     image: "/assets/side columns.jpeg",
-    alt: "Lead Counsel at Habeeb Salawu Chambers",
+    alt: "Habeeb Salawu Chambers",
   },
 ];
 
@@ -193,7 +193,7 @@ export default function Hero() {
           {/* Starts covering 100% of stage on load/reload, wipes to the right, and docks as the right rail */}
           <aside
             aria-label="Next Story & Navigation"
-            className={`absolute top-0 bottom-0 right-0 z-20 bg-brand-navy text-white select-none border-l-[3px] border-brand-gold overflow-hidden transition-all duration-1350 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+            className={`absolute top-0 bottom-0 right-0 z-20 bg-brand-navy text-white select-none border-l-[3px] border-brand-gold overflow-hidden transition-all duration-3000 ease-[cubic-bezier(0.16,1,0.3,1)] ${
               curtainPhase === "covering"
                 ? "left-0"
                 : "left-full lg:left-[calc(100%-4rem)] xl:left-[calc(100%-5rem)]"

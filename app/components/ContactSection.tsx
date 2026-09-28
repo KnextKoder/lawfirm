@@ -18,7 +18,7 @@ export default function ContactSection() {
             </h2>
 
             <p className="mt-6 sm:mt-8 text-brand-navy/75 text-[15px] sm:text-base leading-relaxed max-w-xl font-normal">
-              Representation in a dispute, a property or recovery matter, advice on a commercial transaction, or ongoing institutional support &mdash; we will advise on the right approach.
+              Whether you require representation in a dispute, assistance with a property or recovery matter, advice on a commercial transaction, or ongoing institutional legal support, our team is available to discuss your requirements.
             </p>
           </div>
 

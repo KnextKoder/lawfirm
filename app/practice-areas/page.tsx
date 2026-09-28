@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Hero from "../components/practice areas/Hero";
 import CorePractice from "../components/practice areas/CorePractice";
-import FurtherPractice from "../components/practice areas/FurtherPractice";
-// import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
@@ -19,8 +17,6 @@ export default function PracticeAreasPage() {
       <main className="flex-1">
         <Hero />
         <CorePractice />
-        <FurtherPractice />
-        {/* <ContactSection /> */}
       </main>
       <Footer />
     </div>

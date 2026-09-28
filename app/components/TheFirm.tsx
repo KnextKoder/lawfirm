@@ -88,7 +88,7 @@ export default function TheFirm() {
   return (
     <div id="the-firm" className="w-full bg-white">
       {/* ============================================================ */}
-      {/* § 01 | THE FIRM (Overview Narrative & Library Photograph)   */}
+      {/* § 01 | A FIRM BUILT ON EXPERIENCE (Overview & Library)       */}
       {/* ============================================================ */}
       <section className="w-full bg-white py-12 sm:py-14 lg:py-16 border-b border-brand-gold/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -100,24 +100,37 @@ export default function TheFirm() {
                 &sect; 01
               </span>
               <p className="text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase">
-                The Firm
+                A Firm Built on Experience
               </p>
             </div>
 
             {/* Right Column / Headline & Two-Column Text (9 cols on lg) */}
             <div className="lg:col-span-9 flex flex-col">
               <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] text-brand-navy leading-[1.18] tracking-tight">
-                We combine technical legal expertise with a practical understanding of our clients&rsquo; objectives &mdash;{" "}
+                We combine technical legal expertise with a practical understanding of our clients&rsquo; objectives,{" "}
                 <span className="italic font-normal">from initial assessment through to resolution.</span>
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mt-8 sm:mt-10 lg:mt-10 pt-2">
                 <p className="text-brand-navy/75 text-[14.5px] sm:text-[15.5px] leading-relaxed font-normal">
-                  Since 2007, Habeeb Salawu Chambers has represented government institutions, financial institutions, corporate organisations and private clients in matters involving significant legal, financial, commercial and property interests.
+                  Since 2007, Habeeb Salawu Chambers has developed a broad legal practice serving clients across the public and private sectors. We have represented government institutions, financial institutions, corporate organisations and private clients in matters involving significant legal, financial, commercial and property interests.
                 </p>
-                <p className="text-brand-navy/75 text-[14.5px] sm:text-[15.5px] leading-relaxed font-normal">
-                  Our experience spans complex litigation, asset and debt recovery, land and property disputes, banking and financial matters, corporate advisory and institutional engagements.
-                </p>
+                <div className="flex flex-col justify-between">
+                  <p className="text-brand-navy/75 text-[14.5px] sm:text-[15.5px] leading-relaxed font-normal mb-6">
+                    Our experience includes complex litigation and dispute resolution, asset and debt recovery, land and property disputes, banking and financial matters, corporate advisory, and institutional legal engagements.
+                  </p>
+                  <div>
+                    <Link
+                      href="/about"
+                      className="inline-flex items-center gap-2 text-xs sm:text-[13px] font-bold uppercase tracking-[0.2em] text-brand-navy hover:text-brand-blue border-b-2 border-brand-gold pb-1 transition-colors"
+                    >
+                      <span>About the Firm</span>
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -275,6 +288,15 @@ export default function TheFirm() {
                 <p className="font-serif italic text-[17px] sm:text-lg md:text-[19px] text-slate-200 leading-relaxed font-normal">
                   Our engagement with the Osun State Government and the Osun State Internal Revenue Service on revenue collection and recovery reflects our broader experience protecting and recovering financial and institutional interests.
                 </p>
+                <div className="mt-5">
+                  <Link
+                    href="/experience"
+                    className="inline-flex items-center gap-2 text-xs sm:text-[13px] font-semibold tracking-wider text-brand-gold hover:text-white uppercase transition-colors"
+                  >
+                    <span>View full clientele &amp; areas of experience</span>
+                    <span>&rarr;</span>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -282,11 +304,11 @@ export default function TheFirm() {
       </section>
 
       {/* ============================================================ */}
-      {/* § 04 | LEADERSHIP (Habeeb Salawu & Our Approach)            */}
+      {/* § 04 | OUR LEGAL PRACTITIONERS                              */}
       {/* ============================================================ */}
-      <section id="leadership" className="w-full bg-white py-12 sm:py-14 lg:py-16 border-b border-brand-gold/30">
+      <section id="practitioners" className="w-full bg-white py-12 sm:py-14 lg:py-16 border-b border-brand-gold/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Top Section: Leadership Profile */}
+          {/* Top Section: Practitioners Profile */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             {/* Left Column / Metadata Sidebar (3 cols on lg) */}
             <div className="lg:col-span-3 flex flex-col space-y-2 lg:space-y-3 pt-1">
@@ -294,25 +316,52 @@ export default function TheFirm() {
                 &sect; 04
               </span>
               <p className="text-xs font-semibold tracking-[0.22em] text-brand-navy/70 uppercase">
-                Leadership
+                Our Legal Practitioners
               </p>
             </div>
 
-            {/* Right Column / Managing Partner Profile Narrative (9 cols on lg) */}
+            {/* Right Column / Practitioners Narrative (9 cols on lg) */}
             <div className="lg:col-span-9 flex flex-col">
               <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl text-brand-navy tracking-tight">
-                Habeeb Salawu
+                Our Legal Practitioners
               </h3>
 
-              <div className="flex flex-wrap items-center gap-2 text-[11.5px] sm:text-xs font-semibold tracking-[0.16em] text-brand-navy/70 uppercase mt-3 sm:mt-4">
-                <span>LL.B (ILORIN), 2005</span>
-                <span className="text-brand-gold font-bold">&bull;</span>
-                <span>CALLED TO THE NIGERIAN BAR, 2007</span>
-              </div>
-
-              <p className="text-brand-navy/75 text-[14.5px] sm:text-[15.5px] leading-relaxed max-w-3xl mt-6 font-normal">
-                Habeeb Salawu leads a team of Solicitors and Advocates of the Supreme Court of Nigeria. He has practised continuously since his call to the Bar, building extensive experience in litigation, property law, banking and finance, asset and debt recovery, corporate advisory and institutional legal services.
+              <p className="text-brand-navy/75 text-[15px] sm:text-[16px] leading-relaxed max-w-3xl mt-5 font-normal">
+                Our practice is supported by a team of Solicitors and Advocates of the Supreme Court of Nigeria with experience across litigation, dispute resolution, property, banking and finance, corporate and commercial law, recovery matters and institutional legal advisory.
               </p>
+
+              <p className="text-brand-navy/75 text-[14.5px] sm:text-[15.5px] leading-relaxed max-w-3xl mt-3 font-normal">
+                Working collaboratively across different areas of practice, our lawyers combine legal research, advocacy, advisory and transactional capabilities to provide clients with comprehensive legal support.
+              </p>
+
+              {/* Principal Counsel Profile Block */}
+              <div className="mt-8 pt-6 border-t border-brand-gold/25 max-w-3xl">
+                <h4 className="font-serif text-2xl sm:text-3xl text-brand-navy tracking-tight">
+                  Habeeb Salawu
+                </h4>
+
+                <div className="flex flex-wrap items-center gap-2 text-[11.5px] sm:text-xs font-semibold tracking-[0.16em] text-brand-navy/70 uppercase mt-2">
+                  <span>LL.B (ILORIN), 2005</span>
+                  <span className="text-brand-gold font-bold">&bull;</span>
+                  <span>CALLED TO THE NIGERIAN BAR, 2007</span>
+                </div>
+
+                <p className="text-brand-navy/75 text-[14.5px] sm:text-[15.5px] leading-relaxed mt-4 font-normal">
+                  The firm&rsquo;s practice is led by Habeeb Salawu, who was called to the Nigerian Bar in 2007 and has over 19 years of professional legal practice. He has built extensive experience in litigation, dispute resolution, property law, banking and finance, asset and debt recovery, corporate advisory and institutional legal services.
+                </p>
+
+                <div className="mt-5">
+                  <Link
+                    href="/about"
+                    className="inline-flex items-center gap-2 text-xs sm:text-[13px] font-bold uppercase tracking-[0.2em] text-brand-navy hover:text-brand-blue border-b-2 border-brand-gold pb-1 transition-colors"
+                  >
+                    <span>Read more in About the Firm</span>
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
 
