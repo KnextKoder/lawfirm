@@ -220,9 +220,6 @@ export default function Hero() {
                       <span className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-[2.15rem] font-bold tracking-tight text-brand-navy leading-[1.12] whitespace-nowrap">
                         Habeeb Salawu Chambers
                       </span>
-                      <span className="text-[10px] sm:text-xs md:text-sm lg:text-[13px] font-semibold tracking-[0.24em] sm:tracking-[0.28em] text-brand-navy/75 uppercase leading-none mt-1 sm:mt-1.5 whitespace-nowrap">
-                        Barristers &amp; Solicitors
-                      </span>
                     </div>
                   </div>
                 </div>
