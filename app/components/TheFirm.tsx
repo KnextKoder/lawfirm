@@ -85,17 +85,17 @@ export default function TheFirm() {
       {/* ============================================================ */}
       <section className="w-full bg-white py-12 sm:py-14 lg:py-16 border-b border-brand-gold/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Top Split Section: Sidebar and Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start">
-            {/* Left Column / Metadata Sidebar (3 cols on lg) */}
-            <div className="lg:col-span-3 flex items-center lg:flex-col lg:items-start pt-1">
+          {/* Top Split Section: Sidebar and Content - Locked precisely to 4-column client grid above */}
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-0 items-start">
+            {/* Left Column / Metadata Sidebar (1 of 4 cols = exactly 25% matching Col 1 of client grid) */}
+            <div className="lg:col-span-1 flex items-center lg:flex-col lg:items-start pt-1">
               <p className="text-xs sm:text-[13px] font-normal tracking-[0.22em] text-brand-navy/70 uppercase">
                 A Firm Built on Experience
               </p>
             </div>
 
-            {/* Right Column / Headline & Two-Column Text (9 cols on lg) */}
-            <div className="lg:col-span-9 flex flex-col">
+            {/* Right Column / Headline & Two-Column Text (3 of 4 cols = exactly 75% starting at Col 2 line) */}
+            <div className="lg:col-span-3 flex flex-col lg:pl-6 xl:pl-8">
               <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-[3.25rem] text-brand-navy leading-[1.18] tracking-tight">
                 We combine technical legal expertise with a practical understanding of our clients&rsquo; objectives,{" "}
                 <span className="italic font-normal">from initial assessment through to resolution.</span>
@@ -143,16 +143,16 @@ export default function TheFirm() {
       {/* ============================================================ */}
       <section id="practice-areas" className="w-full bg-white py-12 sm:py-14 lg:py-16 border-b border-brand-gold/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start">
-            {/* Left Column / Metadata Sidebar (3 cols on lg) */}
-            <div className="lg:col-span-3 flex items-center lg:flex-col lg:items-start pt-1">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-0 items-start">
+            {/* Left Column / Metadata Sidebar (1 of 4 cols = exactly 25%) */}
+            <div className="lg:col-span-1 flex items-center lg:flex-col lg:items-start pt-1">
               <p className="text-xs sm:text-[13px] font-normal tracking-[0.22em] text-brand-navy/70 uppercase">
                 Practice Areas
               </p>
             </div>
 
-            {/* Right Column / Content (9 cols on lg) */}
-            <div className="lg:col-span-9 flex flex-col">
+            {/* Right Column / Content (3 of 4 cols = 75% starting at Col 2 line) */}
+            <div className="lg:col-span-3 flex flex-col lg:pl-6 xl:pl-8">
               {/* Section Header: Title & Link */}
               <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-3 sm:gap-6 pb-4 sm:pb-6 border-b border-brand-gold/30">
                 <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-[40px] text-brand-navy tracking-tight">
@@ -232,16 +232,16 @@ export default function TheFirm() {
       {/* ============================================================ */}
       <section id="experience" className="w-full bg-brand-navy py-12 sm:py-14 lg:py-16 text-white border-b border-brand-gold/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start">
-            {/* Left Column / Metadata Sidebar (3 cols on lg) */}
-            <div className="lg:col-span-3 flex items-center lg:flex-col lg:items-start pt-1">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-0 items-start">
+            {/* Left Column / Metadata Sidebar (1 of 4 cols = exactly 25%) */}
+            <div className="lg:col-span-1 flex items-center lg:flex-col lg:items-start pt-1">
               <p className="text-xs sm:text-[13px] font-normal tracking-[0.22em] text-brand-gold uppercase">
                 Track Record
               </p>
             </div>
 
-            {/* Right Column / Matters & Highlight Note (9 cols on lg) */}
-            <div className="lg:col-span-9 flex flex-col">
+            {/* Right Column / Matters & Highlight Note (3 of 4 cols = 75% starting at Col 2 line) */}
+            <div className="lg:col-span-3 flex flex-col lg:pl-6 xl:pl-8">
               <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl text-white tracking-tight mb-6 sm:mb-8 lg:mb-10">
                 Experience across complex matters
               </h2>
@@ -305,16 +305,16 @@ export default function TheFirm() {
       <section id="practitioners" className="w-full bg-white py-12 sm:py-14 lg:py-16 border-b border-brand-gold/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top Section: Practitioners Profile */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start">
-            {/* Left Column / Metadata Sidebar (3 cols on lg) */}
-            <div className="lg:col-span-3 flex items-center lg:flex-col lg:items-start pt-1">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-0 items-start">
+            {/* Left Column / Metadata Sidebar (1 of 4 cols = exactly 25%) */}
+            <div className="lg:col-span-1 flex items-center lg:flex-col lg:items-start pt-1">
               <p className="text-xs sm:text-[13px] font-normal tracking-[0.22em] text-brand-navy/70 uppercase">
                 Our Legal Practitioners
               </p>
             </div>
 
-            {/* Right Column / Practitioners Narrative (9 cols on lg) */}
-            <div className="lg:col-span-9 flex flex-col">
+            {/* Right Column / Practitioners Narrative (3 of 4 cols = 75% starting at Col 2 line) */}
+            <div className="lg:col-span-3 flex flex-col lg:pl-6 xl:pl-8">
               <h3 className="font-serif text-2xl sm:text-4xl md:text-5xl text-brand-navy tracking-tight">
                 Our Legal Practitioners
               </h3>
