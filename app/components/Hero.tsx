@@ -73,8 +73,8 @@ export default function Hero() {
           >
             <div
               className={`w-full h-full bg-white transition-transform duration-1800 ease-[cubic-bezier(0.16,1,0.3,1)] ${curtainPhase === "covering"
-                  ? "translate-y-0"
-                  : "-translate-y-full border-b-[3px] border-brand-gold shadow-[0_25px_60px_rgba(10,27,51,0.3)]"
+                ? "translate-y-0"
+                : "-translate-y-full border-b-[3px] border-brand-gold shadow-[0_25px_60px_rgba(10,27,51,0.3)]"
                 }`}
             />
           </div>
@@ -83,8 +83,8 @@ export default function Hero() {
           {logoStep !== "hidden" && (
             <div
               className={`fixed inset-0 z-100 flex items-center justify-center px-4 transition-all duration-500 ease-out pointer-events-none select-none ${logoStep === "fadeout"
-                  ? "opacity-0 scale-95"
-                  : "opacity-100 scale-100"
+                ? "opacity-0 scale-95"
+                : "opacity-100 scale-100"
                 }`}
             >
               <div className="relative flex flex-col items-center justify-center sm:flex-row">
@@ -97,8 +97,8 @@ export default function Hero() {
                 {/* 1. Official Logo Emblem - Pops in with spring bounce from tiny center dot, then shifts left on desktop or up on mobile */}
                 <div
                   className={`shrink-0 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${logoStep === "slide"
-                      ? "-translate-y-2.5 sm:translate-y-0 sm:-translate-x-4 md:-translate-x-5"
-                      : "translate-y-0 translate-x-0"
+                    ? "-translate-y-2.5 sm:translate-y-0 sm:-translate-x-4 md:-translate-x-5"
+                    : "translate-y-0 translate-x-0"
                     }`}
                 >
                   <div className="relative flex items-center justify-center animate-logo-pop">
@@ -116,15 +116,15 @@ export default function Hero() {
                 {/* 2. Firm Typography Mask - Slides out vertically below on mobile, horizontally on desktop */}
                 <div
                   className={`overflow-hidden flex flex-col items-center sm:flex-row sm:items-center transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${logoStep === "slide"
-                      ? "max-h-40 sm:max-h-none max-w-xs min-[400px]:max-w-sm sm:max-w-137.5 opacity-100 pt-2 sm:pt-0 sm:pl-4 md:pl-5"
-                      : "max-h-0 sm:max-h-none max-w-0 opacity-0 pt-0 sm:pl-0"
+                    ? "max-h-40 sm:max-h-none max-w-xs min-[400px]:max-w-sm sm:max-w-137.5 opacity-100 pt-2 sm:pt-0 sm:pl-4 md:pl-5"
+                    : "max-h-0 sm:max-h-none max-w-0 opacity-0 pt-0 sm:pl-0"
                     }`}
                 >
                   {/* Gold Accent Divider Bar - Horizontal on mobile, vertical on desktop */}
                   <div
                     className={`h-0.5 w-12 sm:w-0.5 sm:h-12 md:h-14 lg:h-18 bg-brand-gold shrink-0 my-2 sm:my-0 transition-all duration-500 delay-100 ${logoStep === "slide"
-                        ? "scale-100 opacity-100"
-                        : "scale-0 sm:scale-y-0 opacity-0"
+                      ? "scale-100 opacity-100"
+                      : "scale-0 sm:scale-y-0 opacity-0"
                       }`}
                     aria-hidden="true"
                   />
@@ -132,8 +132,8 @@ export default function Hero() {
                   {/* Firm Name & Subtitle sliding out below on mobile, to the right on desktop */}
                   <div
                     className={`flex flex-col justify-center items-center sm:items-start text-center sm:text-left sm:pl-4 md:pl-5 shrink-0 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${logoStep === "slide"
-                        ? "translate-y-0 sm:translate-x-0 opacity-100"
-                        : "-translate-y-4 sm:translate-y-0 sm:-translate-x-10 opacity-0"
+                      ? "translate-y-0 sm:translate-x-0 opacity-100"
+                      : "-translate-y-4 sm:translate-y-0 sm:-translate-x-10 opacity-0"
                       }`}
                   >
                     <span className="font-serif text-lg min-[360px]:text-xl sm:text-2xl md:text-3xl lg:text-[2.15rem] font-bold tracking-tight text-brand-navy leading-tight whitespace-nowrap">
@@ -155,7 +155,7 @@ export default function Hero() {
         aria-label="Firm Overview & Insights"
         className="relative w-full bg-brand-navy border-b border-brand-gold/30 overflow-hidden"
       >
-        <div className="relative flex flex-col sm:min-h-[calc(100vh-88px)] md:min-h-[calc(100vh-96px)] lg:min-h-[calc(100vh-100px)]">
+        <div className="relative flex flex-col min-h-[72vh] min-[400px]:min-h-[76vh] sm:min-h-[calc(100vh-88px)] md:min-h-[calc(100vh-96px)] lg:min-h-[calc(100vh-100px)]">
           {/* Main Stage Container with Full-Bleed Background Image & Overlaid Text */}
           <div className="relative flex-1 flex flex-col justify-center overflow-hidden">
             {/* Full-Bleed Background Neoclassical Columns Image */}
@@ -181,15 +181,14 @@ export default function Hero() {
 
             {/* Overlaid Typography Stage - Emerges gracefully from the bottom upwards */}
             <div
-              className={`relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 min-[380px]:py-14 sm:py-12 lg:py-16 flex-1 flex flex-col justify-center transition-all duration-1800 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-                curtainPhase === "covering"
+              className={`relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 min-[380px]:py-20 sm:py-14 lg:py-16 flex-1 flex flex-col justify-end md:justify-center transition-all duration-1800 ease-[cubic-bezier(0.16,1,0.3,1)] ${curtainPhase === "covering"
                   ? "translate-y-24 opacity-75 scale-[0.98]"
                   : "translate-y-0 opacity-100 scale-100"
-              }`}
+                }`}
             >
               <div className="max-w-4xl xl:max-w-5xl">
-                {/* Category Eyebrow */}
-                <p className="text-xs sm:text-sm md:text-[15px] font-medium tracking-[0.26em] text-brand-gold uppercase mb-3.5 sm:mb-4.5 flex items-center gap-2.5">
+                {/* Category Eyebrow - Refined and sized delicately so it doesn't look too big compared to body text */}
+                <p className="text-[10px] min-[360px]:text-[11px] sm:text-xs md:text-[13px] font-semibold tracking-[0.24em] sm:tracking-[0.28em] text-brand-gold uppercase mb-3.5 sm:mb-4.5 flex items-center gap-2">
                   <span>Legal Practice · Est. 2007</span>
                 </p>
 
@@ -207,7 +206,7 @@ export default function Hero() {
                 </p>
 
                 {/* Call To Actions */}
-                <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-4 sm:gap-6">
+                <div className="mt-7 sm:mt-8 flex flex-wrap items-center gap-4 sm:gap-6">
                   <Link
                     href="/practice-areas"
                     className="inline-flex items-center justify-center px-6 sm:px-7 py-3 sm:py-3.5 bg-brand-gold hover:bg-white hover:text-brand-navy active:bg-brand-navy text-white text-xs sm:text-[13px] font-semibold tracking-wider uppercase rounded-xs transition-all duration-200 border border-brand-gold/60 shadow-lg hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"

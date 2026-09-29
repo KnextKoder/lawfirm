@@ -88,10 +88,10 @@ export function HSCBrandLogo({ logoSrc = "/logo.png" }: { logoSrc?: string }) {
   return (
     <Link
       href="/"
-      className="group flex items-center gap-2 min-[380px]:gap-2.5 sm:gap-3.5 md:gap-4 transition-all duration-300 hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue/40 rounded-sm"
+      className="group flex items-center gap-2 min-[380px]:gap-2.5 sm:gap-3 lg:gap-2.5 xl:gap-3.5 transition-all duration-300 hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue/40 rounded-sm shrink-0"
       aria-label="Habeeb Salawu Chambers - Home"
     >
-      {/* Official Brand Logo - Prominently Scaled with Mobile Responsiveness */}
+      {/* Official Brand Logo - Scaled smoothly from mobile to 1024px laptop and large desktop */}
       <div className="shrink-0 flex items-center justify-center">
         <Image
           src={logoSrc}
@@ -99,22 +99,22 @@ export function HSCBrandLogo({ logoSrc = "/logo.png" }: { logoSrc?: string }) {
           width={76}
           height={60}
           priority
-          className="h-9 min-[380px]:h-10.5 sm:h-12.5 md:h-14 lg:h-15.5 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+          className="h-9 min-[380px]:h-10.5 sm:h-12 md:h-13 lg:h-11.5 xl:h-13.5 2xl:h-15 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
         />
       </div>
 
       {/* Gold Divider */}
       <div
-        className="h-8 min-[380px]:h-9.5 sm:h-11.5 md:h-13 lg:h-14.5 w-0.5 bg-brand-gold shrink-0"
+        className="h-8 min-[380px]:h-9.5 sm:h-11 md:h-12 lg:h-10.5 xl:h-12 2xl:h-13.5 w-0.5 bg-brand-gold shrink-0"
         aria-hidden="true"
       />
 
-      {/* Firm Typography - Consistent Single-Line Scope Across Mobile & Desktop */}
+      {/* Firm Typography - Balanced font sizes preventing overlap at 1024px laptop screens */}
       <div className="flex flex-col justify-center select-none min-w-0">
-        <span className="font-serif text-[0.96rem] min-[360px]:text-[1.06rem] min-[400px]:text-[1.18rem] sm:text-[1.45rem] md:text-[1.7rem] lg:text-[1.92rem] font-bold tracking-tight text-brand-navy leading-tight group-hover:text-brand-blue transition-colors whitespace-nowrap">
+        <span className="font-serif text-[0.96rem] min-[360px]:text-[1.06rem] min-[400px]:text-[1.18rem] sm:text-[1.35rem] md:text-[1.45rem] lg:text-[1.16rem] xl:text-[1.45rem] 2xl:text-[1.75rem] font-bold tracking-tight text-brand-navy leading-tight group-hover:text-brand-blue transition-colors whitespace-nowrap">
           Habeeb Salawu Chambers
         </span>
-        <span className="text-[7.5px] min-[360px]:text-[8.5px] min-[400px]:text-[9.5px] sm:text-[10.5px] md:text-[11.5px] lg:text-[12px] font-semibold tracking-[0.2em] min-[360px]:tracking-[0.24em] sm:tracking-[0.28em] md:tracking-[0.32em] text-brand-navy/75 uppercase leading-none mt-0.5 sm:mt-1.5 whitespace-nowrap">
+        <span className="text-[7.5px] min-[360px]:text-[8.5px] min-[400px]:text-[9.5px] sm:text-[10px] md:text-[10.5px] lg:text-[8px] xl:text-[9.5px] 2xl:text-[11px] font-semibold tracking-[0.2em] min-[360px]:tracking-[0.24em] sm:tracking-[0.26em] text-brand-navy/75 uppercase leading-none mt-0.5 sm:mt-1 whitespace-nowrap">
           Barristers &amp; Solicitors
         </span>
       </div>
@@ -176,15 +176,15 @@ export default function Navbar({ logoSrc = "/logo.png", activePath }: NavbarProp
           : "border-b border-brand-gold/15"
         }`}
     >
-      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
-        <div className="flex items-center justify-between h-20 sm:h-22 md:h-24 lg:h-25">
+      <div className="w-full px-4 sm:px-6 lg:px-6 xl:px-10 2xl:px-14">
+        <div className="flex items-center justify-between gap-3 lg:gap-4 xl:gap-8 h-20 sm:h-22 md:h-24 lg:h-24 xl:h-25">
           {/* Logo brand area */}
           <HSCBrandLogo logoSrc={logoSrc} />
 
           {/* Desktop Navigation Links */}
           <nav
             aria-label="Main Navigation"
-            className="hidden lg:flex items-center gap-7 xl:gap-9"
+            className="hidden lg:flex items-center gap-3.5 xl:gap-6 2xl:gap-8 shrink-0"
           >
             {navLinks.map((link) => {
               const isActive =
@@ -194,7 +194,7 @@ export default function Navbar({ logoSrc = "/logo.png", activePath }: NavbarProp
                 <Link
                   key={link.label}
                   href={link.href}
-                  className={`group relative py-2 text-[15px] font-medium transition-colors duration-150 ${isActive
+                  className={`group relative py-2 text-xs lg:text-[13px] xl:text-[14px] 2xl:text-[15px] font-medium transition-colors duration-150 whitespace-nowrap ${isActive
                       ? "text-brand-navy font-semibold"
                       : "text-brand-navy/75 hover:text-brand-blue"
                     }`}
@@ -210,11 +210,11 @@ export default function Navbar({ logoSrc = "/logo.png", activePath }: NavbarProp
             })}
           </nav>
 
-          {/* CTA Button (Desktop) in Deep Navy with Gold border & hover light blue */}
-          <div className="hidden lg:flex items-center">
+          {/* CTA Button (Desktop) */}
+          <div className="hidden lg:flex items-center shrink-0">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-6 py-3 sm:py-3.5 bg-brand-gold hover:bg-brand-navy active:bg-brand-navy text-white text-xs sm:text-[13px] font-semibold tracking-wider uppercase rounded-xs transition-all duration-150 border border-brand-gold/40 shadow-xs hover:shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
+              className="inline-flex items-center justify-center px-3.5 lg:px-4 xl:px-5 2xl:px-6 py-2.5 xl:py-3 bg-brand-gold hover:bg-brand-navy active:bg-brand-navy text-white text-[11px] xl:text-xs font-semibold tracking-wider uppercase rounded-xs transition-all duration-150 border border-brand-gold/40 shadow-xs hover:shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue whitespace-nowrap"
             >
               Book a Consultation
             </Link>
