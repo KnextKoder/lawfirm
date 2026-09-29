@@ -88,33 +88,33 @@ export function HSCBrandLogo({ logoSrc = "/logo.png" }: { logoSrc?: string }) {
   return (
     <Link
       href="/"
-      className="group flex items-center gap-3 sm:gap-3.5 transition-opacity hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue/40 rounded-sm"
+      className="group flex items-center gap-3 sm:gap-3.5 md:gap-4 transition-all duration-300 hover:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue/40 rounded-sm"
       aria-label="Habeeb Salawu Chambers - Home"
     >
-      {/* Official Brand Logo */}
+      {/* Official Brand Logo - Prominently Scaled */}
       <div className="shrink-0 flex items-center justify-center">
         <Image
           src={logoSrc}
           alt="Habeeb Salawu Chambers Logo"
-          width={58}
-          height={46}
+          width={76}
+          height={60}
           priority
-          className="h-10 sm:h-11.5 md:h-12 w-auto object-contain"
+          className="h-11 sm:h-12.5 md:h-14 lg:h-15.5 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
         />
       </div>
 
-      {/* Thin Vertical Divider in Gold */}
+      {/* Gold Divider */}
       <div
-        className="h-9 sm:h-10 md:h-10.5 w-[1.5px] bg-brand-gold shrink-0"
+        className="h-10 sm:h-11.5 md:h-13 lg:h-14.5 w-0.5 bg-brand-gold shrink-0"
         aria-hidden="true"
       />
 
-      {/* Firm Typography */}
+      {/* Firm Typography - Bigger, Commanding, Sophisticated */}
       <div className="flex flex-col justify-center select-none">
-        <span className="font-serif text-[1.18rem] sm:text-[1.38rem] md:text-[1.48rem] font-semibold tracking-[-0.015em] text-brand-navy leading-[1.18] group-hover:text-brand-blue transition-colors">
+        <span className="font-serif text-[1.28rem] sm:text-[1.5rem] md:text-[1.72rem] lg:text-[1.92rem] font-bold tracking-[-0.018em] text-brand-navy leading-[1.12] group-hover:text-brand-blue transition-colors">
           Habeeb Salawu Chambers
         </span>
-        <span className="text-[9px] sm:text-[10px] md:text-[10.5px] font-semibold tracking-[0.24em] sm:tracking-[0.28em] text-brand-navy/70 uppercase leading-none mt-1 sm:mt-1.5">
+        <span className="text-[9.5px] sm:text-[10.5px] md:text-[11.5px] lg:text-[12px] font-semibold tracking-[0.24em] sm:tracking-[0.28em] md:tracking-[0.32em] text-brand-navy/75 uppercase leading-none mt-1 sm:mt-1.5">
           Barristers &amp; Solicitors
         </span>
       </div>
@@ -177,8 +177,8 @@ export default function Navbar({ logoSrc = "/logo.png", activePath }: NavbarProp
           : "border-b border-brand-gold/15"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-19 sm:h-21 md:h-22.5">
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+        <div className="flex items-center justify-between h-20 sm:h-22 md:h-24 lg:h-25">
           {/* Logo brand area */}
           <HSCBrandLogo logoSrc={logoSrc} />
 

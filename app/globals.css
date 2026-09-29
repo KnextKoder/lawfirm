@@ -93,3 +93,17 @@ body {
 .animate-hero-down {
   animation: heroDownIndicator 2.2s ease-in-out infinite;
 }
+
+@keyframes logoShimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.animate-shimmer {
+  animation: logoShimmer 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
