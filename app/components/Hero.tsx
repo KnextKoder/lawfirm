@@ -57,19 +57,34 @@ export default function Hero() {
       {/* 1. FULLSCREEN VERTICAL BOTTOM-TO-TOP WIPE CURTAIN & INTRO */}
       {/* Fixed inset-0 with z-[100] covers the whole screen (including Navbar) during logo & wipe animation */}
       {curtainPhase !== "docked" && (
-        <aside
-          aria-label="Firm Curtain & Intro Reveal"
-          className={`fixed inset-0 z-100 select-none overflow-hidden transition-transform duration-1800 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-            curtainPhase === "covering"
-              ? "translate-y-0 bg-white"
-              : "-translate-y-full bg-white border-b-[3px] border-brand-gold shadow-[0_25px_60px_rgba(10,27,51,0.3)] pointer-events-none"
-          }`}
-        >
+        <aside aria-label="Firm Curtain & Intro Reveal">
+          {/* A. Top Navbar Mask: Keeps the navbar completely hidden (solid white) during the initial logo animation */}
+          <div
+            className={`fixed top-0 inset-x-0 h-20 sm:h-22 md:h-24 lg:h-25 bg-white z-90 transition-opacity duration-600 ease-out ${
+              curtainPhase === "covering" ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
+            aria-hidden="true"
+          />
 
-          {/* Centered Logo Presentation - Exact choreography from public/logo animation.mp4 */}
+          {/* B. Hero Wipe Curtain Container: Constrained strictly between navbar bottom and viewport bottom */}
+          {/* overflow-hidden ensures the vertical wipe ends PRECISELY where the navbar meets the hero section without covering the navbar */}
+          <div
+            className="fixed inset-x-0 top-20 sm:top-22 md:top-24 lg:top-25 bottom-0 z-90 overflow-hidden pointer-events-none select-none"
+            aria-hidden="true"
+          >
+            <div
+              className={`w-full h-full bg-white transition-transform duration-1800 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                curtainPhase === "covering"
+                  ? "translate-y-0"
+                  : "-translate-y-full border-b-[3px] border-brand-gold shadow-[0_25px_60px_rgba(10,27,51,0.3)]"
+              }`}
+            />
+          </div>
+
+          {/* C. Centered Logo Presentation - Exact choreography from public/logo animation.mp4 */}
           {logoStep !== "hidden" && (
             <div
-              className={`relative z-10 w-full h-full flex items-center justify-center px-4 transition-all duration-500 ease-out pointer-events-none ${
+              className={`fixed inset-0 z-100 flex items-center justify-center px-4 transition-all duration-500 ease-out pointer-events-none select-none ${
                 logoStep === "fadeout"
                   ? "opacity-0 scale-95"
                   : "opacity-100 scale-100"
@@ -147,7 +162,7 @@ export default function Hero() {
         aria-label="Firm Overview & Insights"
         className="relative w-full bg-brand-navy border-b border-brand-gold/30 overflow-hidden"
       >
-        <div className="relative flex flex-col min-h-[calc(100vh-76px)] sm:min-h-[calc(100vh-84px)] lg:min-h-[calc(100vh-90px)]">
+        <div className="relative flex flex-col min-h-[calc(100vh-80px)] sm:min-h-[calc(100vh-88px)] md:min-h-[calc(100vh-96px)] lg:min-h-[calc(100vh-100px)]">
           {/* Main Stage Container with Full-Bleed Background Image & Overlaid Text */}
           <div className="relative flex-1 flex flex-col justify-center overflow-hidden">
             {/* Full-Bleed Background Neoclassical Columns Image */}
