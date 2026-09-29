@@ -13,32 +13,32 @@ export default function Footer() {
           <div className="lg:col-span-6 flex flex-col items-start pr-0 lg:pr-8">
             <Link
               href="/"
-              className="group flex items-center gap-2 min-[380px]:gap-2.5 sm:gap-3.5 md:gap-4 transition-all duration-300 hover:opacity-95 focus:outline-none"
+              className="group flex items-center gap-2 min-[380px]:gap-2.5 sm:gap-3 transition-all duration-300 hover:opacity-95 focus:outline-none"
               aria-label="Habeeb Salawu Chambers Home"
             >
-              {/* Official Brand Logo - Scaled to match Navbar */}
+              {/* Official Brand Logo - Refined sizing across breakpoints */}
               <div className="shrink-0 flex items-center justify-center">
                 <Image
                   src="/logo.png"
                   alt="Habeeb Salawu Chambers Logo"
-                  width={76}
-                  height={60}
-                  className="h-9 min-[380px]:h-10.5 sm:h-12.5 md:h-14 lg:h-15.5 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                  width={60}
+                  height={48}
+                  className="h-8.5 min-[380px]:h-9 sm:h-9.5 md:h-10 lg:h-10.5 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
 
               {/* Gold Divider */}
               <div
-                className="h-8 min-[380px]:h-9.5 sm:h-11.5 md:h-13 lg:h-14.5 w-0.5 bg-brand-gold shrink-0"
+                className="h-7.5 min-[380px]:h-8 sm:h-8.5 md:h-9 lg:h-9.5 w-0.5 bg-brand-gold shrink-0"
                 aria-hidden="true"
               />
 
-              {/* Firm Typography - Scaled to match Navbar */}
+              {/* Firm Typography - Compact & refined for footer on tablets & PCs */}
               <div className="flex flex-col justify-center select-none min-w-0">
-                <span className="font-serif text-[0.96rem] min-[360px]:text-[1.06rem] min-[400px]:text-[1.18rem] sm:text-[1.45rem] md:text-[1.7rem] lg:text-[1.92rem] font-bold tracking-tight text-white leading-tight group-hover:text-brand-blue transition-colors whitespace-nowrap">
+                <span className="font-serif text-[0.96rem] min-[360px]:text-[1.05rem] sm:text-[1.12rem] md:text-[1.18rem] lg:text-[1.25rem] font-bold tracking-tight text-white leading-tight group-hover:text-brand-blue transition-colors whitespace-nowrap">
                   Habeeb Salawu Chambers
                 </span>
-                <span className="text-[7.5px] min-[360px]:text-[8.5px] min-[400px]:text-[9.5px] sm:text-[10.5px] md:text-[11.5px] lg:text-[12px] font-semibold tracking-[0.2em] min-[360px]:tracking-[0.24em] sm:tracking-[0.28em] md:tracking-[0.32em] text-brand-gold uppercase leading-none mt-0.5 sm:mt-1.5 whitespace-nowrap">
+                <span className="text-[7.5px] min-[360px]:text-[8px] sm:text-[8.5px] md:text-[9px] lg:text-[9.5px] font-semibold tracking-[0.2em] min-[360px]:tracking-[0.22em] text-brand-gold uppercase leading-none mt-0.5 sm:mt-1 whitespace-nowrap">
                   Barristers &amp; Solicitors
                 </span>
               </div>
