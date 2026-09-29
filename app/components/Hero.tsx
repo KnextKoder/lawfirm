@@ -63,7 +63,7 @@ export default function Hero() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-8 xl:gap-14 items-center">
               {/* Center-Left: Framed Visual Exhibition Stage */}
               <div className="order-2 lg:order-1 lg:col-span-6 flex justify-center">
-                <div className="group relative w-full max-w-sm sm:max-w-md lg:max-w-none aspect-4/4.5 sm:aspect-[4/4.6] lg:aspect-[4/4.7] xl:aspect-[4/4.8] bg-brand-navy overflow-hidden shadow-[0_16px_40px_rgba(10,27,51,0.08)] border border-brand-navy/15">
+                <div className="group relative w-full max-w-sm sm:max-w-md lg:max-w-none aspect-4/4.5 sm:aspect-[4/4.6] lg:aspect-[4/4.7] xl:aspect-[4/4.8] bg-brand-navy overflow-hidden shadow-[0_16px_40px_rgba(10,27,51,0.08)]">
                   <div className="relative w-full h-full">
                     <Image
                       src="/assets/side columns.jpeg"
