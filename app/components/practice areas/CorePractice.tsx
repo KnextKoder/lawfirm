@@ -63,9 +63,31 @@ const allPractices: PracticeItem[] = [
     ],
   },
   {
+    id: "asset-debt-recovery",
+    number: "03",
+    title: "Asset & Debt Recovery",
+    description:
+      "We advise and represent creditors, financial institutions, businesses and public institutions in matters involving the recovery and protection of financial and other assets.",
+    note: "The firm's experience includes recovery-related engagements involving financial institutions, corporate organisations and public institutions, including work connected with the recovery and protection of government revenue and assets.",
+    col1: [
+      "Debt recovery",
+      "Asset recovery",
+      "Recovery of public revenue",
+      "Recovery of possession",
+      "Loan recovery",
+    ],
+    col2: [
+      "Enforcement of contractual obligations",
+      "Enforcement of securities",
+      "Judgment enforcement",
+      "Recovery-related litigation",
+      "Negotiated recovery and settlement",
+    ],
+  },
+  {
     id: "property-real-estate",
     aliases: ["real-estate-property"],
-    number: "03",
+    number: "04",
     title: "Real Estate & Property Law",
     description:
       "We advise and represent clients in relation to land, buildings, property transactions and disputes.",
@@ -89,7 +111,7 @@ const allPractices: PracticeItem[] = [
   },
   {
     id: "banking-finance",
-    number: "04",
+    number: "05",
     title: "Banking & Finance",
     description:
       "We advise financial institutions, businesses and private clients on banking and financial matters.",
@@ -107,28 +129,6 @@ const allPractices: PracticeItem[] = [
       "Asset recovery",
       "Regulatory matters",
       "General banking and finance advisory",
-    ],
-  },
-  {
-    id: "asset-debt-recovery",
-    number: "05",
-    title: "Asset & Debt Recovery",
-    description:
-      "We advise and represent creditors, financial institutions, businesses and public institutions in matters involving the recovery and protection of financial and other assets.",
-    note: "The firm's experience includes recovery-related engagements involving financial institutions, corporate organisations and public institutions, including work connected with the recovery and protection of government revenue and assets.",
-    col1: [
-      "Debt recovery",
-      "Asset recovery",
-      "Recovery of public revenue",
-      "Recovery of possession",
-      "Loan recovery",
-    ],
-    col2: [
-      "Enforcement of contractual obligations",
-      "Enforcement of securities",
-      "Judgment enforcement",
-      "Recovery-related litigation",
-      "Negotiated recovery and settlement",
     ],
   },
   {

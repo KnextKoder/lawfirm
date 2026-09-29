@@ -41,17 +41,17 @@ const practiceAreas = [
 ];
 
 const trackRecordMattersCol1 = [
-  "Recovery of debts, assets and public revenue",
+  "Asset, debt and public revenue recovery",
+  "Land and property recovery and disputes",
   "Banking and financial disputes",
-  "Corporate and commercial advisory",
-  "Construction and infrastructure matters",
+  "Civil and commercial litigation",
 ];
 
 const trackRecordMattersCol2 = [
-  "Land and property recovery and disputes",
-  "Civil and commercial litigation",
   "Government and institutional engagements",
+  "Construction and infrastructure matters",
   "Regulatory and administrative issues",
+  "Corporate and commercial advisory",
 ];
 
 const approaches = [
