@@ -155,7 +155,7 @@ export default function Hero() {
         aria-label="Firm Overview & Insights"
         className="relative w-full bg-brand-navy border-b border-brand-gold/30 overflow-hidden"
       >
-        <div className="relative flex flex-col min-h-[calc(100dvh-80px)] sm:min-h-[calc(100vh-88px)] md:min-h-[calc(100vh-96px)] lg:min-h-[calc(100vh-100px)]">
+        <div className="relative flex flex-col sm:min-h-[calc(100vh-88px)] md:min-h-[calc(100vh-96px)] lg:min-h-[calc(100vh-100px)]">
           {/* Main Stage Container with Full-Bleed Background Image & Overlaid Text */}
           <div className="relative flex-1 flex flex-col justify-center overflow-hidden">
             {/* Full-Bleed Background Neoclassical Columns Image */}
@@ -181,7 +181,7 @@ export default function Hero() {
 
             {/* Overlaid Typography Stage - Emerges gracefully from the bottom upwards */}
             <div
-              className={`relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 min-[380px]:py-10 sm:py-12 lg:py-16 flex-1 flex flex-col justify-center transition-all duration-1800 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+              className={`relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 min-[380px]:py-14 sm:py-12 lg:py-16 flex-1 flex flex-col justify-center transition-all duration-1800 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                 curtainPhase === "covering"
                   ? "translate-y-24 opacity-75 scale-[0.98]"
                   : "translate-y-0 opacity-100 scale-100"
@@ -193,21 +193,21 @@ export default function Hero() {
                   <span>Legal Practice · Est. 2007</span>
                 </p>
 
-                {/* High-Impact Editorial Serif Headline in white - Enlarged and Commanding on mobile and desktop */}
-                <h1 className="text-[2.25rem] min-[360px]:text-[2.5rem] min-[400px]:text-[2.85rem] sm:text-5xl md:text-6xl lg:text-[3.65rem] xl:text-[4.25rem] 2xl:text-[4.65rem] font-serif font-bold text-white tracking-tight leading-[1.12] sm:leading-[1.08]">
+                {/* High-Impact Editorial Serif Headline in white - OG sizing */}
+                <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[3.65rem] xl:text-[4.25rem] 2xl:text-[4.65rem] font-serif font-bold text-white tracking-tight leading-[1.08]">
                   Experienced Legal Practitioners.{" "}
                   <span className="text-slate-100 font-normal italic font-serif">
                     Strategic Representation. Practical Solutions.
                   </span>
                 </h1>
 
-                {/* Narrative Description Subtitle - Scaled to fill vertical stage with prestigious clarity */}
-                <p className="mt-5 sm:mt-6 md:mt-7 text-[15.5px] min-[380px]:text-[16.5px] sm:text-lg md:text-xl lg:text-[1.32rem] xl:text-[1.42rem] text-slate-100/95 font-sans leading-relaxed max-w-3xl xl:max-w-4xl font-normal">
+                {/* Narrative Description Subtitle - OG sizing */}
+                <p className="mt-5 sm:mt-6 md:mt-7 text-sm md:text-xl lg:text-[1.32rem] xl:text-[1.42rem] text-slate-100/95 font-sans leading-relaxed max-w-3xl xl:max-w-4xl font-normal">
                   Habeeb Salawu Chambers is a full-service Nigerian law firm with over 19 years of experience providing legal representation and advisory services to government institutions, financial institutions, corporate organisations and private clients.
                 </p>
 
                 {/* Call To Actions */}
-                <div className="mt-6 min-[380px]:mt-7 sm:mt-8 flex flex-wrap items-center gap-4 sm:gap-6">
+                <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-4 sm:gap-6">
                   <Link
                     href="/practice-areas"
                     className="inline-flex items-center justify-center px-6 sm:px-7 py-3 sm:py-3.5 bg-brand-gold hover:bg-white hover:text-brand-navy active:bg-brand-navy text-white text-xs sm:text-[13px] font-semibold tracking-wider uppercase rounded-xs transition-all duration-200 border border-brand-gold/60 shadow-lg hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
