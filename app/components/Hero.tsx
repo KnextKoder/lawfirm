@@ -5,14 +5,14 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Hero() {
-  // curtainPhase: "covering" (curtain covers hero stage + logo animation plays) -> "revealing" (wiping right) -> "docked" (settled into right rail)
+  // curtainPhase: "covering" -> "revealing" -> "docked"
   const [curtainPhase, setCurtainPhase] = useState<"covering" | "revealing" | "docked">("covering");
-  // logoState: "animating" -> "fadeout" -> "hidden"
-  const [logoState, setLogoState] = useState<"animating" | "fadeout" | "hidden">("animating");
+  // logoStep: "enter" (spring pop from dot in center) -> "slide" (shifts left + text slides out to right) -> "fadeout" -> "hidden"
+  const [logoStep, setLogoStep] = useState<"enter" | "slide" | "fadeout" | "hidden">("enter");
   // gavelVisible: atmospheric legal gavel background during logo animation, smoothly fades to transparent
   const [gavelVisible, setGavelVisible] = useState(true);
 
-  // Orchestrate the dramatic logo animation followed by the cinematic wipe curtain reveal
+  // Orchestrate the exact animation sequence from public/logo animation.mp4
   useEffect(() => {
     // Scroll lock while the logo animation is playing so the user stays focused on the hero intro
     const originalBodyOverflow = document.body.style.overflow;
@@ -20,44 +20,40 @@ export default function Hero() {
     document.body.style.overflow = "hidden";
     document.documentElement.style.overflow = "hidden";
 
-    // 1. As the logo animation is ending, smoothly transition the gavel image to transparent
+    // 1. At 800ms: Logo shifts left and firm name slides out from behind it (exact logo animation.mp4 choreography)
+    const slideTimer = setTimeout(() => {
+      setLogoStep("slide");
+    }, 850);
+
+    // 2. At 2200ms: Smoothly fade gavel image to transparent so curtain becomes blank white
     const gavelFadeTimer = setTimeout(() => {
       setGavelVisible(false);
-    }, 1600);
+    }, 2200);
 
-    // 2. Start graceful fadeout of the logo presentation
+    // 3. At 2600ms: Start graceful fadeout of the logo lockup
     const fadeoutTimer = setTimeout(() => {
-      setLogoState("fadeout");
-    }, 1900);
+      setLogoStep("fadeout");
+    }, 2600);
 
-    // 3. Release scroll lock as the logo animation concludes and wipe reveal begins
-    const unlockTimer = setTimeout(() => {
+    // 4. At 2900ms: Release scroll lock and begin the wipe curtain reveal
+    const revealTimer = setTimeout(() => {
       document.body.style.overflow = originalBodyOverflow || "";
       document.documentElement.style.overflow = originalHtmlOverflow || "";
-    }, 2250);
-
-    // 4. Mark logo as completely hidden so screen is a clean blank navy canvas during the wipe
-    const hideTimer = setTimeout(() => {
-      setLogoState("hidden");
-    }, 2350);
-
-    // 5. Begin the dramatic curtain wipe with extended duration (1800ms) with a completely blank screen
-    const revealTimer = setTimeout(() => {
+      setLogoStep("hidden");
       setCurtainPhase("revealing");
-    }, 2400);
+    }, 2900);
 
-    // 6. Complete wipe and settle into docked right rail
+    // 5. At 4800ms: Complete wipe and settle into docked right rail
     const dockTimer = setTimeout(() => {
       setCurtainPhase("docked");
-    }, 4400);
+    }, 4800);
 
     return () => {
       document.body.style.overflow = originalBodyOverflow || "";
       document.documentElement.style.overflow = originalHtmlOverflow || "";
+      clearTimeout(slideTimer);
       clearTimeout(gavelFadeTimer);
       clearTimeout(fadeoutTimer);
-      clearTimeout(unlockTimer);
-      clearTimeout(hideTimer);
       clearTimeout(revealTimer);
       clearTimeout(dockTimer);
     };
@@ -163,32 +159,71 @@ export default function Hero() {
               <div className="absolute inset-0 bg-radial from-transparent via-white/50 to-white/95" />
             </div>
 
-            {/* Centered Logo Presentation - Standalone Logo directly on white-ish canvas (no text, no background box) */}
-            {logoState !== "hidden" && (
+            {/* Centered Logo Presentation - Exact choreography from public/logo animation.mp4 */}
+            {logoStep !== "hidden" && (
               <div
-                className={`relative z-10 w-full h-full flex flex-col items-center justify-center px-4 transition-all duration-500 ease-out pointer-events-none ${
-                  logoState === "fadeout"
+                className={`relative z-10 w-full h-full flex items-center justify-center px-4 transition-all duration-500 ease-out pointer-events-none ${
+                  logoStep === "fadeout"
                     ? "opacity-0 scale-95"
-                    : "opacity-100 scale-100 animate-hero-scale-in"
+                    : "opacity-100 scale-100"
                 }`}
               >
-                <div className="relative flex flex-col items-center justify-center">
+                <div className="relative flex items-center justify-center">
                   {/* Subtle Ambient Gold Halo */}
                   <div
-                    className="absolute -inset-16 bg-radial from-brand-gold/25 via-brand-gold/5 to-transparent blur-3xl rounded-full pointer-events-none"
+                    className="absolute -inset-16 bg-radial from-brand-gold/20 via-brand-gold/5 to-transparent blur-3xl rounded-full pointer-events-none"
                     aria-hidden="true"
                   />
 
-                  {/* Standalone Logo Mark - Big, Crisp, Direct on white-ish canvas */}
-                  <div className="relative flex items-center justify-center">
-                    <Image
-                      src="/logo.png"
-                      alt="Habeeb Salawu Chambers Logo"
-                      width={240}
-                      height={192}
-                      priority
-                      className="h-28 sm:h-36 md:h-44 lg:h-52 w-auto object-contain drop-shadow-[0_12px_28px_rgba(10,27,51,0.08)]"
+                  {/* 1. Official Logo Emblem - Pops in with spring bounce from tiny center dot, then shifts left */}
+                  <div
+                    className={`shrink-0 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                      logoStep === "slide"
+                        ? "-translate-x-2 sm:-translate-x-4 md:-translate-x-5"
+                        : "translate-x-0"
+                    }`}
+                  >
+                    <div className="relative flex items-center justify-center animate-logo-pop">
+                      <Image
+                        src="/logo.png"
+                        alt="Habeeb Salawu Chambers Logo"
+                        width={240}
+                        height={192}
+                        priority
+                        className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain drop-shadow-[0_12px_28px_rgba(10,27,51,0.08)]"
+                      />
+                    </div>
+                  </div>
+
+                  {/* 2. Firm Typography Mask - Slides out horizontally from behind the logo (exact logo animation.mp4 effect) */}
+                  <div
+                    className={`overflow-hidden flex items-center transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                      logoStep === "slide"
+                        ? "max-w-115 sm:max-w-137.5 opacity-100 pl-3 sm:pl-4 md:pl-5"
+                        : "max-w-0 opacity-0 pl-0"
+                    }`}
+                  >
+                    {/* Gold Accent Divider Bar */}
+                    <div
+                      className={`w-0.5 sm:w-0.5 h-12 sm:h-14 md:h-16 lg:h-20 bg-brand-gold shrink-0 transition-all duration-500 delay-100 ${
+                        logoStep === "slide" ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
+                      }`}
+                      aria-hidden="true"
                     />
+
+                    {/* Firm Name & Subtitle sliding out to the right */}
+                    <div
+                      className={`flex flex-col justify-center pl-3 sm:pl-4 md:pl-5 shrink-0 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                        logoStep === "slide" ? "translate-x-0" : "-translate-x-10 sm:-translate-x-14"
+                      }`}
+                    >
+                      <span className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-[2.15rem] font-bold tracking-tight text-brand-navy leading-[1.12] whitespace-nowrap">
+                        Habeeb Salawu Chambers
+                      </span>
+                      <span className="text-[10px] sm:text-xs md:text-sm lg:text-[13px] font-semibold tracking-[0.24em] sm:tracking-[0.28em] text-brand-navy/75 uppercase leading-none mt-1 sm:mt-1.5 whitespace-nowrap">
+                        Barristers &amp; Solicitors
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
