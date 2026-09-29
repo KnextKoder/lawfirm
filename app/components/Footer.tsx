@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -15,9 +16,23 @@ export default function Footer() {
               className="flex items-center gap-3.5 group focus:outline-none"
               aria-label="Habeeb Salawu Chambers Home"
             >
-              <span className="font-serif text-xl sm:text-[1.38rem] font-semibold text-white tracking-tight group-hover:text-brand-blue transition-colors">
-                Habeeb Salawu Chambers
-              </span>
+              <div className="shrink-0 w-9 h-9 rounded-xs bg-white/10 border border-brand-gold/40 p-1 flex items-center justify-center">
+                <Image
+                  src="/logo.png"
+                  alt="Habeeb Salawu Chambers Logo"
+                  width={28}
+                  height={28}
+                  className="object-contain"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-serif text-lg sm:text-[1.32rem] font-semibold text-white tracking-tight group-hover:text-brand-blue transition-colors">
+                  Habeeb Salawu Chambers
+                </span>
+                <span className="text-[9px] sm:text-[10px] font-semibold tracking-[0.22em] text-brand-gold uppercase mt-0.5">
+                  Barristers &amp; Solicitors
+                </span>
+              </div>
             </Link>
 
             <p className="font-serif italic text-white/75 text-sm sm:text-[15px] mt-4 leading-relaxed font-normal">

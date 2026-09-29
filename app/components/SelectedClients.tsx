@@ -87,7 +87,7 @@ export default function SelectedClients() {
               Selected Clients &amp; Engagements
             </h2>
           </div>
-          <p className="text-brand-navy/75 text-sm sm:text-[14.5px] leading-relaxed max-w-xl font-normal">
+          <p className="text-brand-navy/75 text-sm sm:text-[14.5px] leading-relaxed max-w-xl font-normal md:pb-1">
             Our clients and professional engagements have included state governments, federal institutions, financial institutions, public bodies, utilities, petroleum companies and other corporate organisations.
           </p>
         </div>
@@ -182,7 +182,7 @@ export default function SelectedClients() {
                         </div>
                       )}
                     </div>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col min-w-0">
                       <span className="font-serif text-[15px] sm:text-[15.5px] lg:text-[16.5px] leading-snug text-brand-navy font-normal">
                         {client.name}
                       </span>

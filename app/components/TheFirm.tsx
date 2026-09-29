@@ -83,7 +83,7 @@ export default function TheFirm() {
       {/* ============================================================ */}
       {/* 01 | A FIRM BUILT ON EXPERIENCE (Overview & Library)         */}
       {/* ============================================================ */}
-      <section className="w-full bg-white py-10 sm:py-12 lg:py-16 border-b border-brand-gold/30">
+      <section className="w-full bg-white py-12 sm:py-14 lg:py-16 border-b border-brand-gold/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top Split Section: Sidebar and Content */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start">
@@ -141,86 +141,88 @@ export default function TheFirm() {
       {/* ============================================================ */}
       {/* 02 | PRACTICE (Where we focus)                               */}
       {/* ============================================================ */}
-      <section id="practice-areas" className="w-full bg-white py-8 sm:py-10 lg:py-14 border-b border-brand-gold/30">
+      <section id="practice-areas" className="w-full bg-white py-12 sm:py-14 lg:py-16 border-b border-brand-gold/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header: Compact & balanced */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 sm:gap-6 pb-4 sm:pb-6 border-b border-brand-gold/30">
-            {/* Left badge */}
-            <div className="flex items-center md:flex-col md:items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start">
+            {/* Left Column / Metadata Sidebar (3 cols on lg) */}
+            <div className="lg:col-span-3 flex items-center lg:flex-col lg:items-start pt-1">
               <p className="text-xs sm:text-[13px] font-normal tracking-[0.22em] text-brand-navy/70 uppercase">
                 Practice Areas
               </p>
             </div>
 
-            {/* Title & Link inline row */}
-            <div className="flex items-baseline justify-between gap-4 flex-1 md:px-6">
-              <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-[40px] text-brand-navy tracking-tight">
-                Where we focus
-              </h2>
-              <Link
-                href="/practice-areas"
-                className="inline-flex items-center gap-1.5 text-brand-navy text-xs sm:text-sm font-semibold underline underline-offset-4 decoration-brand-gold/60 hover:text-brand-blue hover:decoration-brand-blue transition-colors duration-150 shrink-0"
-              >
-                <span>All 13 practice areas</span>
-                <span aria-hidden="true">&rarr;</span>
-              </Link>
-            </div>
-          </div>
+            {/* Right Column / Content (9 cols on lg) */}
+            <div className="lg:col-span-9 flex flex-col">
+              {/* Section Header: Title & Link */}
+              <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-3 sm:gap-6 pb-4 sm:pb-6 border-b border-brand-gold/30">
+                <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-[40px] text-brand-navy tracking-tight">
+                  Where we focus
+                </h2>
+                <Link
+                  href="/practice-areas"
+                  className="inline-flex items-center gap-1.5 text-brand-navy text-xs sm:text-sm font-semibold underline underline-offset-4 decoration-brand-gold/60 hover:text-brand-blue hover:decoration-brand-blue transition-colors duration-150 shrink-0"
+                >
+                  <span>All 13 practice areas</span>
+                  <span aria-hidden="true">&rarr;</span>
+                </Link>
+              </div>
 
-          {/* Practice Areas List: Clean, unnumbered, compact spacing */}
-          <div className="divide-y divide-brand-gold/20">
-            {practiceAreas.map((area) => (
-              <Link
-                key={area.title}
-                href={area.href}
-                className="group block md:flex md:items-center md:justify-between py-3.5 sm:py-4 lg:py-5 md:gap-8 transition-colors duration-150 hover:bg-slate-50/80 px-2 sm:px-3 rounded-xs"
-              >
-                {/* Mobile Title Row: Title with Arrow aligned on the right */}
-                <div className="flex items-center justify-between gap-3 md:w-72 lg:w-84 shrink-0">
-                  <h3 className="font-serif text-[17px] sm:text-xl lg:text-2xl text-brand-navy group-hover:text-brand-blue transition-colors font-normal leading-snug">
-                    {area.title}
-                  </h3>
-                  {/* Arrow for mobile (< md) on the right of title */}
-                  <div className="md:hidden shrink-0 text-brand-gold group-hover:text-brand-blue group-hover:translate-x-1 transition-all duration-150">
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.75"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                      />
-                    </svg>
-                  </div>
-                </div>
-
-                {/* Description */}
-                <p className="mt-1 md:mt-0 text-brand-navy/75 text-[13.5px] sm:text-[14.5px] leading-relaxed flex-1 md:px-4">
-                  {area.description}
-                </p>
-
-                {/* Arrow for tablet & desktop (md and up) */}
-                <div className="hidden md:block shrink-0 text-brand-gold group-hover:text-brand-blue group-hover:translate-x-1.5 transition-all duration-150">
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
+              {/* Practice Areas List: Clean, unnumbered, perfectly aligned */}
+              <div className="divide-y divide-brand-gold/20">
+                {practiceAreas.map((area) => (
+                  <Link
+                    key={area.title}
+                    href={area.href}
+                    className="group block md:flex md:items-center md:justify-between py-3.5 sm:py-4 lg:py-4.5 md:gap-6 lg:gap-8 transition-colors duration-150 hover:bg-slate-50/80 px-2 sm:px-3 rounded-xs"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                    />
-                  </svg>
-                </div>
-              </Link>
-            ))}
+                    {/* Title with Arrow for Mobile */}
+                    <div className="flex items-center justify-between gap-3 md:w-64 lg:w-72 shrink-0">
+                      <h3 className="font-serif text-[17px] sm:text-lg lg:text-[1.32rem] text-brand-navy group-hover:text-brand-blue transition-colors font-normal leading-snug">
+                        {area.title}
+                      </h3>
+                      {/* Arrow for mobile (< md) on the right of title */}
+                      <div className="md:hidden shrink-0 text-brand-gold group-hover:text-brand-blue group-hover:translate-x-1 transition-all duration-150">
+                        <svg
+                          className="w-4 h-4"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth="1.75"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+
+                    {/* Description */}
+                    <p className="mt-1 md:mt-0 text-brand-navy/75 text-[13.5px] sm:text-[14px] lg:text-[14.5px] leading-relaxed flex-1 md:px-2">
+                      {area.description}
+                    </p>
+
+                    {/* Arrow for tablet & desktop (md and up) */}
+                    <div className="hidden md:block shrink-0 text-brand-gold group-hover:text-brand-blue group-hover:translate-x-1.5 transition-all duration-150">
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="1.5"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                        />
+                      </svg>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -228,7 +230,7 @@ export default function TheFirm() {
       {/* ============================================================ */}
       {/* 03 | TRACK RECORD (Experience across complex matters)        */}
       {/* ============================================================ */}
-      <section id="experience" className="w-full bg-brand-navy py-10 sm:py-12 lg:py-16 text-white border-b border-brand-gold/30">
+      <section id="experience" className="w-full bg-brand-navy py-12 sm:py-14 lg:py-16 text-white border-b border-brand-gold/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start">
             {/* Left Column / Metadata Sidebar (3 cols on lg) */}
@@ -300,13 +302,13 @@ export default function TheFirm() {
       {/* ============================================================ */}
       {/* 04 | OUR LEGAL PRACTITIONERS                                 */}
       {/* ============================================================ */}
-      <section id="practitioners" className="w-full bg-white py-10 sm:py-12 lg:py-16 border-b border-brand-gold/30">
+      <section id="practitioners" className="w-full bg-white py-12 sm:py-14 lg:py-16 border-b border-brand-gold/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top Section: Practitioners Profile */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start">
             {/* Left Column / Metadata Sidebar (3 cols on lg) */}
             <div className="lg:col-span-3 flex items-center lg:flex-col lg:items-start pt-1">
-              <p className="text-xs sm:text-[13px]   font-normal tracking-[0.22em] text-brand-navy/70 uppercase">
+              <p className="text-xs sm:text-[13px] font-normal tracking-[0.22em] text-brand-navy/70 uppercase">
                 Our Legal Practitioners
               </p>
             </div>
@@ -344,7 +346,7 @@ export default function TheFirm() {
 
           {/* Bottom Section: Our Approach */}
           <div className="mt-8 sm:mt-10 lg:mt-12 pt-5 sm:pt-7 lg:pt-8 border-t border-brand-gold/30">
-            <p className="text-sm md:text-base font-semibold tracking-[0.22em] text-brand-navy/70 uppercase mb-3.5 sm:mb-6">
+            <p className="text-xs sm:text-[13px] font-semibold tracking-[0.22em] text-brand-navy/70 uppercase mb-4 sm:mb-6">
               Our Approach
             </p>
 

@@ -177,7 +177,7 @@ export default function Navbar({ logoSrc = "/logo.png", activePath }: NavbarProp
           : "border-b border-brand-gold/15"
       }`}
     >
-      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 sm:h-22 md:h-24 lg:h-25">
           {/* Logo brand area */}
           <HSCBrandLogo logoSrc={logoSrc} />
@@ -185,7 +185,7 @@ export default function Navbar({ logoSrc = "/logo.png", activePath }: NavbarProp
           {/* Desktop Navigation Links */}
           <nav
             aria-label="Main Navigation"
-            className="hidden lg:flex items-center gap-7 xl:gap-9"
+            className="hidden lg:flex items-center gap-5 xl:gap-8"
           >
             {navLinks.map((link) => {
               const isActive =
@@ -195,7 +195,7 @@ export default function Navbar({ logoSrc = "/logo.png", activePath }: NavbarProp
                 <Link
                   key={link.label}
                   href={link.href}
-                  className={`group relative py-2 text-[15px] font-medium transition-colors duration-150 ${
+                  className={`group relative py-2 text-[14.5px] xl:text-[15px] font-medium transition-colors duration-150 ${
                     isActive
                       ? "text-brand-navy font-semibold"
                       : "text-brand-navy/75 hover:text-brand-blue"
@@ -217,7 +217,7 @@ export default function Navbar({ logoSrc = "/logo.png", activePath }: NavbarProp
           <div className="hidden lg:flex items-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-6 py-3 sm:py-3.5 bg-brand-gold hover:bg-brand-navy active:bg-brand-navy text-white text-xs sm:text-[13px] font-semibold tracking-wider uppercase rounded-xs transition-all duration-150 border border-brand-gold/40 shadow-xs hover:shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
+              className="inline-flex items-center justify-center px-5 xl:px-6 py-3 sm:py-3.5 bg-brand-gold hover:bg-brand-navy active:bg-brand-navy text-white text-xs sm:text-[13px] font-semibold tracking-wider uppercase rounded-xs transition-all duration-150 border border-brand-gold/40 shadow-xs hover:shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
             >
               Book a Consultation
             </Link>

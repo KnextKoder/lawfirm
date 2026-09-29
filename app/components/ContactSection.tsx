@@ -8,8 +8,7 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Heading and Narrative */}
           <div className="lg:col-span-7 flex flex-col">
-            <p className="text-xs sm:text-[13px] font-semibold tracking-[0.22em] text-brand-blue uppercase mb-6 flex items-center gap-2">
-
+            <p className="text-xs sm:text-[13px] font-semibold tracking-[0.22em] text-brand-blue uppercase mb-4 sm:mb-5 flex items-center gap-2">
               <span>Speak With Us</span>
             </p>
 

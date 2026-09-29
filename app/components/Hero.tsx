@@ -169,7 +169,7 @@ export default function Hero() {
 
             {/* Overlaid Typography Stage - Emerges gracefully from the bottom upwards */}
             <div
-              className={`relative z-10 flex-1 flex flex-col justify-center px-6 sm:px-10 md:px-14 lg:px-16 xl:px-20 py-8 sm:py-12 lg:py-14 transition-all duration-1800 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+              className={`relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 flex-1 flex flex-col justify-center transition-all duration-1800 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                 curtainPhase === "covering"
                   ? "translate-y-24 opacity-75 scale-[0.98]"
                   : "translate-y-0 opacity-100 scale-100"
