@@ -41,25 +41,28 @@ const allPractices: PracticeItem[] = [
     ],
   },
   {
-    id: "corporate-commercial",
+    id: "property-real-estate",
+    aliases: ["real-estate-property"],
     number: "02",
-    title: "Corporate & Commercial Law",
+    title: "Real Estate & Property Law",
     description:
-      "We advise businesses, companies and institutions on their legal and commercial affairs.",
+      "We advise and represent clients in relation to land, buildings, property transactions and disputes.",
     col1: [
-      "Corporate advisory",
-      "Commercial transactions",
-      "Contract drafting and review",
-      "Company matters",
-      "Corporate governance",
-      "Shareholder matters",
+      "Land acquisition and disposal",
+      "Land recovery",
+      "Land disputes",
+      "Title investigation and verification",
+      "Title regularisation",
+      "Property documentation",
+      "Perfection of title",
     ],
     col2: [
-      "Business structuring",
-      "Regulatory compliance",
-      "Legal due diligence",
-      "Commercial negotiations",
-      "General corporate advisory",
+      "Leases and tenancy matters",
+      "Property development",
+      "Real estate transactions",
+      "Recovery of possession",
+      "Boundary disputes",
+      "Estate-related property matters",
     ],
   },
   {
@@ -85,33 +88,8 @@ const allPractices: PracticeItem[] = [
     ],
   },
   {
-    id: "property-real-estate",
-    aliases: ["real-estate-property"],
-    number: "04",
-    title: "Real Estate & Property Law",
-    description:
-      "We advise and represent clients in relation to land, buildings, property transactions and disputes.",
-    col1: [
-      "Land acquisition and disposal",
-      "Land recovery",
-      "Land disputes",
-      "Title investigation and verification",
-      "Title regularisation",
-      "Property documentation",
-      "Perfection of title",
-    ],
-    col2: [
-      "Leases and tenancy matters",
-      "Property development",
-      "Real estate transactions",
-      "Recovery of possession",
-      "Boundary disputes",
-      "Estate-related property matters",
-    ],
-  },
-  {
     id: "banking-finance",
-    number: "05",
+    number: "04",
     title: "Banking & Finance",
     description:
       "We advise financial institutions, businesses and private clients on banking and financial matters.",
@@ -132,8 +110,51 @@ const allPractices: PracticeItem[] = [
     ],
   },
   {
-    id: "criminal-law",
+    id: "corporate-commercial",
+    number: "05",
+    title: "Corporate & Commercial Law",
+    description:
+      "We advise businesses, companies and institutions on their legal and commercial affairs.",
+    col1: [
+      "Corporate advisory",
+      "Commercial transactions",
+      "Contract drafting and review",
+      "Company matters",
+      "Corporate governance",
+      "Shareholder matters",
+    ],
+    col2: [
+      "Business structuring",
+      "Regulatory compliance",
+      "Legal due diligence",
+      "Commercial negotiations",
+      "General corporate advisory",
+    ],
+  },
+  {
+    id: "regulatory-institutional",
+    aliases: ["institutional-government-advisory", "regulatory-institutional-advisory"],
     number: "06",
+    title: "Regulatory & Institutional Advisory",
+    description:
+      "We provide legal support to government institutions, public bodies, companies and other organisations operating within regulated environments.",
+    col1: [
+      "Regulatory compliance",
+      "Institutional advisory",
+      "Government advisory",
+      "Corporate governance",
+      "Legal opinions",
+    ],
+    col2: [
+      "Contract review",
+      "Regulatory disputes",
+      "Policy and regulatory matters",
+      "Institutional risk assessment",
+    ],
+  },
+  {
+    id: "criminal-law",
+    number: "07",
     title: "Criminal Law",
     description:
       "We provide representation and advisory services in criminal matters.",
@@ -153,7 +174,7 @@ const allPractices: PracticeItem[] = [
   {
     id: "family-matrimonial",
     aliases: ["family-law"],
-    number: "07",
+    number: "08",
     title: "Family & Matrimonial Law",
     description:
       "We provide legal assistance in family and matrimonial matters with appropriate discretion and sensitivity.",
@@ -171,7 +192,7 @@ const allPractices: PracticeItem[] = [
   },
   {
     id: "employment-labour",
-    number: "08",
+    number: "09",
     title: "Employment & Labour Law",
     description:
       "We advise employers, employees and organisations on employment-related legal matters.",
@@ -192,7 +213,7 @@ const allPractices: PracticeItem[] = [
   {
     id: "arbitration-adr",
     aliases: ["arbitration-mediation-adr"],
-    number: "09",
+    number: "10",
     title: "Arbitration, Mediation & ADR",
     description:
       "We assist clients in resolving disputes through mechanisms that may provide alternatives to conventional litigation.",
@@ -211,7 +232,7 @@ const allPractices: PracticeItem[] = [
   },
   {
     id: "constitutional-administrative",
-    number: "10",
+    number: "11",
     title: "Constitutional & Administrative Law",
     description:
       "We advise clients on matters involving government, public authorities and the exercise of statutory or administrative powers.",
@@ -230,7 +251,7 @@ const allPractices: PracticeItem[] = [
   },
   {
     id: "probate-wills-estates",
-    number: "11",
+    number: "12",
     title: "Probate, Wills & Estate Administration",
     description:
       "We assist individuals and families with succession and estate matters.",
@@ -249,7 +270,7 @@ const allPractices: PracticeItem[] = [
   },
   {
     id: "construction-infrastructure",
-    number: "12",
+    number: "13",
     title: "Construction & Infrastructure Law",
     description:
       "We advise clients involved in construction, property development and infrastructure projects.",
@@ -264,27 +285,6 @@ const allPractices: PracticeItem[] = [
       "Project-related disputes",
       "Construction claims",
       "Regulatory approvals",
-    ],
-  },
-  {
-    id: "regulatory-institutional",
-    aliases: ["institutional-government-advisory", "regulatory-institutional-advisory"],
-    number: "13",
-    title: "Regulatory & Institutional Advisory",
-    description:
-      "We provide legal support to government institutions, public bodies, companies and other organisations operating within regulated environments.",
-    col1: [
-      "Regulatory compliance",
-      "Institutional advisory",
-      "Government advisory",
-      "Corporate governance",
-      "Legal opinions",
-    ],
-    col2: [
-      "Contract review",
-      "Regulatory disputes",
-      "Policy and regulatory matters",
-      "Institutional risk assessment",
     ],
   },
 ];
@@ -366,7 +366,7 @@ export default function CorePractice() {
         <div>
           {allPractices.map((practice) => (
             <div
-              key={practice.number}
+              key={practice.id}
               id={practice.id}
               className="scroll-mt-24 sm:scroll-mt-28 py-7 sm:py-9 border-b border-brand-gold/20 last:border-b-0 relative"
             >

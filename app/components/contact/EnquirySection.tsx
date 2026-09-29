@@ -15,10 +15,11 @@ export default function EnquirySection() {
 
   const practiceAreaOptions = [
     "Litigation & Dispute Resolution",
-    "Corporate & Commercial Law",
     "Real Estate & Property Law",
-    "Banking & Finance",
     "Asset & Debt Recovery",
+    "Banking & Finance",
+    "Corporate & Commercial Law",
+    "Regulatory & Institutional Advisory",
     "Criminal Law",
     "Family & Matrimonial Law",
     "Employment & Labour Law",
@@ -26,7 +27,6 @@ export default function EnquirySection() {
     "Constitutional & Administrative Law",
     "Probate, Wills & Estate Administration",
     "Construction & Infrastructure Law",
-    "Regulatory & Institutional Advisory",
     "Other Legal Assistance",
   ];
 
