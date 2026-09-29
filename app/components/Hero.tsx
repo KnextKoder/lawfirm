@@ -101,22 +101,22 @@ export default function Hero() {
 
           {/* Overlaid Typography Stage */}
           <div className="relative z-10 flex-1 flex flex-col justify-center px-6 sm:px-10 md:px-14 lg:px-16 xl:px-20 py-8 sm:py-12 lg:py-14 lg:mr-16 xl:mr-20">
-            <div className="max-w-3xl">
+            <div className="max-w-4xl xl:max-w-5xl">
               {/* Category Eyebrow */}
-              <p className="text-xs sm:text-[13px] font-normal tracking-[0.24em] text-brand-gold uppercase mb-2.5 sm:mb-3.5 flex items-center gap-2.5">
+              <p className="text-xs sm:text-sm md:text-[15px] font-medium tracking-[0.26em] text-brand-gold uppercase mb-3.5 sm:mb-4.5 flex items-center gap-2.5">
                 <span>Legal Practice · Est. 2007</span>
               </p>
 
-              {/* High-Impact Editorial Serif Headline in white */}
-              <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[2.85rem] xl:text-[3.35rem] font-serif font-bold text-white tracking-tight leading-[1.12]">
+              {/* High-Impact Editorial Serif Headline in white - Enlarged and Commanding */}
+              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[3.65rem] xl:text-[4.25rem] 2xl:text-[4.65rem] font-serif font-bold text-white tracking-tight leading-[1.08]">
                 Experienced Legal Practitioners.{" "}
-                <span className="text-slate-200 font-normal italic font-serif">
+                <span className="text-slate-100 font-normal italic font-serif">
                   Strategic Representation. Practical Solutions.
                 </span>
               </h1>
 
-              {/* Narrative Description Subtitle */}
-              <p className="mt-3.5 sm:mt-4.5 text-[15px] sm:text-base md:text-lg text-slate-200/90 font-sans leading-relaxed max-w-2xl font-normal">
+              {/* Narrative Description Subtitle - Enlarged for prestigious clarity */}
+              <p className="mt-5 sm:mt-6 md:mt-7 text-base sm:text-lg md:text-xl lg:text-[1.32rem] xl:text-[1.42rem] text-slate-100/95 font-sans leading-relaxed max-w-3xl xl:max-w-4xl font-normal">
                 Habeeb Salawu Chambers is a full-service Nigerian law firm with over 19 years of experience providing legal representation and advisory services to government institutions, financial institutions, corporate organisations and private clients.
               </p>
 
@@ -135,13 +135,15 @@ export default function Hero() {
           {/* 3. THE REVEAL WIPE CURTAIN & DOCKED RIGHT RAIL (Exact A&O Shearman Screen Animation) */}
           <aside
             aria-label="Firm Curtain & Story Reveal"
-            className={`absolute top-0 bottom-0 right-0 z-20 bg-brand-navy text-white select-none border-l-[3px] border-brand-gold overflow-hidden transition-all duration-1800 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+            className={`absolute top-0 bottom-0 right-0 z-20 select-none border-l-[3px] border-brand-gold overflow-hidden transition-all duration-1800 ease-[cubic-bezier(0.16,1,0.3,1)] ${
               curtainPhase === "covering"
-                ? "left-0"
-                : "left-full lg:left-[calc(100%-4rem)] xl:left-[calc(100%-5rem)]"
+                ? "left-0 bg-white"
+                : curtainPhase === "revealing"
+                ? "left-full lg:left-[calc(100%-4rem)] xl:left-[calc(100%-5rem)] bg-white"
+                : "left-full lg:left-[calc(100%-4rem)] xl:left-[calc(100%-5rem)] bg-brand-navy transition-colors duration-500"
             }`}
           >
-            {/* Atmospheric Gavel Background during Logo Animation - Smoothly fades to transparent */}
+            {/* Atmospheric Gavel Background during Logo Animation - Soft high-key watermark that smoothly fades to transparent */}
             <div
               className={`absolute inset-0 pointer-events-none transition-opacity duration-800 ease-out ${
                 gavelVisible ? "opacity-100" : "opacity-0"
@@ -156,12 +158,12 @@ export default function Hero() {
                 sizes="100vw"
                 className="object-cover object-center scale-105"
               />
-              {/* Multi-layered cinematic navy gradient overlay */}
-              <div className="absolute inset-0 bg-brand-navy/80" />
-              <div className="absolute inset-0 bg-radial from-transparent via-brand-navy/60 to-brand-navy/95" />
+              {/* White-ish high-key wash so the background is light/white-ish and gavel texture is subtle and elegant */}
+              <div className="absolute inset-0 bg-white/85 backdrop-blur-[1px]" />
+              <div className="absolute inset-0 bg-radial from-transparent via-white/50 to-white/95" />
             </div>
 
-            {/* Centered Logo Animation Presentation (plays while wipe is paused) */}
+            {/* Centered Logo Presentation - Standalone Logo directly on white-ish canvas (no text, no background box) */}
             {logoState !== "hidden" && (
               <div
                 className={`relative z-10 w-full h-full flex flex-col items-center justify-center px-4 transition-all duration-500 ease-out pointer-events-none ${
@@ -170,50 +172,23 @@ export default function Hero() {
                     : "opacity-100 scale-100 animate-hero-scale-in"
                 }`}
               >
-                <div className="relative flex flex-col items-center text-center max-w-lg mx-auto">
-                  {/* Radiant Ambient Gold Glow Halo */}
+                <div className="relative flex flex-col items-center justify-center">
+                  {/* Subtle Ambient Gold Halo */}
                   <div
-                    className="absolute -inset-16 bg-radial from-brand-gold/30 via-brand-gold/10 to-transparent blur-3xl rounded-full pointer-events-none"
+                    className="absolute -inset-16 bg-radial from-brand-gold/25 via-brand-gold/5 to-transparent blur-3xl rounded-full pointer-events-none"
                     aria-hidden="true"
                   />
 
-                  {/* Emblem Container with Gold Rim & Subtle Light Sweep */}
-                  <div className="relative mb-6 p-4 sm:p-5 rounded-xs bg-white border-2 border-brand-gold/80 shadow-[0_0_50px_rgba(199,162,75,0.4)] flex items-center justify-center overflow-hidden">
-                    
+                  {/* Standalone Logo Mark - Big, Crisp, Direct on white-ish canvas */}
+                  <div className="relative flex items-center justify-center">
                     <Image
                       src="/logo.png"
-                      alt="Habeeb Salawu Chambers Emblem"
-                      width={100}
-                      height={80}
+                      alt="Habeeb Salawu Chambers Logo"
+                      width={240}
+                      height={192}
                       priority
-                      className="h-14 sm:h-16 md:h-18 w-auto object-contain drop-shadow-sm"
+                      className="h-28 sm:h-36 md:h-44 lg:h-52 w-auto object-contain drop-shadow-[0_12px_28px_rgba(10,27,51,0.08)]"
                     />
-                  </div>
-
-                  {/* Delicate Gold Dividing Rule with Diamond */}
-                  <div className="flex items-center gap-3 w-52 sm:w-64 mb-4">
-                    <div className="flex-1 h-[1.5px] bg-linear-to-r from-transparent via-brand-gold/70 to-brand-gold" />
-                    <div className="w-1.5 h-1.5 rotate-45 bg-brand-gold shrink-0 shadow-[0_0_8px_rgba(199,162,75,0.8)]" />
-                    <div className="flex-1 h-[1.5px] bg-linear-to-l from-transparent via-brand-gold/70 to-brand-gold" />
-                  </div>
-
-                  {/* High-Impact Brand Typography */}
-                  <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-[0.16em] uppercase text-white drop-shadow-md">
-                    Habeeb Salawu
-                  </h2>
-                  <span className="font-serif text-lg sm:text-xl md:text-2xl font-normal tracking-[0.3em] uppercase text-brand-gold mt-1.5 drop-shadow-sm">
-                    Chambers
-                  </span>
-
-                  {/* Subtitle with High-End Letter Tracking */}
-                  <div className="mt-3.5 flex items-center gap-2.5">
-                    <span className="text-[10.5px] sm:text-xs font-semibold tracking-[0.32em] uppercase text-slate-200">
-                      Barristers &amp; Solicitors
-                    </span>
-                    <span className="text-brand-gold text-xs" aria-hidden="true">·</span>
-                    <span className="text-[10.5px] sm:text-xs font-medium tracking-[0.22em] uppercase text-brand-gold/90">
-                      Est. 2007
-                    </span>
                   </div>
                 </div>
               </div>
