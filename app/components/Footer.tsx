@@ -21,8 +21,8 @@ export default function Footer() {
                 <Image
                   src="/logo.png"
                   alt="Habeeb Salawu Chambers Logo"
-                  width={60}
-                  height={48}
+                  width={70}
+                  height={60}
                   className="h-8.5 min-[380px]:h-9 sm:h-9.5 md:h-10 lg:h-10.5 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
