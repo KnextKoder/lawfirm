@@ -27,13 +27,13 @@ export default function ContactSection() {
             {/* 1. Primary Action: Direct Call (Deep Navy with Gold Border) */}
             <a
               href="tel:+2348037125633"
-              className="group flex items-center justify-between px-7 py-5 sm:py-5.5 bg-brand-gold hover:bg-brand-blue active:bg-brand-navy text-white rounded-xs transition-all duration-150 shadow-sm hover:shadow border border-brand-gold/40"
+              className="group flex items-center justify-between px-7 py-5 sm:py-5.5 bg-brand-navy hover:bg-brand-blue active:bg-brand-navy text-white rounded-xs transition-all duration-150 shadow-sm hover:shadow border border-brand-gold/40"
             >
               <span className="text-[14.5px] sm:text-[15px] font-medium tracking-wide">
                 Call +234 803 712 5633
               </span>
               <svg
-                className="w-4 h-4 text-white group-hover:text-white group-hover:translate-x-1 transition-all duration-150 shrink-0"
+                className="w-4 h-4 text-brand-gold group-hover:text-white group-hover:translate-x-1 transition-all duration-150 shrink-0"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="2"

@@ -59,7 +59,7 @@ export default function Hero() {
       {curtainPhase !== "docked" && (
         <aside
           aria-label="Firm Curtain & Intro Reveal"
-          className={`fixed inset-0 z-[100] select-none overflow-hidden transition-transform duration-[1800ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          className={`fixed inset-0 z-100 select-none overflow-hidden transition-transform duration-1800 ease-[cubic-bezier(0.16,1,0.3,1)] ${
             curtainPhase === "covering"
               ? "translate-y-0 bg-white"
               : "-translate-y-full bg-white border-b-[3px] border-brand-gold shadow-[0_25px_60px_rgba(10,27,51,0.3)] pointer-events-none"
@@ -106,13 +106,13 @@ export default function Hero() {
                 <div
                   className={`overflow-hidden flex items-center transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                     logoStep === "slide"
-                      ? "max-w-[460px] sm:max-w-[550px] opacity-100 pl-3 sm:pl-4 md:pl-5"
+                      ? "max-w-115 sm:max-w-137.5 opacity-100 pl-3 sm:pl-4 md:pl-5"
                       : "max-w-0 opacity-0 pl-0"
                   }`}
                 >
                   {/* Gold Accent Divider Bar */}
                   <div
-                    className={`w-0.5 sm:w-[2px] h-12 sm:h-14 md:h-16 lg:h-20 bg-brand-gold shrink-0 transition-all duration-500 delay-100 ${
+                    className={`w-0.5 sm:w-0.5 h-12 sm:h-14 md:h-16 lg:h-20 bg-brand-gold shrink-0 transition-all duration-500 delay-100 ${
                       logoStep === "slide" ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
                     }`}
                     aria-hidden="true"
@@ -169,7 +169,7 @@ export default function Hero() {
 
             {/* Overlaid Typography Stage - Emerges gracefully from the bottom upwards */}
             <div
-              className={`relative z-10 flex-1 flex flex-col justify-center px-6 sm:px-10 md:px-14 lg:px-16 xl:px-20 py-8 sm:py-12 lg:py-14 transition-all duration-[1800ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
+              className={`relative z-10 flex-1 flex flex-col justify-center px-6 sm:px-10 md:px-14 lg:px-16 xl:px-20 py-8 sm:py-12 lg:py-14 transition-all duration-1800 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                 curtainPhase === "covering"
                   ? "translate-y-24 opacity-75 scale-[0.98]"
                   : "translate-y-0 opacity-100 scale-100"
@@ -190,7 +190,7 @@ export default function Hero() {
                 </h1>
 
                 {/* Narrative Description Subtitle - Enlarged for prestigious clarity */}
-                <p className="mt-5 sm:mt-6 md:mt-7 text-base sm:text-lg md:text-xl lg:text-[1.32rem] xl:text-[1.42rem] text-slate-100/95 font-sans leading-relaxed max-w-3xl xl:max-w-4xl font-normal">
+                <p className="mt-5 sm:mt-6 md:mt-7 text-sm md:text-xl lg:text-[1.32rem] xl:text-[1.42rem] text-slate-100/95 font-sans leading-relaxed max-w-3xl xl:max-w-4xl font-normal">
                   Habeeb Salawu Chambers is a full-service Nigerian law firm with over 19 years of experience providing legal representation and advisory services to government institutions, financial institutions, corporate organisations and private clients.
                 </p>
 
