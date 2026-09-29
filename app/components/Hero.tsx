@@ -75,59 +75,63 @@ export default function Hero() {
                   : "opacity-100 scale-100"
               }`}
             >
-              <div className="relative flex items-center justify-center">
+              <div className="relative flex flex-col items-center justify-center sm:flex-row">
                 {/* Subtle Ambient Gold Halo */}
                 <div
                   className="absolute -inset-16 bg-radial from-brand-gold/20 via-brand-gold/5 to-transparent blur-3xl rounded-full pointer-events-none"
                   aria-hidden="true"
                 />
 
-                {/* 1. Official Logo Emblem - Pops in with spring bounce from tiny center dot, then shifts left */}
+                {/* 1. Official Logo Emblem - Pops in with spring bounce from tiny center dot, then shifts left on desktop or up on mobile */}
                 <div
                   className={`shrink-0 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                     logoStep === "slide"
-                      ? "-translate-x-2 sm:-translate-x-4 md:-translate-x-5"
-                      : "translate-x-0"
+                      ? "-translate-y-2.5 sm:translate-y-0 sm:-translate-x-4 md:-translate-x-5"
+                      : "translate-y-0 translate-x-0"
                   }`}
                 >
                   <div className="relative flex items-center justify-center animate-logo-pop">
                     <Image
                       src="/logo.png"
                       alt="Habeeb Salawu Chambers Logo"
-                      width={240}
-                      height={192}
+                      width={280}
+                      height={224}
                       priority
-                      className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain drop-shadow-[0_12px_28px_rgba(10,27,51,0.08)]"
+                      className="h-24 min-[380px]:h-28 sm:h-26 md:h-30 lg:h-34 w-auto object-contain drop-shadow-[0_12px_28px_rgba(10,27,51,0.08)]"
                     />
                   </div>
                 </div>
 
-                {/* 2. Firm Typography Mask - Slides out horizontally from behind the logo (exact logo animation.mp4 effect) */}
+                {/* 2. Firm Typography Mask - Slides out vertically below on mobile, horizontally on desktop */}
                 <div
-                  className={`overflow-hidden flex items-center transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                  className={`overflow-hidden flex flex-col items-center sm:flex-row sm:items-center transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                     logoStep === "slide"
-                      ? "max-w-115 sm:max-w-137.5 opacity-100 pl-3 sm:pl-4 md:pl-5"
-                      : "max-w-0 opacity-0 pl-0"
+                      ? "max-h-40 sm:max-h-none max-w-xs min-[400px]:max-w-sm sm:max-w-137.5 opacity-100 pt-2 sm:pt-0 sm:pl-4 md:pl-5"
+                      : "max-h-0 sm:max-h-none max-w-0 opacity-0 pt-0 sm:pl-0"
                   }`}
                 >
-                  {/* Gold Accent Divider Bar */}
+                  {/* Gold Accent Divider Bar - Horizontal on mobile, vertical on desktop */}
                   <div
-                    className={`w-0.5 sm:w-0.5 h-12 sm:h-14 md:h-16 lg:h-20 bg-brand-gold shrink-0 transition-all duration-500 delay-100 ${
-                      logoStep === "slide" ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
+                    className={`h-0.5 w-12 sm:w-0.5 sm:h-12 md:h-14 lg:h-18 bg-brand-gold shrink-0 my-2 sm:my-0 transition-all duration-500 delay-100 ${
+                      logoStep === "slide"
+                        ? "scale-100 opacity-100"
+                        : "scale-0 sm:scale-y-0 opacity-0"
                     }`}
                     aria-hidden="true"
                   />
 
-                  {/* Firm Name & Subtitle sliding out to the right */}
+                  {/* Firm Name & Subtitle sliding out below on mobile, to the right on desktop */}
                   <div
-                    className={`flex flex-col justify-center pl-3 sm:pl-4 md:pl-5 shrink-0 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-                      logoStep === "slide" ? "translate-x-0" : "-translate-x-10 sm:-translate-x-14"
+                    className={`flex flex-col justify-center items-center sm:items-start text-center sm:text-left sm:pl-4 md:pl-5 shrink-0 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                      logoStep === "slide"
+                        ? "translate-y-0 sm:translate-x-0 opacity-100"
+                        : "-translate-y-4 sm:translate-y-0 sm:-translate-x-10 opacity-0"
                     }`}
                   >
-                    <span className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-[2.15rem] font-bold tracking-tight text-brand-navy leading-[1.12] whitespace-nowrap">
+                    <span className="font-serif text-lg min-[360px]:text-xl sm:text-2xl md:text-3xl lg:text-[2.15rem] font-bold tracking-tight text-brand-navy leading-tight whitespace-nowrap">
                       Habeeb Salawu Chambers
                     </span>
-                    <span className="text-[10px] sm:text-xs md:text-sm lg:text-[13px] font-semibold tracking-[0.24em] sm:tracking-[0.28em] text-brand-navy/75 uppercase leading-none mt-1 sm:mt-1.5 whitespace-nowrap">
+                    <span className="text-[9px] min-[360px]:text-[10px] sm:text-xs md:text-sm lg:text-[13px] font-semibold tracking-[0.22em] sm:tracking-[0.28em] text-brand-navy/75 uppercase leading-none mt-1 sm:mt-1.5 whitespace-nowrap">
                       Barristers &amp; Solicitors
                     </span>
                   </div>
