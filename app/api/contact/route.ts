@@ -4,10 +4,7 @@ import { NextResponse } from "next/server";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const RECIPIENT_EMAIL = "salawusan@yahoo.com";
-// For testing: use "onboarding@resend.dev" (Resend's shared domain, no setup needed)
-// For production: use a verified custom domain address, e.g. "enquiries@yourdomain.com"
-
-const FROM_EMAIL = "onboarding@resend.dev";
+const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || "enquiries@habeebsalawuchambers.com";
 
 export async function POST(request: Request) {
   try {
