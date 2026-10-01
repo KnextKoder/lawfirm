@@ -11,7 +11,7 @@ const rubik = Rubik({
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "700"],
   display: "swap",
 });
 
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   title: "Habeeb Salawu Chambers | Barristers & Solicitors",
   description: "A distinguished full-service law firm providing expert legal counsel, advocacy, corporate advisory, and dispute resolution.",
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/favicon-32x32.png",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 

@@ -38,6 +38,8 @@ body {
 .animate-marquee-vertical {
   animation: marquee-vertical 22s linear infinite;
   will-change: transform;
+  contain: paint layout;
+  transform: translateZ(0);
 }
 
 .animate-marquee-vertical:hover,

@@ -131,7 +131,8 @@ export default function TheFirm() {
               src="/assets/bookshelf.jpeg"
               alt="Habeeb Salawu Chambers Library and Private Consultation Suite"
               fill
-              sizes="(max-width: 1280px) 100vw, 1280px"
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 95vw, 1200px"
+              quality={75}
               className="object-cover object-center"
             />
           </div>

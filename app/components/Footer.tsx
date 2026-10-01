@@ -23,6 +23,7 @@ export default function Footer() {
                   alt="Habeeb Salawu Chambers Logo"
                   width={70}
                   height={60}
+                  loading="lazy"
                   className="h-8.5 min-[380px]:h-9 sm:h-9.5 md:h-10 lg:h-10.5 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </div>

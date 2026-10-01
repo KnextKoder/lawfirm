@@ -16,8 +16,9 @@ export default function Hero() {
     const originalBodyOverflow = document.body.style.overflow;
     const originalHtmlOverflow = document.documentElement.style.overflow;
     document.body.style.overflow = "hidden";
-    document.documentElement.style.overflow = "hidden";
-    window.scrollTo(0, 0);
+    if (window.scrollY > 0) {
+      window.scrollTo(0, 0);
+    }
 
     // 1. At 850ms: Logo shifts left and firm name slides out from behind it (exact logo animation.mp4 choreography)
     const slideTimer = setTimeout(() => {
@@ -72,7 +73,7 @@ export default function Hero() {
             aria-hidden="true"
           >
             <div
-              className={`w-full h-full bg-white transition-transform duration-1800 ease-[cubic-bezier(0.16,1,0.3,1)] ${curtainPhase === "covering"
+              className={`w-full h-full bg-white transition-transform duration-1800 ease-[cubic-bezier(0.16,1,0.3,1)] transform-gpu will-change-transform ${curtainPhase === "covering"
                 ? "translate-y-0"
                 : "-translate-y-full border-b-[3px] border-brand-gold shadow-[0_25px_60px_rgba(10,27,51,0.3)]"
                 }`}
@@ -165,7 +166,8 @@ export default function Hero() {
                 alt="Habeeb Salawu Chambers Legal Architecture"
                 fill
                 priority
-                sizes="100vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1920px"
+                quality={75}
                 className="object-cover object-center scale-105"
               />
               {/* Multi-layered cinematic gradient overlay */}

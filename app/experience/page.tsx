@@ -191,6 +191,7 @@ export default function ExperiencePage() {
                               alt={`${client.name} logo`}
                               width={48}
                               height={48}
+                              loading="lazy"
                               className="max-h-full max-w-full object-contain"
                             />
                           ) : (

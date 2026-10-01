@@ -112,6 +112,7 @@ export default function SelectedClients() {
                       alt={`${client.name} logo`}
                       width={38}
                       height={38}
+                      loading="lazy"
                       className="max-h-full max-w-full object-contain"
                     />
                   ) : (
@@ -162,6 +163,7 @@ export default function SelectedClients() {
                           alt={`${client.name} logo`}
                           width={48}
                           height={48}
+                          loading="lazy"
                           className="max-h-full max-w-full object-contain"
                         />
                       ) : (
